@@ -1,0 +1,98 @@
+.container{
+	position: relative;
+	width: 100%;
+	height:716px;
+	background-image:url(../images/bg_a_giotto.jpg);
+	background-repeat:no-repeat;
+	background-position:center center;
+	-o-background-size: 100% 100%, auto;
+	-moz-background-size: 100% 100%, auto;
+	-webkit-background-size: 100% 100%, auto;
+	background-size: 100% 100%, auto;
+}
+	.left_container{
+		position: relative;
+		background-image:url(../images/bg_trans_submenu.png);
+		height:100%;
+		min-width:300px;
+	}
+	.title_container{
+		margin-top:17.45%;
+		margin-left:18.83%;
+		margin-right:18.83%;
+		margin-bottom:62px;
+		max-width:512px;
+		height:54px;
+	}	
+	.text_container{
+		margin-left:18.83%;
+		margin-right:18.83%;
+		max-width:512px;
+		height:348px;
+	}
+		.title_left_container{
+			font-family:HelveticaCondensedLight;
+			font-weight:normal;
+			font-size:46px;
+			color:#fff;
+			margin:0px;
+		}
+		.text_left_container{
+			font-family:HelveticaCondensedLight;
+			font-weight:normal;
+			font-size:12px;
+			color:#fff;
+		}		
+	.right_container{
+		position: relative;
+		height:100%;
+		min-width:300px;
+	}	
+
+	.img_container{
+		position:relative;
+		max-width: 461px;
+		top:162px;
+		margin:0 auto;
+		background-image:url(../images/bg_image_container.png);
+	}
+@media only screen and (max-width: 1260px)
+{
+.right_container{display:none;	}
+.left_container{
+	position: relative;
+	background-image:url(../images/bg_trans_submenu.png);
+	height:100%;
+	width:100%;
+}
+}
+@media only screen and (max-width: 768px)
+{
+
+	.right_container{
+		display:none;
+	}
+	.left_container{
+		width:100%;
+	}
+}	
+/*jcicle a giotto*/
+.slideshow {margin:0 auto; width:461px; height:auto;  }  
+.slideshow img {width:100%!important; height:auto; padding: 18px 22px;} 
+#next{position: absolute;top:111px;right:-26%; float:right; background-image:url(../images/bt_next_cycle.png); background-position:center; height:173px; width:135px; display:block;}
+#prev{position: absolute;top:111px;left:-26%;float:left; background-image:url(../images/bt_prev_cycle.png); background-position:center; height:173px; width:135px; display:block;} 
+#nav {tex-align:center; position:absolute;margin-top:63.2%;margin-left:50%; border:#0F0; z-index:5000; height:30px; width:300px;  }
+#nav a{ color:transparent;float:left; height:21px; width:21px;display:block; margin-right:11px; background-image:url(images/bg_nav_slider_off.png); background-position:3px 3px; background-repeat:no-repeat;}	
+#nav .activeSlide{ background-image:url(images/bg_nav_slider_on.png); background-repeat:no-repeat;background-position:0px 0px;}
+/*scroll personalizado*/
+#scrollbar1 { width: auto; clear: both; margin: 0px 0 0px; }
+#scrollbar1 .viewport { width: auto; height:389px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
+#scrollbar1 .thumb .end,
+#scrollbar1 .thumb { background-color: #fff;-moz-border-radius: 0px;border-radius: 0px; }
+#scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
+#scrollbar1 .track { left: 83px;background-image:url('../images/bg_track.png'); background-color:repeat-y; background-color:transparent; height: 100%; width:7px; position: relative; padding: 0 0px;  }
+#scrollbar1 .thumb { height: 20px; width: 7px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 7px; }
+#scrollbar1 .disable{ display: none; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }

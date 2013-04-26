@@ -1,0 +1,50 @@
+/*	--------------------------------------------------
+Container
+-------------------------------------------------- */
+div#container, div.container { position: relative; width: 1564px; margin: 0 auto; padding: 0; }
+ 
+ 
+/*	--------------------------------------------------
+Grid
+-------------------------------------------------- */
+.column-row, .row { margin: 0 0 18px -20px; }
+.column, .columns { float: left; display: inline; margin: 0 0 0 20px; }
+ 
+.one { width: 112px; }
+.two { width: 244px; }
+.three { width: 376px; }
+.four { width: 508px; }
+.five { width: 640px; }
+.six { width: 772px; }
+.seven { width: 904px; }
+.eight { width: 1036px; }
+.nine { width: 1168px; }
+.ten { width: 1300px; }
+.eleven { width: 1432px; }
+.twelve { width: 1564px; }
+ 
+.offset-by-one-half { margin-left: 66px; }
+.offset-by-one { margin-left: 132px; }
+.offset-by-two { margin-left: 264px; }
+.offset-by-three { margin-left: 396px; }
+.offset-by-four { margin-left: 528px; }
+.offset-by-five { margin-left: 660px; }
+.offset-by-six { margin-left: 792px; }
+.offset-by-seven { margin-left: 924px; }
+.offset-by-eight { margin-left: 1056px; }
+.offset-by-nine { margin-left: 1188px; }
+.offset-by-ten { margin-left: 1320px; }
+ 
+/* Clear the columns automagically, thanks @kneath */
+.column-row:after, .row:after, .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+* html .column-row, * html .row, * html .clearfix { height: 1%; }
+.column-row, .row, .clearfix { display: inline-block; }
+.column-row, .row, .clearfix { display: block; }
+ 
+/*	IE6 Problems ---------- */
+body.ie .column-row { width: 1584px; }
+body.ie .eight .column-row	 { width: 1056px; }
+body.ie .nine .column-row	 { width: 1188px; }
+body.ie .ten .column-row	 { width: 1320px; }
+body.ie .eleven .column-row { width: 1452px; }
+body.ie .two-thirds .column-row { width: 1076px; }
