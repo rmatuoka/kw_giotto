@@ -1,6 +1,7 @@
 KwGiotto::Application.routes.draw do
 
   get "products/index"
+  get "representatives/new"
 
   resources :user_sessions
   resources :users
