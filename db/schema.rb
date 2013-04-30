@@ -10,7 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429165559) do
+ActiveRecord::Schema.define(:version => 20130430180841) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "title"
+    t.boolean  "published"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contacts", :force => true do |t|
     t.string   "name"
@@ -19,6 +27,25 @@ ActiveRecord::Schema.define(:version => 20130429165559) do
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "code"
+    t.string   "name"
+    t.string   "ean"
+    t.string   "dun"
+    t.decimal  "weight",       :precision => 10, :scale => 0
+    t.decimal  "total_weight", :precision => 10, :scale => 0
+    t.decimal  "cubage",       :precision => 10, :scale => 0
+    t.decimal  "amount",       :precision => 10, :scale => 0
+    t.string   "dimensions"
+    t.string   "color"
+    t.boolean  "published"
+    t.boolean  "active"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "novelty"
   end
 
   create_table "roles", :force => true do |t|

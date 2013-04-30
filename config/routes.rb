@@ -1,7 +1,11 @@
 KwGiotto::Application.routes.draw do
 
+
+  get "about_us/index"
+
   get "products/index"
-  get "representatives/new"
+  
+  resources :representatives
 
   resources :user_sessions
   resources :users
@@ -9,6 +13,9 @@ KwGiotto::Application.routes.draw do
   resources :atualizar
   #Inicio do namespace Admin
   namespace(:admin){
+    resources (:categories){
+      resources :products
+    }
     resources :static_contents
     resources :users do
       collection do

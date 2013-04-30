@@ -1,0 +1,29 @@
+one:
+  code: MyString
+  name: MyString
+  ean: MyString
+  dun: MyString
+  weight: 9.99
+  total_weight: 9.99
+  cubage: 9.99
+  amount: 9.99
+  dimensions: MyString
+  color: MyString
+  published: false
+  active: false
+  category_id: 1
+
+two:
+  code: MyString
+  name: MyString
+  ean: MyString
+  dun: MyString
+  weight: 9.99
+  total_weight: 9.99
+  cubage: 9.99
+  amount: 9.99
+  dimensions: MyString
+  color: MyString
+  published: false
+  active: false
+  category_id: 1

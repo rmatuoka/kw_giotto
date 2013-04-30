@@ -1,0 +1,16 @@
+<%= form_for [:admin, @category] do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title, "Título:" %><br />
+    <%= f.text_field :title, :placeholder => "Título" %>
+  </p>
+  <p>
+    <%= f.label :published, "Publicada:" %><br />
+    <%= f.check_box :published %>
+  </p>
+  <p>
+    <%= f.label :active, "Ativa:"%><br />
+    <%= f.check_box :active %>
+  </p>
+  <p><%= f.submit "Salvar", :class => "button" %></p>
+<% end %>

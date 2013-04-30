@@ -1,0 +1,22 @@
+<title>Categorias</title>
+<h1>Categorias</h1>
+<table>
+  <tr>
+    <th>Título</th>
+    <th>Publicada</th>
+    <th>Ativa</th>
+  </tr>
+  <% for category in @categories %>
+    <tr>
+      <td><%= category.title %></td>
+      <td><%= print_active(category.published) %></td>
+      <td><%= print_active(category.active)%></td>
+      <td><%= link_to "Visualizar", [:admin, category], :class => "button secondary"%></td>
+      <td><%= link_to "Editar", edit_admin_category_path(category), :class => "button secondary" %></td>
+      <td><%= link_to "Produtos", admin_category_products_path(category), :class => "button secondary" %></td>
+      <td><%= link_to "Deletar", [:admin, category], :class => "button secondary", :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Nova Categoria", new_admin_category_path, :class => "button" %></p>

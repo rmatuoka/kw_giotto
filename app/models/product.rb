@@ -1,0 +1,4 @@
+class Product < ActiveRecord::Base
+  attr_accessible :code, :name, :ean, :dun, :weight, :total_weight, :cubage, :amount, :dimensions, :color, :published, :active, :category_id, :novelty
+  belongs_to :category
+end

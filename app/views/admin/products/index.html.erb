@@ -1,0 +1,44 @@
+<% title "Produtos" %>
+<h1>Produtos</h1>
+
+<table>
+  <tr>
+    <th>Código</th>
+    <th>Nome</th>
+    <th>Código Ean-13</th>
+    <th>Código Dun-14</th>
+    <th>Peso Líquido</th>
+    <th>Peso Total</th>
+    <th>Cubagem Embalagem m³</th>
+    <th>Quantidade</th>
+    <th>Dimensões</th>
+    <th>Cor</th>
+    <th>Novidade</th>
+    <th>Publicado</th>
+    <th>Ativo</th>
+    <th>Categoria</th>
+  </tr>
+  <% for product in @products %>
+    <tr>
+      <td><%= product.code %></td>
+      <td><%= product.name %></td>
+      <td><%= product.ean %></td>
+      <td><%= product.dun %></td>
+      <td><%= product.weight %></td>
+      <td><%= product.total_weight %></td>
+      <td><%= product.cubage %></td>
+      <td><%= product.amount %></td>
+      <td><%= product.dimensions %></td>
+      <td><%= product.color %></td>
+      <td><%= print_active(product.novelty) %></td>
+      <td><%= print_active(product.published) %></td>
+      <td><%= print_active(product.active) %></td>
+      <td><%= product.category_id %></td>
+      <td><%= link_to "Visualizar", admin_category_product_path(@category,product) %></td>
+      <td><%= link_to "Editar", edit_admin_category_product_path(@category,product) %></td>
+      <td><%= link_to "Deletar", admin_category_product_path(@category,product), :confirm => 'Tem certeza?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "+ Produto", new_admin_category_product_path(@category), :class => "button" %></p>

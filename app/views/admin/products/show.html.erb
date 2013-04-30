@@ -1,0 +1,64 @@
+<% title "Admin/Product" %>
+
+<p>
+  <strong>Code:</strong>
+  <%= @product.code %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+<p>
+  <strong>Ean:</strong>
+  <%= @product.ean %>
+</p>
+<p>
+  <strong>Dun:</strong>
+  <%= @product.dun %>
+</p>
+<p>
+  <strong>Weight:</strong>
+  <%= @product.weight %>
+</p>
+<p>
+  <strong>Total Weight:</strong>
+  <%= @product.total_weight %>
+</p>
+<p>
+  <strong>Cubage:</strong>
+  <%= @product.cubage %>
+</p>
+<p>
+  <strong>Amount:</strong>
+  <%= @product.amount %>
+</p>
+<p>
+  <strong>Dimensions:</strong>
+  <%= @product.dimensions %>
+</p>
+<p>
+  <strong>Color:</strong>
+  <%= @product.color %>
+</p>
+<p>
+  <strong>Novidade:</strong>
+  <%= @product.novelty %>
+</p>
+<p>
+  <strong>Published:</strong>
+  <%= @product.published %>
+</p>
+<p>
+  <strong>Active:</strong>
+  <%= @product.active %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%= @product.category_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_product_path(@product) %> |
+  <%= link_to "Destroy", [:admin, @product], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_products_path %>
+</p>

@@ -1,0 +1,60 @@
+<%= form_for ([:admin,@category,@product], :html => { :multipart => :true }) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :code, "Código" %><br />
+    <%= f.text_field :code, :placeholder => "Código" %>
+  </p>
+  <p>
+    <%= f.label :name, "Nome" %><br />
+    <%= f.text_field :name, :placeholder => "Nome" %>
+  </p>
+  <p>
+    <%= f.label :ean, "Código EAN-13" %><br />
+    <%= f.text_field :ean, :placeholder => "Código EAN-13" %>
+  </p>
+  <p>
+    <%= f.label :dun, "Código DUN-14" %><br />
+    <%= f.text_field :dun, :placeholder => "Código DUN-14" %>
+  </p>
+  <p>
+    <%= f.label :weight, "Peso Líquido" %><br />
+    <%= f.text_field :weight, :placeholder => "Peso Líquido" %>
+  </p>
+  <p>
+    <%= f.label :total_weight, "Peso total" %><br />
+    <%= f.text_field :total_weight, :placeholder => "Peso total" %>
+  </p>
+  <p>
+    <%= f.label :cubage, "Cubagem embalagem m³" %><br />
+    <%= f.text_field :cubage, :placeholder => "Cubagem embalagem m³" %>
+  </p>
+  <p>
+    <%= f.label :amount, "Quantidade" %><br />
+    <%= f.text_field :amount, :placeholder => "Quantidade" %>
+  </p>
+  <p>
+    <%= f.label :dimensions, "Dimensões" %><br />
+    <%= f.text_field :dimensions, :placeholder => "Dimensões" %>
+  </p>
+  <p>
+    <%= f.label :color, "Cor" %><br />
+    <%= f.text_field :color, :placeholder => "Cor" %>
+  </p>
+  <p>
+    <%= f.label :novelty, "Novidade" %><br />
+    <%= f.check_box :novelty %>
+  </p>
+  <p>
+    <%= f.label :published, "Publicado" %><br />
+    <%= f.check_box :published %>
+  </p>
+  <p>
+    <%= f.label :active, "Ativo" %><br />
+    <%= f.check_box :active %>
+  </p>
+  <p>
+    <%= f.label :category_id, "Categoria" %><br />
+    <%= f.text_field :category_id %>
+  </p>
+  <p><%= f.submit "Salvar", :class => "button" %></p>
+<% end %>
