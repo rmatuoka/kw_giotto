@@ -2,15 +2,15 @@
 <%= stylesheet_link_tag "produtos_espec"%>
 <% end %>	
 <div class="container_prod" style="display: none;">
-    <img src="images/bt_close_prod.png" class="bt_close_prod">
+    <%= image_tag ("bt_close_prod.png"), :class => "bt_close_prod"%>
     <div class="content_area">
         <div class="box_area">
             <div class="box_area_left">
                 <div id="prev2"></div>
             	<div id="next2"></div>
                 <div class="slideshow2" style="position: relative; width: 250px; height: 390px; overflow: hidden;">   	
-                    <img src="images/img_standbig.jpg" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1;">
-                    <img src="images/img_standbig_2.jpg" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 1;">
+                    <%=image_tag ("img_standbig.jpg"), :style =>"position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1;"%>
+                    <%=image_tag ("img_standbig_2.jpg"), :style => "position: absolute; top: 0px; left: 0px; display: none; z-index: 1;"%>
                 </div>    
             </div>
             <div class="box_area_right">
@@ -166,3 +166,45 @@
 
 		</div>
 	</div>
+<script>
+  $(document).ready(function(){
+     $(".container_prod").hide();
+    $(".products_item").click(function () {
+		
+      $(".container_prod").fadeIn("slow");
+	  
+    });
+    $(".bt_close_prod").click(function () {
+		
+      $(".container_prod").fadeOut("slow");
+	  
+    });	
+
+  });
+  
+ 
+ </script>
+ <script type="text/javascript">
+
+$(document).ready(function() {
+	$('#scrollbar1').tinyscrollbar();
+	$(window).resize(function(){
+	$('#scrollbar1').tinyscrollbar_update();
+	});	
+	
+	
+	
+	$('.slideshow2').cycle({ 
+		fx:     'scrollHorz', 
+        slideResize: false,
+        fit: 1,			
+		prev:   '#prev2', 
+		next:   '#next2',  
+		timeout: 0 
+	});
+
+
+
+});
+	
+</script>

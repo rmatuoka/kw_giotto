@@ -1,14 +1,14 @@
 	<div class="header">
             <div class="logo left">
-				<a href="./home.html"><%= image_tag ("logo.png") %></a>           
+				<%= link_to image_tag("logo.png"), root_path %>         
             </div>     
             <!--Menu --> 
             <div class="menu_container right">    
                 <ul class="menu">
-                    <li><a href="./a-giotto.html">A Giotto</a>                  
+                    <li><%= link_to "A Giotto", about_us_index_path%>                  
                     </li>
                     <li>
-                    	<a href="./produtos_espec.html">Produtos</a>
+                    	<%= link_to "Produtos", products_path%>
                         <ul class="sub_menu">
                         	<li><a href="./lancamentos.html">Lançamentos</a></li>
                             <li><a href="./lancamentos.html">Utilidades Domésticas</a></li>
@@ -19,7 +19,7 @@
                         </ul>
                     	
                     </li>
-                    <li><a href="./representantes.html">Representantes</a>
+                    <li><%= link_to "Representantes", new_representative_path%>
                         <ul class="sub_menu">
                         	<li><a href="./lancamentos.html">Lançamentos</a></li>
                             <li><a href="./lancamentos.html">Utilidades Domésticas</a></li>
@@ -27,7 +27,7 @@
                          
                         </ul>                    
                     </li>
-                    <li><a href="./onde_encontrar.html">Onde Encontrar</a>
+                    <li><%= link_to "Onde Encontrar", find_us_index_path%>
                         <ul class="sub_menu">
                         	<li><a href="./lancamentos.html">Lançamentos</a></li>
                             <li><a href="./lancamentos.html">Utilidades Domésticas</a></li>

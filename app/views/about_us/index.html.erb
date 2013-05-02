@@ -1,11 +1,33 @@
 <%content_for :head do%>
 <%= stylesheet_link_tag "a_giotto"%>
+<script type="text/javascript">
 
+$(document).ready(function() {
+	$('#scrollbar1').tinyscrollbar();
+	$(window).resize(function(){
+	$('#scrollbar1').tinyscrollbar_update();
+	});	
+	
+		
+	$('.slideshow').cycle({ 
+		fx:     'scrollHorz', 
+        slideResize: false,
+        fit: 1,			
+		prev:   '#prev', 
+		next:   '#next',  
+		timeout: 0 
+	});
+
+
+
+});
+	
+</script>
 <%end%>
 <div class="container ">
     <div class="left_container six columns">
         <div class="title_container">
-            <h1 class="title_left_container">A GIotto</h1>
+            <h1 class="title_left_container">A Giotto</h1>
         </div>
         <div class="text_container">
             <div id="scrollbar1">
@@ -47,9 +69,9 @@
             <div id="prev"></div>
             <div id="next"></div>	
                <div class="slideshow" style="position: relative; width: 461px; height: 382px; overflow: hidden;">
-                <%=image_tag ("images/exemp_1.jpg"), :style=>"position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 1;"%> 
-                <img src="images/exemp_2.jpg" style="position: absolute; top: 0px; left: -417px; display: none; z-index: 3; opacity: 1;">
-                <img src="images/exemp_1.jpg" style="position: absolute; top: 0px; left: -417px; display: none; z-index: 3; opacity: 1;">       
+                <%=image_tag ("exemp_1.jpg"), :style=> "position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 1;"%> 
+                <%=image_tag ("exemp_2.jpg"), :style => "position: absolute; top: 0px; left: -417px; display: none; z-index: 3; opacity: 1;"%>
+                <%=image_tag ("exemp_1.jpg"), :style => "position: absolute; top: 0px; left: -417px; display: none; z-index: 3; opacity: 1;"%>       
                </div>
             </div>     
                    

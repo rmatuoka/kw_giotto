@@ -1,10 +1,11 @@
 KwGiotto::Application.routes.draw do
 
 
-  get "about_us/index"
+  get "find_us/index"
 
-  get "products/index"
-  
+  get "about_us/index"
+    
+  resources :products
   resources :representatives
 
   resources :user_sessions

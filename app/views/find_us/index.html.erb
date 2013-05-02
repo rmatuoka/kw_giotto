@@ -1,0 +1,85 @@
+<%content_for :head do%>
+<%= stylesheet_link_tag "onde_encontrar"%>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#scrollbar1').tinyscrollbar();
+	$(window).resize(function(){
+	$('#scrollbar1').tinyscrollbar_update();
+	});	
+	
+	
+	$('.slideshow').cycle({ 
+		fx:     'scrollHorz', 
+        slideResize: false,
+        fit: 1,			
+		prev:   '#prev', 
+		next:   '#next',  
+		timeout: 0 
+	});
+
+
+
+});
+	
+</script>
+<% end %>
+<div class="container ">
+    <div class="left_container six columns">
+        <div class="title_container ">
+            <h1 class="title_left_container twelve columns">Onde Encontrar</h1>
+        </div>
+		
+        <div class="text_container twelve columns">
+            <form>           
+                <div class="six mobile-three columns">
+                    <div href="#" class="small button dropdown">
+                      Selecione seu Estado
+                      <ul class="no-hover" style="top: 27px;">
+                        <li><a href="#">SP</a></li>
+                        <li><a href="#">RJ</a></li>
+                        <li><a href="#">AC</a></li>
+                      </ul>
+                    </div>  
+                </div>
+                
+                <div class="six mobile-three columns">
+                    <div href="#" class="small button dropdown">
+                      Selecione sua Cidade
+                      <ul class="no-hover" style="top: 27px;">
+                        <li><a href="#">Atibaia</a></li>
+                        <li><a href="#">Aguaí</a></li>
+                        <li><a href="#">Atibaia</a></li>
+                      </ul>
+                    </div>  
+                </div>   
+          </form>  
+          <br><br>             
+            <div id="scrollbar1">
+                <div class="scrollbar" style="height: 389px;"><div class="track" style="height: 389px;"><div class="thumb" style="top: 0px; height: 323.3354700854701px;"><div class="end"></div></div></div></div>
+                <div class="viewport">
+                    <div class="overview" style="top: 0px;">
+                        <p class="text_left_container">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nulla magna, facilisis et ullamcorper nec, laoreet nec elit. Donec sit amet quam orci, ut tempus magna. Integer vitae felis risus. Aliquam neque enim, vulputate vitae blandit vitae, fringilla vitae erat. Nulla erat ligula, volutpat quis blandit sed, vestibulum eget nulla. Sed pulvinar, risus a rhoncus placerat, lacus metus fermentum sapien, in euismod nisl risus eget lorem. Quisque nibh tortor, rutrum at varius eu, auctor vitae nibh.<br>
+                     
+                        </p>
+                        <hr style="border-color:#f1454b;" class="twelve columns">
+                        <p class="text_left_container">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nulla magna, facilisis et ullamcorper nec, laoreet nec elit. Donec sit amet quam orci, ut tempus magna. Integer vitae felis risus. Aliquam neque enim, vulputate vitae blandit vitae, fringilla vitae erat. Nulla erat ligula, volutpat quis blandit sed, vestibulum eget nulla. Sed pulvinar, risus a rhoncus placerat, lacus metus fermentum sapien, in euismod nisl risus eget lorem. Quisque nibh tortor, rutrum at varius eu, auctor vitae nibh.<br>
+                
+                        </p>
+                        <hr style="border-color:#f1454b;" class="twelve columns">  
+                        <p class="text_left_container">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nulla magna, facilisis et ullamcorper nec, laoreet nec elit. Donec sit amet quam orci, ut tempus magna. Integer vitae felis risus. Aliquam neque enim, vulputate vitae blandit vitae, fringilla vitae erat. Nulla erat ligula, volutpat quis blandit sed, vestibulum eget nulla. Sed pulvinar, risus a rhoncus placerat, lacus metus fermentum sapien, in euismod nisl risus eget lorem. Quisque nibh tortor, rutrum at varius eu, auctor vitae nibh.<br>
+
+                        </p>
+                        <hr style="border-color:#f1454b;" class="twelve columns">                                                                                  
+                    </div>
+                </div>
+            </div>         	        
+    
+        </div>
+    </div>
+    <div class="right_container six columns">
+
+    </div>
+</div>
