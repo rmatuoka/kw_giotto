@@ -1,6 +1,8 @@
 KwGiotto::Application.routes.draw do
 
 
+  namespace(:admin){  }
+
   get "find_us/index"
 
   get "about_us/index"
@@ -14,9 +16,11 @@ KwGiotto::Application.routes.draw do
   resources :atualizar
   #Inicio do namespace Admin
   namespace(:admin){
-    resources (:categories){
-      resources :products
-    }
+    resources :categories do
+      resources :products do
+        resources :product_images
+      end  
+    end
     resources :static_contents
     resources :users do
       collection do

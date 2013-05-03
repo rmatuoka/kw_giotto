@@ -36,6 +36,7 @@
       <td><%= product.category_id %></td>
       <td><%= link_to "Visualizar", admin_category_product_path(@category,product) %></td>
       <td><%= link_to "Editar", edit_admin_category_product_path(@category,product) %></td>
+      <td><%= link_to "Imagem de Produto", admin_category_product_product_images_path(@category,product), :class => "button secondary" %></td>
       <td><%= link_to "Deletar", admin_category_product_path(@category,product), :confirm => 'Tem certeza?', :method => :delete %></td>
     </tr>
   <% end %>

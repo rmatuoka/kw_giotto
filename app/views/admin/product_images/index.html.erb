@@ -1,0 +1,20 @@
+<% title "Imagens do Produto" %>
+<h1>Imagens do Produto</h1>
+<table>
+  <tr>
+    <th>Active</th>
+    <th>Published</th>
+  </tr>
+  <% for product_image in @product_images %>
+    <tr>
+      <td><%= print_active(product_image.active) %></td>
+      <td><%= print_active(product_image.published) %></td>
+      <td><%= link_to "Show", admin_category_product_product_image_path(@category,@product,product_image) %></td>
+      <td><%= link_to "Edit", edit_admin_category_product_product_image_path(@category,@product,product_image) %></td>
+      <td><%= link_to "Destroy", admin_category_product_product_image_path(@category,@product,product_image), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "+ Imagem de Produto", new_admin_category_product_product_image_path %></p>
+<p><%= link_to "Voltar", admin_category_products_path(@category,@product) %></p>

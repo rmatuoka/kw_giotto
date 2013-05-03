@@ -1,0 +1,20 @@
+<% title "Admin/Product Image" %>
+
+<p>
+  <strong>Active:</strong>
+  <%= @product_image.active %>
+</p>
+<p>
+  <strong>Published:</strong>
+  <%= @product_image.published %>
+</p>
+<p>
+  <strong>Imagem:</strong>
+  <%= image_tag(@product_image.image.url(:thumb))%>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_category_product_product_image_path(@category,@product,@product_image) %> |
+  <%= link_to "Destroy", admin_category_product_product_image_path(@category,@product,@product_image), :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_category_product_product_images_path %>
+</p>

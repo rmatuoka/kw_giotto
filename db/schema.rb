@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130430180841) do
+ActiveRecord::Schema.define(:version => 20130503171107) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -29,6 +29,18 @@ ActiveRecord::Schema.define(:version => 20130430180841) do
     t.datetime "updated_at"
   end
 
+  create_table "product_images", :force => true do |t|
+    t.boolean  "active"
+    t.boolean  "published"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "product_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
   create_table "products", :force => true do |t|
     t.string   "code"
     t.string   "name"
@@ -36,12 +48,12 @@ ActiveRecord::Schema.define(:version => 20130430180841) do
     t.string   "dun"
     t.decimal  "weight",       :precision => 10, :scale => 0
     t.decimal  "total_weight", :precision => 10, :scale => 0
-    t.decimal  "cubage",       :precision => 10, :scale => 0
+    t.decimal  "cubage",       :precision => 10, :scale => 4
     t.decimal  "amount",       :precision => 10, :scale => 0
     t.string   "dimensions"
     t.string   "color"
-    t.boolean  "published"
-    t.boolean  "active"
+    t.boolean  "published",                                   :default => true, :null => false
+    t.boolean  "active",                                      :default => true, :null => false
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
