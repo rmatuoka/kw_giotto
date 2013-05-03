@@ -1,0 +1,70 @@
+<%content_for :head do%>
+<%= stylesheet_link_tag "lancamentos"%>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$('#scrollbar1').tinyscrollbar();
+	$(window).resize(function(){
+	$('#scrollbar1').tinyscrollbar_update();
+	});	
+	
+		
+	$('.slideshow').cycle({ 
+		fx:     'scrollHorz', 
+        slideResize: false,
+        fit: 1,			
+		prev:   '#prev', 
+		next:   '#next',  
+		timeout: 0 
+	});
+
+
+
+});
+	
+</script>
+<%end%>
+<div class="container ">
+    <div class="left_container three columns left">
+        <div class="title_container">
+            <h1 class="title_left_container">Lançamentos</h1>
+        </div>
+    </div>
+        <div class="right_container nine columns right">
+			<div class="products_container">    
+               <div id="scrollbar1">
+                    <div class="scrollbar" style="height: 570px;"><div class="track" style="height: 570px;"><div class="thumb" style="top: 0px; height: 144.52846975088968px;"><div class="end"></div></div></div></div>
+                    <div class="viewport">
+                        <div class="overview" style="top: 0px;">
+                          <% if @releases.count > 0 %>
+                          <% @releases.each do |release|%>
+                          <div class="products_item">
+                                <div class="image_products">
+                                  	<%= image_tag%>
+                              	</div>                                
+                                <div class="code_products">
+                                	COD: <%= release.code %>
+                                </div>
+                                <div class="name_products">
+                                	<%= release.name %>
+                                </div>                                
+                          </div> 
+                        <% end %>
+                        <% end %>  
+                              
+                            
+                            
+                            
+                           
+                            
+                            
+                                                                                                                                    
+                                                    
+                        </div>
+                    </div>
+                </div> 
+			</div>
+               
+
+		</div>
+	</div>

@@ -1,6 +1,8 @@
 KwGiotto::Application.routes.draw do
 
 
+  get "releases/index"
+
   namespace(:admin){  }
 
   get "find_us/index"

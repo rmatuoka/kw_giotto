@@ -30,13 +30,9 @@
 			<div class="products_container">
             <div class="products_menu">
                 <ul>
-                    <li class="p_item">Firenze</li>
-                    <li class="p_item">Organizar</li>
-                    <li class="p_item">Stylus</li>
-                    <li class="p_item">Utilidades</li>
-                    <li class="p_item">Infantil</li> 
-                    <li class="p_item">Ondulada</li> 
-                    <li class="p_item">Banho</li>                 
+                  <% @categories.each do |category| %>
+                    <li class="p_item"><%= category.title %></li>
+                  <% end %>
                 </ul>
             </div>  
                <div id="scrollbar1">
@@ -55,110 +51,7 @@
                                 </div>                                
                          </div>  
                             
-                          <div class="products_item block-grid four-up mobile">
-                                <div class="image_products">
-                                  	<%= image_tag ("img_stan_prod2.jpg") %>
-                              	</div>                                
-                                <div class="code_products">
-                                	COD: 9999
-                                </div>
-                                <div class="name_products">
-                                	Lorem Ipsum Dolor
-                                </div>                                
-                          </div>    
-                          <div class="products_item block-grid four-up mobile">
-                                <div class="image_products">
-                                  	<%= image_tag ("img_stan_prod1.jpg") %>
-                              	</div>                                
-                                <div class="code_products">
-                                	COD: 9999
-                                </div>
-                                <div class="name_products">
-                                	Lorem Ipsum Dolor
-                                </div>                                
-                         </div>  
-                            
-                          <div class="products_item block-grid four-up mobile">
-                                <div class="image_products">
-                                  	<%= image_tag ("img_stan_prod2.jpg") %>
-                              	</div>                                
-                                <div class="code_products">
-                                	COD: 9999
-                                </div>
-                                <div class="name_products">
-                                	Lorem Ipsum Dolor
-                                </div>                                
-                          </div>  
-                          <div class="products_item block-grid four-up mobile">
-                                <div class="image_products">
-                                  	<%= image_tag ("img_stan_prod1.jpg") %>
-                              	</div>                                
-                                <div class="code_products">
-                                	COD: 9999
-                                </div>
-                                <div class="name_products">
-                                	Lorem Ipsum Dolor
-                                </div>                                
-                         </div>  
-                            
-                          <div class="products_item block-grid four-up mobile">
-                                <div class="image_products">
-                                  	<%= image_tag ("img_stan_prod2.jpg") %>
-                              	</div>                                
-                                <div class="code_products">
-                                	COD: 9999
-                                </div>
-                                <div class="name_products">
-                                	Lorem Ipsum Dolor
-                                </div>                                
-                          </div>  
-                          <div class="products_item block-grid four-up mobile">
-                                <div class="image_products">
-                                  	<%= image_tag ("img_stan_prod1.jpg") %>
-                              	</div>                                
-                                <div class="code_products">
-                                	COD: 9999
-                                </div>
-                                <div class="name_products">
-                                	Lorem Ipsum Dolor
-                                </div>                                
-                         </div>  
-                            
-                          <div class="products_item block-grid four-up mobile">
-                                <div class="image_products">
-                                  	<%= image_tag ("img_stan_prod2.jpg") %>
-                              	</div>                                
-                                <div class="code_products">
-                                	COD: 9999
-                                </div>
-                                <div class="name_products">
-                                	Lorem Ipsum Dolor
-                                </div>                                
-                          </div>                                                                                                          
-                          <div class="products_item block-grid four-up mobile">
-                                <div class="image_products">
-                                  	<%= image_tag ("img_stan_prod1.jpg") %>
-                              	</div>                                
-                                <div class="code_products">
-                                	COD: 9999
-                                </div>
-                                <div class="name_products">
-                                	Lorem Ipsum Dolor
-                                </div>                                
-                         </div>  
-                            
-                          <div class="products_item block-grid four-up mobile">
-                                <div class="image_products">
-                                  	<%= image_tag ("img_stan_prod2.jpg") %>
-                              	</div>                                
-                                <div class="code_products">
-                                	COD: 9999
-                                </div>
-                                <div class="name_products">
-                                	Lorem Ipsum Dolor
-                                </div>                                
-                          </div>                                                    
-                        </div>
+                          
                     </div>
                 </div> 
 			</div>
