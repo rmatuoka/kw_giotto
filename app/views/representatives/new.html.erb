@@ -1,5 +1,6 @@
 <%content_for :head do%>
 <%= stylesheet_link_tag "representantes_v2"%>
+
 <% end %>
 <div class="container ">
     <div class="left_container six columns">
@@ -11,44 +12,30 @@
         <hr style="border-color:#f1454b;" class="twelve columns">
         <p class="text_container_p twelve columns">
         	Lorem ipsum dolor sit ametconsectetur adipiscing elit. Sed ornare porta nibh vitae lacinia. Phasellus ut nulla dolor. Integer eu metus orci, et semper neque. 
-        </p> 
-            <form>
-                <div class="twelve mobile-three columns">
-                  <input type="text" placeholder="Nome" class="eight">
+        </p>
+            <%= form_for ([@representative]) do |f| %>
+              <div class="twelve mobile-three columns">
+                  <%= f.text_field :name, :placeholder => "Nome", :class => "eight" %>
                 </div>
                 <div class="twelve mobile-three columns">
-                  <input type="text" placeholder="E-mail" class="eight">
+                  <%= f.text_field :email, :placeholder => "E-mail", :class => "eight" %>
                 </div>            
                 <div class="six mobile-three columns">
-                    <div href="#" class="small button dropdown">
-                      Selecione seu Estado
-                      <ul class="no-hover" style="top: 27px;">
-                        <li><a href="#">SP</a></li>
-                        <li><a href="#">RJ</a></li>
-                        <li><a href="#">AC</a></li>
-                      </ul>
-                    </div>  
+                  <%= f.select (:state, options_for_select([['SP'],['AM']]), :id => "customDropdown", :style => "display:none") %>
                 </div>
                 <br><br>
                 <div class="six mobile-three columns">
-                    <div href="#" class="small button dropdown">
-                      Selecione sua Cidade
-                      <ul class="no-hover" style="top: 27px;">
-                        <li><a href="#">Atibaia</a></li>
-                        <li><a href="#">Aguaí</a></li>
-                        <li><a href="#">Atibaia</a></li>
-                      </ul>
-                    </div>  
+                  <%= f.select (:city, options_for_select([['Atibaia'],['Piracaia']]), :class => "small button dropdown") %>
                 </div>   
                 <br><br>          
                 <div class="twelve mobile-three columns inp_margin">
-                  <input type="text" placeholder="Telefone Comercial" class="eight">
+                  <%= f.text_field :commercial_phone, :placeholder => "Telefone Comercial", :class => "eight"%>
                 </div> 
                 <div class="twelve mobile-three columns">
-                	<%= image_tag ("bt_enviar_repres.jpg")%>
+                	<%= image_submit_tag ("bt_enviar_repres.jpg")%>
                 </div>
           </form>               
- 	        
+ 	        <% end %>
     
         </div>
     </div>

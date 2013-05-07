@@ -35,4 +35,15 @@ class ApplicationController < ActionController::Base
        redirect_to login_path
      end
    end
+  
+  def create
+    @contact = Contact.new(params[:contact])
+    if @contact.save
+      ContactMailer.send_contact_to_adm(@contact).deliver
+      redirect_to root_path
+  
+  else
+    render :action => 'new'
+  end
+  end
 end
