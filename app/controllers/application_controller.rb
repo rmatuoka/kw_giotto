@@ -9,7 +9,11 @@ class ApplicationController < ActionController::Base
       redirect_to atualizar_index_path
     end 
   end
-     
+  
+  def new_contact
+    @contact = Contact.new
+  end
+  
   private
   
   def current_user_session
@@ -35,15 +39,5 @@ class ApplicationController < ActionController::Base
        redirect_to login_path
      end
    end
-  
-  def create
-    @contact = Contact.new(params[:contact])
-    if @contact.save
-      ContactMailer.send_contact_to_adm(@contact).deliver
-      redirect_to root_path
-  
-  else
-    render :action => 'new'
-  end
-  end
+   
 end

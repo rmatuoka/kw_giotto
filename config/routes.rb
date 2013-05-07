@@ -5,6 +5,8 @@ KwGiotto::Application.routes.draw do
 
   get "find_us/index"
   get "about_us/index"
+  get "home/create"
+  post "home/create"
     
   resources :products
   resources :representatives

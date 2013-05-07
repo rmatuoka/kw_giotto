@@ -14,37 +14,38 @@
         </p>
     </div>
     <div class="cont_box_right ">
-        <form>
+        
+          <%= form_for @contact, :url => home_create_path(@contact), :remote => true do |f| %>
               <div class="four columns">
-                <label class="right inline">Name</label>
+                <%= label_tag :name, "Nome", :class => "right inline"%>
+                </div>
+              <div class="eight  columns">
+                <%= f.text_field :name, :placeholder => "Nome", :class => "five"%>
+              </div>
+              <div class="four  columns">
+                <%= label_tag :email, "E-mail", :class => "right inline"%>
               </div>
               <div class="eight  columns">
-                <input type="text" placeholder="Nome" class="five">
+                <%= f.text_field :email, :placeholder => "E-mail", :class => "five"%>
               </div>
               <div class="four columns">
-                <label class="right inline">E-mail</label>
+                <%= label_tag :phone, "Telefone", :class => "right inline"%>
               </div>
               <div class="eight  columns">
-                <input type="text" placeholder="E-mail" class="five">
+                <%= f.text_field :phone, :placeholder => "Telefone", :class => "five"%>
               </div>
               <div class="four columns">
-                <label class="right inline">Telefone</label>
-              </div>
-              <div class="eight  columns">
-                <input type="text" placeholder="Telefone" class="five">
-              </div>
-              <div class="four columns">
-                <label class="right inline">Mensagem</label>
+                <%= label_tag :message, "Mensagem", :class => "right inline"%>
               </div>
               <div class="eight columns">
-                <textarea type="" placeholder="Mensagem" class="five">                </textarea>
+                <%= f.text_area :message, :placeholder => "Mensagem", :class => "five"%>
               </div>
               <div class="four columns">
               </div>
               <div class="eight  columns">
-                <a href="#"><img src="images/bt_enviar_contato.jpg"></a>
+                <%= image_submit_tag("bt_enviar_contato.jpg")%>
               </div>          
-        </form>  
+          <% end %>
     </div>
 </div>
 	</div>
