@@ -13,7 +13,7 @@
                         	<li><%= link_to "Lançamentos", releases_index_path %></li>
                             <% if @categories.count > 0 %>
                             <% @categories.each do |category| %>
-                            <li><%= link_to category.title, products_path %></li>
+                            <li><%= link_to category.title, product_path(category.id) %></li>
                             <% end %> 
                             <% end %>                           
                         </ul>
