@@ -1,0 +1,30 @@
+<%= image_tag ("bt_close_prod.png"), :class => "bt_close_prod"%>
+    <div class="content_area">
+        <div class="box_area">
+            <div class="box_area_left">
+                <div id="prev2"></div>
+            	<div id="next2"></div>
+                <div class="slideshow2" style="position: relative; width: 250px; height: 390px; overflow: hidden;">   	
+                    <% @product_images.each do |images| %>
+                      <%= image_tag(images.image("rotative"))%>
+                    <% end %>
+                    <%#=image_tag ("img_standbig.jpg"), :style =>"position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1;"%>
+                    <%#=image_tag ("img_standbig_2.jpg"), :style => "position: absolute; top: 0px; left: 0px; display: none; z-index: 1;"%>
+                </div>    
+            </div>
+            <div class="box_area_right">
+                <p class="title_prod"><%= @product.name %></p>
+                <p class="text_prod">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare porta nibh vitae lacinia. Phasellus ut nulla dolor. Integer eu metus orci, et semper neque. </p>
+                <p class="title_spec">Especificações:</p>
+                <p class="text_prod"><b>Código: </b><%= @product.code %></p>
+                <p class="text_prod"><b>Código EAN-13: </b><%= @product.ean %></p>
+                <p class="text_prod"><b>Código DUN-14: </b><%= @product.dun %></p>
+                <p class="text_prod"><b>Peso Un: </b><%= @product.weight %></p>
+                <p class="text_prod"><b>Peso Total: </b><%= @product.total_weight %></p>
+                <p class="text_prod"><b>Cubagem: </b><%= @product.cubage %></p>
+                <p class="text_prod"><b>Quantidade: </b><%= @product.amount %></p>
+                <p class="text_prod"><b>Dimensões: </b><%= @product.dimensions %></p>
+                <p class="text_prod"><b>Cores: </b><%= @product.color %></p>
+            </div>
+        </div>
+    </div>

@@ -1,6 +1,6 @@
 class RepresentativesController < ApplicationController
 layout  "template2013"
-
+before_filter :new_contact
   def index
     redirect_to new_representative_path
   end

@@ -1,16 +1,18 @@
 KwGiotto::Application.routes.draw do
 
-
   get "releases/index"
-
-  get "find_us/index"
   get "about_us/index"
   get "home/create"
   post "home/create"
     
-  resources :products
+  resources :products do
+    member do
+      get "show_category"
+      get "show_product"
+    end
+  end
   resources :representatives
-
+  resources :find_us
   resources :user_sessions
   resources :users
   resources :password_resets

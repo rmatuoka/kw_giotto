@@ -1,24 +1,8 @@
 <%content_for :head do%>
 <%= stylesheet_link_tag "produtos_espec"%>
 <% end %>	
-<div class="container_prod" style="display: none;">
-    <%= image_tag ("bt_close_prod.png"), :class => "bt_close_prod"%>
-    <div class="content_area">
-        <div class="box_area">
-            <div class="box_area_left">
-                <div id="prev2"></div>
-            	<div id="next2"></div>
-                <div class="slideshow2" style="position: relative; width: 250px; height: 390px; overflow: hidden;">   	
-                    <%=image_tag ("img_standbig.jpg"), :style =>"position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1;"%>
-                    <%=image_tag ("img_standbig_2.jpg"), :style => "position: absolute; top: 0px; left: 0px; display: none; z-index: 1;"%>
-                </div>    
-            </div>
-            <div class="box_area_right">
-                <p class="title_prod">Lorem Ipsum Dolor</p>
-                <p class="text_prod">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare porta nibh vitae lacinia. Phasellus ut nulla dolor. Integer eu metus orci, et semper neque. </p>
-            </div>
-        </div>
-    </div>
+<div id="container_prod" class="container_prod" style="display: none;">
+    
 </div>
 <div class="container ">
     <div class="left_container three columns left">
@@ -31,25 +15,15 @@
             <div class="products_menu">
                 <ul>
                   <% @categories.each do |category| %>
-                    <li class="p_item"><%= category.title %></li>
+                    <li class="p_item"><%= link_to category.title, show_category_product_path(category.id), :remote => true %></li>
                   <% end %>
                 </ul>
             </div>  
                <div id="scrollbar1">
                     <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
                     <div class="viewport">
-                        <div class="overview">
-                          <div class="products_item block-grid four-up mobile">
-                                <div class="image_products">
-                                  	<%= image_tag ("img_stan_prod1.jpg") %>
-                              	</div>                                
-                                <div class="code_products">
-                                	COD: 9999
-                                </div>
-                                <div class="name_products">
-                                	Lorem Ipsum Dolor
-                                </div>                                
-                         </div>  
+                        <div class="overview" id="show_product">
+ 
                             
                           
                     </div>
@@ -62,16 +36,12 @@
 <script>
   $(document).ready(function(){
      $(".container_prod").hide();
-    $(".products_item").click(function () {
+    $(".products_item a").click(function () {
 		
       $(".container_prod").fadeIn("slow");
 	  
     });
-    $(".bt_close_prod").click(function () {
-		
-      $(".container_prod").fadeOut("slow");
-	  
-    });	
+    
 
   });
   
@@ -84,19 +54,6 @@ $(document).ready(function() {
 	$(window).resize(function(){
 	$('#scrollbar1').tinyscrollbar_update();
 	});	
-	
-	
-	
-	$('.slideshow2').cycle({ 
-		fx:     'scrollHorz', 
-        slideResize: false,
-        fit: 1,			
-		prev:   '#prev2', 
-		next:   '#next2',  
-		timeout: 0 
-	});
-
-
 
 });
 	

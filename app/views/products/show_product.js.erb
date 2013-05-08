@@ -1,0 +1,14 @@
+$('#container_prod').html("<%=escape_javascript(render('product'))%>");
+$(".bt_close_prod").click(function () {
+		
+      $(".container_prod").fadeOut("slow");
+	  
+    });
+$('.slideshow2').cycle({ 
+		fx:     'scrollHorz', 
+        slideResize: false,
+        fit: 1,			
+		prev:   '#prev2', 
+		next:   '#next2',  
+		timeout: 0 
+	});
