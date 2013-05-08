@@ -1,5 +1,6 @@
 <%content_for :head do%>
 <%= stylesheet_link_tag "lancamentos"%>
+<%= stylesheet_link_tag "produtos_espec"%>
 <script type="text/javascript">
 
 $(document).ready(function() {
@@ -24,6 +25,10 @@ $(document).ready(function() {
 	
 </script>
 <%end%>
+<div id="container_prod" class="container_prod" style="display: none;">
+    
+</div>
+
 <div class="container ">
     <div class="left_container three columns left">
         <div class="title_container">
@@ -36,30 +41,8 @@ $(document).ready(function() {
                     <div class="scrollbar" style="height: 570px;"><div class="track" style="height: 570px;"><div class="thumb" style="top: 0px; height: 144.52846975088968px;"><div class="end"></div></div></div></div>
                     <div class="viewport">
                         <div class="overview" style="top: 0px;">
-                          <% if @releases.count > 0 %>
-                          <% @releases.each do |release|%>
-                          <div class="products_item">
-                                <div class="image_products">
-                                  	<%= %>
-                              	</div>                                
-                                <div class="code_products">
-                                	COD: <%= release.code %>
-                                </div>
-                                <div class="name_products">
-                                	<%= release.name %>
-                                </div>                                
-                          </div> 
-                        <% end %>
-                        <% end %>  
-                              
-                            
-                            
-                            
-                           
-                            
-                            
-                                                                                                                                    
-                                                    
+                          <%=render "products/show", :collection => @products%>
+
                         </div>
                     </div>
                 </div> 
@@ -68,3 +51,17 @@ $(document).ready(function() {
 
 		</div>
 	</div>
+<script>
+  $(document).ready(function(){
+     $(".container_prod").hide();
+    $(".products_item a").click(function () {
+		
+      $(".container_prod").fadeIn("slow");
+	  
+    });
+    
+
+  });
+  
+ 
+ </script>
