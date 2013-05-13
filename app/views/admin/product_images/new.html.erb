@@ -1,5 +1,5 @@
 <% title "New Admin/Product Image" %>
-
+<h2> Imagens do produto: <%= @product.name %> / <%= @product.color %> / <%= @product.code %></h2>
 <%= render 'form' %>
 
 <p><%= link_to "Back to List", admin_category_product_product_images_path %></p>

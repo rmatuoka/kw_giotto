@@ -23,11 +23,11 @@ layout "inadmin"
   end
 
   def edit
-    @product = @category.products(params[:id])
+    @product = @category.products.find(params[:id])
   end
 
   def update
-    @product = Product.find(params[:id])
+    @product = @category.products.find(params[:id])
     if @product.update_attributes(params[:product])
       redirect_to admin_category_product_path(@category,@product), :notice  => "Successfully updated product."
     else

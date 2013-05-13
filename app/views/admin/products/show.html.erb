@@ -45,6 +45,10 @@
   <%= @product.novelty %>
 </p>
 <p>
+  <strong>Descrição:</strong>
+  <%= @product.description %>
+</p>
+<p>
   <strong>Published:</strong>
   <%= @product.published %>
 </p>
@@ -58,7 +62,7 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_admin_product_path(@product) %> |
-  <%= link_to "Destroy", [:admin, @product], :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", admin_products_path %>
+  <%= link_to "Edit", edit_admin_category_product_path(@category,@product) %> |
+  <%= link_to "Destroy", admin_category_product_path(@category,@product), :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_category_products_path(@category) %>
 </p>

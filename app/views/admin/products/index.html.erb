@@ -19,7 +19,8 @@
     <th>Categoria</th>
   </tr>
   <% for product in @products %>
-    <tr>
+    <tr <%= "style=background-color:grey" if product.description.blank?%>>
+      <td><%= link_to "Editar", edit_admin_category_product_path(@category,product), :class => "button secondary" %></td>
       <td><%= product.code %></td>
       <td><%= product.name %></td>
       <td><%= product.ean %></td>
@@ -34,10 +35,10 @@
       <td><%= print_active(product.published) %></td>
       <td><%= print_active(product.active) %></td>
       <td><%= product.category_id %></td>
-      <td><%= link_to "Visualizar", admin_category_product_path(@category,product) %></td>
-      <td><%= link_to "Editar", edit_admin_category_product_path(@category,product) %></td>
+      <td><%= link_to "Visualizar", admin_category_product_path(@category,product), :class => "button secondary" %></td>
+      <td><%= link_to "Editar", edit_admin_category_product_path(@category,product), :class => "button secondary" %></td>
       <td><%= link_to "Imagem de Produto", admin_category_product_product_images_path(@category,product), :class => "button secondary" %></td>
-      <td><%= link_to "Deletar", admin_category_product_path(@category,product), :confirm => 'Tem certeza?', :method => :delete %></td>
+      <td><%= link_to "Deletar", admin_category_product_path(@category,product), :class => "button secondary", :confirm => 'Tem certeza?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

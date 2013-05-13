@@ -1,5 +1,6 @@
-<%= form_for ([:admin,@category,@product], :html => { :multipart => :true }) do |f| %>
+<%= form_for([:admin,@category,@product], :html => { :multipart => :true }) do |f| %>
   <%= f.error_messages %>
+  <p><%= f.submit "Salvar", :class => "button" %></p>
   <p>
     <%= f.label :code, "Código" %><br />
     <%= f.text_field :code, :placeholder => "Código" %>
@@ -7,6 +8,10 @@
   <p>
     <%= f.label :name, "Nome" %><br />
     <%= f.text_field :name, :placeholder => "Nome" %>
+  </p>
+  <p>
+    <%= f.label :description, "Descrição" %><br />
+    <%= f.text_area :description %>
   </p>
   <p>
     <%= f.label :ean, "Código EAN-13" %><br />

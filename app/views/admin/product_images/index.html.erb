@@ -1,14 +1,16 @@
 <% title "Imagens do Produto" %>
 <h1>Imagens do Produto</h1>
+<h2><%= @product.name %></h2>
 <table>
   <tr>
-    <th>Active</th>
-    <th>Published</th>
+    <th>Ativa</th>
+    <th>Publicada</th>
   </tr>
   <% for product_image in @product_images %>
     <tr>
       <td><%= print_active(product_image.active) %></td>
       <td><%= print_active(product_image.published) %></td>
+      <td><%= image_tag(product_image.image.url(:thumb))%></td>
       <td><%= link_to "Show", admin_category_product_product_image_path(@category,@product,product_image) %></td>
       <td><%= link_to "Edit", edit_admin_category_product_product_image_path(@category,@product,product_image) %></td>
       <td><%= link_to "Destroy", admin_category_product_product_image_path(@category,@product,product_image), :confirm => 'Are you sure?', :method => :delete %></td>

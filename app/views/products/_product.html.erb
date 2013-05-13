@@ -2,8 +2,10 @@
     <div class="content_area">
         <div class="box_area">
             <div class="box_area_left">
+                <% if @product_images.count > 1%>
                 <div id="prev2"></div>
             	<div id="next2"></div>
+              <% end %>
                 <div class="slideshow2" style="position: relative; width: 250px; height: 390px; overflow: hidden;">   	
                     <% @product_images.each do |images| %>
                       <%= image_tag(images.image("rotative"))%>
@@ -14,7 +16,7 @@
             </div>
             <div class="box_area_right">
                 <p class="title_prod"><%= @product.name %></p>
-                <p class="text_prod">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare porta nibh vitae lacinia. Phasellus ut nulla dolor. Integer eu metus orci, et semper neque. </p>
+                <p class="text_prod"><%= @product.description %></p>
                 <p class="title_spec">Especificações:</p>
                 <p class="text_prod"><b>Código: </b><%= @product.code %></p>
                 <p class="text_prod"><b>Código EAN-13: </b><%= @product.ean %></p>

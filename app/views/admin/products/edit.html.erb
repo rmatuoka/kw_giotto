@@ -1,8 +1,8 @@
-<% title "Edit Admin/Product" %>
-
+<% title "Editar Produto" %>
+<h1>Editar</h1>
 <%= render 'form' %>
 
 <p>
-  <%= link_to "Show", [:admin, @product] %> |
-  <%= link_to "View All", admin_products_path %>
+  <%= link_to "Show", admin_category_product_path(@category, @product) %> |
+  <%= link_to "View All", admin_category_products_path %>
 </p>
