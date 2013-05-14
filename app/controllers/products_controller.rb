@@ -7,7 +7,8 @@ before_filter :new_contact
   
   def show_category
     @category = Category.find_by_id(params[:id])
-    @products = Product.all(:joins=>"LEFT JOIN `product_images` ON `product_images`.`product_id` = `products`.`id`", :conditions => ["products.category_id=?",@category.id]) 
+    @products = @category.products
+
   end
   
   def show_product
