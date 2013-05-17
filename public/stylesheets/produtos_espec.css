@@ -139,13 +139,18 @@
 				font-family:HelveticaCondensedLight;
 				font-weight:bold;
 				font-size:18px;
-				color:#b0b0b0 !important;
+				color:#b0b0b0;
 				text-align:center;			
 			}
 			li.p_item a:hover{
 				color:#fff !important;
 				background:#ed1d24;
 			}
+      .category_active{
+        color:#fff !important;
+				background:#ed1d24;
+        color:#FFF !important;
+      }
 		
 			.products_item{
 				position:relative;
@@ -307,7 +312,7 @@
 
 /*jcicle produtos interna*/
 .slideshow2 {margin:0 auto; width:461px; height:auto;  }  
-.slideshow2 img {width:250px; height:390px; padding: 18px 22px;} 
+.slideshow2 img {width:250px !important;} 
 #next2{position: absolute;top: 43%;right: 0px; float:right; background-image:url(../images/bt_next_arr_g.png); background-position:center; height:75px; width:50px; display:block;cursor:pointer;}
 #prev2{position: absolute;top: 43%;left: 0px;float:left; background-image:url(../images/bt_prev_arr_g.png); background-position:center; height:75px; width:50px; display:block;cursor:pointer;} 
 #nav {tex-align:center; position:absolute;margin-top:63.2%;margin-left:50%; border:#0F0; z-index:5000; height:30px; width:300px;  }

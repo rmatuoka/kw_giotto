@@ -8,10 +8,14 @@
               <% end %>
                 <div class="slideshow2" style="position: relative; width: 250px; height: 390px; overflow: hidden;">   	
                     <% @product_images.each do |images| %>
-                      <%= image_tag(images.image("rotative"))%>
+                      <table height="390" style="border-style:none;display:table !important;">
+                        <tr>
+                          <td align="center" valign="middle" style="vertical-align:middle !important;">
+                          <%= image_tag(images.image("rotative"))%>
+                          </td>
+                        </tr>
+                      </table>
                     <% end %>
-                    <%#=image_tag ("img_standbig.jpg"), :style =>"position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1;"%>
-                    <%#=image_tag ("img_standbig_2.jpg"), :style => "position: absolute; top: 0px; left: 0px; display: none; z-index: 1;"%>
                 </div>    
             </div>
             <div class="box_area_right">
