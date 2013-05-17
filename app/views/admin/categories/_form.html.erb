@@ -1,4 +1,4 @@
-<%= form_for [:admin, @category] do |f| %>
+<%= form_for ([:admin, @category], :html => { :multipart => :true }) do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :title, "Título:" %><br />
