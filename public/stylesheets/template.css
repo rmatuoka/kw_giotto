@@ -74,7 +74,7 @@ margin-bottom: 0;
 		z-index: 90;		
 		min-width:194px;
 		width:auto;
-		border:transparent 1px solid;
+		border:none;
 		padding-top:4px;
 		padding-bottom:19px;
 		background-image:url(../images/bg_trans_submenu.png);
@@ -97,10 +97,12 @@ margin-bottom: 0;
 		margin-top:18px !important;
 		width:auto !important;
 		border:none !important;
-		height:18px !important;	
 		line-height: 16px !important;
 		color:#fff !important;
 		cursor:pointer !important;
+		padding-top:12px;
+		padding-bottom:12px;
+		display: block;
 	}			
 	.menu ul.sub_menu li:hover{
 		
@@ -117,7 +119,6 @@ margin-bottom: 0;
 	width:100%;	
 	height:auto;
 	display:block;
-	border:#CF3 1px solid;
 	}
 
 .contato_box{

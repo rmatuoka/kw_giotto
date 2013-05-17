@@ -13,10 +13,8 @@
 }
 	.left_container{
 		position: relative;
-		
 		padding:35px 11px 0px 18px;
 		height:auto;
-		min-width:300px;
 	}
 		.title_left_container{
 			background-color:#ed1d24;
