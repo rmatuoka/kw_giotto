@@ -17,11 +17,7 @@
   <%= javascript_include_tag :defaults %> 
   <%= javascript_include_tag "modernizr.foundation" %>
 <style>
-.slideshow {margin-bottom:66.2%; width:100%; height:auto; }  
-.slideshow img {width:100%!important; height:auto;}  
-#nav {tex-align:center; position:absolute;bottom:1%;margin-left:50%; border:#0F0; z-index:2000; height:30px; width:300px;  }
-#nav a{ color:transparent;float:left; height:21px; width:21px;display:block; margin-right:11px; background-image:url(images/bg_nav_slider_off.png); background-position:3px 3px; background-repeat:no-repeat;}	
-#nav .activeSlide{ background-image:url(images/bg_nav_slider_on.png); background-repeat:no-repeat;background-position:0px 0px;}
+
 </style>
 <%=yield :head%>   
 </head>
@@ -73,26 +69,44 @@ function resizegiotto(){
         }
     });	
 }
+
+function ajustaTela() {
+    height = $(window).height()-$('#footer').height()-$('#header').height()-25;
+    $('#content').height(height);
+}
+
 $(document).ready(function() {
 	
-    $('.slideshow').cycle({  
-      fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc... 
-	  pager: '#nav',
-	  	sync: true, 
-		containerResize: false,
-        slideResize: false,
-        fit: 1,		    
+<% if !browser.mobile? %>	
+	ajustaTela();	
+	$(window).resize(function() {
+		ajustaTela();
 	});
+<% end %>
 
-
+$('.slideshow').cycle({  
+	fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc... 
+	pager: '#nav',
+	sync: true, 
+	containerResize: false,
+	slideResize: true,
+	width: '100%',
+	fit: 1,
+	speed:1000,
+	timeout: 5000,
 	
-    $( "#tela_ajustavel" ).each(function() {
-        var newHeight = 0, $this = $( this );
-        $.each( $this.children(), function() {
-            newHeight += $( this ).height();
-        });
-        $this.height( newHeight );
-    });
+});
+	
+ //   $( "#tela_ajustavel" ).each(function() {
+ //       var newHeight = 0, $this = $( this );
+ //       $.each( $this.children(), function() {
+ //           newHeight += $( this ).height();
+ //       });
+ //       $this.height( newHeight );
+ //   });
+
+
+
 	
   $(".contato_box").hide();	
   $("#contato_bt").click(function () {
