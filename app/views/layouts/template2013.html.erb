@@ -14,8 +14,12 @@
   <%= stylesheet_link_tag "foundation"%>
   <%= stylesheet_link_tag "app"%>
   <%= stylesheet_link_tag "template"%>
-  <%= javascript_include_tag :defaults %> 
+  <%= javascript_include_tag :defaults %>
+  <%=javascript_include_tag "jquery.validate.min.js"%>
+  <%=javascript_include_tag "jquery.meio.mask.js"%>
   <%= javascript_include_tag "modernizr.foundation" %>
+
+
 <style>
 .slideshow {margin-bottom:66.2%; width:100%; height:auto; }  
 .slideshow img {width:100%!important; height:auto;}  
@@ -40,9 +44,11 @@
   <script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
   <%= javascript_include_tag "jquery.tinyscrollbar.min"%>
   
+    
     <script>
     $(window).load(function(){
       $("#featured").orbit();
+     
     });
     </script> 
 <script type="text/javascript">
@@ -84,7 +90,6 @@ $(document).ready(function() {
         fit: 1,		    
 	});
 
-
 	
     $( "#tela_ajustavel" ).each(function() {
         var newHeight = 0, $this = $( this );
@@ -103,9 +108,7 @@ $(document).ready(function() {
     }
   });
 
-
 });
-	
 </script>
 
 </body>

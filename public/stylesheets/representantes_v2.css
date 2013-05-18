@@ -84,6 +84,14 @@
 		margin:0 auto;
 		background-image:url(../images/bg_image_container.png);
 	}
+  
+  #representative_state{
+    border-color: #abd047 !important;
+    background-color: #e0383e !important;
+    font-weight: bold;
+    color: white !important;
+    height: 32px;
+}
 @media only screen and (max-width: 1260px)
 {
 .right_container{display:none;	}
