@@ -2,25 +2,56 @@
 <%= stylesheet_link_tag "home"%>
 
 <% end %>	
-  <div class="container">
-        	<div class=" saiba_mais_container ">
-            	<div class="sm_ct_1">Lorem Ipsum Dolor</div>
-                <div class="sm_ct_2">Sit Amet</div>
-                <div class="sm_ct_3">
-                	Lorem ipsum dolor sit amet, consectetur adipiscing<br />
-                    elit. Sed ornare porta nibh vitae lacinia. Phasellus ut<br />
-                    nulla dolor. Integer eu metus orci, et semper neque. 
-                </div>
-                <a href="#"><img src="images/bt_saibamais.jpg" class="bt_saibamais"></a>
-        	</div>
-           <div id="nav" style="">
-           </div>  
-           <div class="slideshow"  id="images_c" >
-			<img src="images/destaque_1.jpg"  > 
-			<img src="images/destaque_2.jpg"  >
-            <img src="images/destaque_1.jpg"  > 
-                  
-           </div> 
+<div class="container" id="content">
 
-  	</div>
+	<div id="nav">
 
+	</div>  
+	<div class="slideshow"  id="images_c" >
+		
+		
+		<div>
+			<div class=" saiba_mais_container ">
+				<div class="sm_ct_1">Organize sua casa</div>
+				<div class="sm_ct_2">com Giotto</div>				
+				<div class="sm_ct_3">
+					Organize roupas ou produtos de limpeza com um cesto versátil e bonito.
+				</div>
+				<%= link_to(image_tag("bt_saibamais.jpg", :class=>"bt_saibamais"),product_path(7))%>
+			</div>	
+			<%= image_tag("DestaqueCesto.jpg", :class=>"img_show")%>			
+		</div>
+		
+		<div>
+			<div class=" saiba_mais_container ">
+				<div class="sm_ct_1">Bem-vindo à Giotto</div>
+				<div class="sm_ct_3">
+					O que faz de uma casa um verdadeiro lar são as pessoas, as cores e sentimentos<br />
+					compartilhados em cada cantinho. Por isso, produzimos linhas que completam sua casa de um <br /><br />
+					jeito muito especial.<br /> <br />
+					Você, sua família e seu lar merecem Giotto.
+				</div>
+				<%= link_to(image_tag("bt_saibamais.jpg", :class=>"bt_saibamais"),about_us_index_path)%>	
+			</div>	
+			<%= image_tag("DestaqueFamilia.jpg", :class=>"img_show")%>			
+		</div>		
+		
+		<div>
+			<div class=" saiba_mais_container ">
+				<div class="sm_ct_1">Mais beleza </div>
+				<div class="sm_ct_2">para sua casa</div>
+				<div class="sm_ct_3">
+					Um novo design com a qualidade que você já conhece.<br /><br />
+					Novos baldes Giotto: sua casa mais bonita e funcional
+				</div>
+				<%= link_to(image_tag("bt_saibamais.jpg", :class=>"bt_saibamais"), releases_index_path())%>	
+			</div>	
+			<%= image_tag("DestaqueBalde.jpg", :class=>"img_show")%>
+		</div>		
+		
+		
+	</div> 
+</div>
+<script type="text/javascript">
+
+</script>

@@ -16,7 +16,8 @@
 		position:relative;
 		width:165px;
 		top:35px;
-		height:128px;	
+		/*height:128px;*/	
+		height:80px;		
 		left:60px;
 	}
 	.menu_container{
@@ -102,7 +103,7 @@ margin-bottom: 0;
 		cursor:pointer !important;
 		padding-top:12px;
 		padding-bottom:12px;
-		display: block;
+		display: block;		
 	}			
 	.menu ul.sub_menu li:hover{
 		
@@ -119,6 +120,7 @@ margin-bottom: 0;
 	width:100%;	
 	height:auto;
 	display:block;
+	border:transparent 1px solid; /* Borda maligna */
 	}
 
 .contato_box{

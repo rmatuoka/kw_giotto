@@ -21,11 +21,7 @@
 
 
 <style>
-.slideshow {margin-bottom:66.2%; width:100%; height:auto; }  
-.slideshow img {width:100%!important; height:auto;}  
-#nav {tex-align:center; position:absolute;bottom:1%;margin-left:50%; border:#0F0; z-index:2000; height:30px; width:300px;  }
-#nav a{ color:transparent;float:left; height:21px; width:21px;display:block; margin-right:11px; background-image:url(images/bg_nav_slider_off.png); background-position:3px 3px; background-repeat:no-repeat;}	
-#nav .activeSlide{ background-image:url(images/bg_nav_slider_on.png); background-repeat:no-repeat;background-position:0px 0px;}
+
 </style>
 <%=yield :head%>   
 </head>
@@ -52,52 +48,31 @@
     });
     </script> 
 <script type="text/javascript">
-function resizegiotto(){
-    var $img = $("#images_c");
-    var ratio;
-    var offsetX = $img.offset().left;
-    var offsetY = $img.offset().top;
-
-    $(window).load(function () {
-        ratio = $img.width() / $img.height();
-        $(this).resize();
-    });
-
-    $(window).resize(function () {
-		
-        var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-        var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-        var availWidth = viewportWidth - offsetX - 25;
-        var availHeight = viewportHeight - offsetY - 25;
-
-        if (availWidth / availHeight > ratio) {
-            $img.height(availHeight);
-            $img.width(availHeight * ratio);
-        } else {
-            $img.width(availWidth);
-            $img.height(availWidth / ratio);
-        }
-    });	
+function ajustaTela() {
+    height = $(window).height()-$('#footer').height()-$('#header').height()-25;
+    $('#content').height(height);
 }
+
 $(document).ready(function() {
 	
-    $('.slideshow').cycle({  
-      fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc... 
-	  pager: '#nav',
-	  	sync: true, 
-		containerResize: false,
-        slideResize: false,
-        fit: 1,		    
+<% if !browser.mobile? %>	
+	ajustaTela();	
+	$(window).resize(function() {
+		ajustaTela();
 	});
+<% end %>
 
-	
-    $( "#tela_ajustavel" ).each(function() {
-        var newHeight = 0, $this = $( this );
-        $.each( $this.children(), function() {
-            newHeight += $( this ).height();
-        });
-        $this.height( newHeight );
-    });
+	$('.slideshow').cycle({  
+		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc... 
+		pager: '#nav',
+		sync: true, 
+		containerResize: false,
+		slideResize: true,
+		width: '100%',
+		fit: 1,
+		speed:1000,
+		timeout: 5000	
+	});
 	
   $(".contato_box").hide();	
   $("#contato_bt").click(function () {
