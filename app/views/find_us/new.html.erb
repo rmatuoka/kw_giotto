@@ -28,8 +28,12 @@ $(document).ready(function() {
         <div class="title_container ">
             <h1 class="title_left_container twelve columns">Onde Encontrar</h1>
         </div>
-		
+        		
         <div class="text_container twelve columns">
+          <hr style="border-color:#f1454b;" class="twelve columns">
+        <p class="text_container_p twelve columns">
+        	Para encontrar produtos Giotto perto de você, preencha os campos abaixo e aguarde nosso contato. 
+        </p>
             <%= form_for @find, :as => "post", :url => find_us_path do |f| %>
               <div class="twelve mobile-three columns">
                   <%= f.text_field :name, :placeholder => "Nome", :class => "eight" %>
@@ -38,14 +42,14 @@ $(document).ready(function() {
                   <%= f.text_field :mail, :placeholder => "E-mail", :class => "eight" %>
                 </div>            
                 <div class="six mobile-three columns">
-                  <%= f.select (:state, options_for_select([['AC'],['AL'],['AP'],['AM'],['BA'],['CE'],['DF'],['ES'],['GO'],['MA'],['MT'],['MS'],['MG'],['PA'],['PB'],['PR'],['PE'],['PI'],['RJ'],['RN'],['RS'],['RO'],['RR'],['SC'],['SP'],['SE'],['TO']]), :id => "customDropdown", :style => "display:none") %>
-                </div>
-                <br><br>
-                <div class="six mobile-three columns">
                   <%= f.text_field :city, :placeholder => "Cidade", :class => "eight"%>
                 </div>   
-                <br><br>          
-                <div class="twelve mobile-three columns inp_margin">
+                <br><br><div class="one column"></div> 
+                <div class="five mobile-three columns">
+                  <%= f.select (:state, options_for_select([['Selecione o Estado',''],['AC'],['AL'],['AP'],['AM'],['BA'],['CE'],['DF'],['ES'],['GO'],['MA'],['MT'],['MS'],['MG'],['PA'],['PB'],['PR'],['PE'],['PI'],['RJ'],['RN'],['RS'],['RO'],['RR'],['SC'],['SP'],['SE'],['TO']]), :id => "customDropdown",:class => "state_input", :style => "display:none") %>
+                </div>
+                <br><br>         
+                <div class="twelve mobile-three columns">
                   <%= f.text_field :commercial_phone, :placeholder => "Telefone Comercial", :class => "eight"%>
                 </div> 
                 <div class="twelve mobile-three columns">
@@ -60,4 +64,140 @@ $(document).ready(function() {
     <div class="right_container six columns">
 
     </div>
+<script>
+/* Mascaras personalizadas */ 
+$.mask.masks = $.extend($.mask.masks,{
+
+   phone_sp:{ mask: '(99) 99999-9999'}
+
+});
+
+(function($){
+
+   $(function(){
+
+       $('input:text').setMask();
+
+
+
+
+        /* Personalização para celulares de SP*/
+
+       $('#post_commercial_phone').keydown(function(event) {
+
+             // Act on the event
+
+             if($(this).val().substring(1,6) == '11) 9'){
+
+                 $(this).attr('alt','phone_sp');
+
+             }else{
+
+                 $(this).attr('alt','phone');
+
+            }
+
+           $(this).setMask();
+
+       });
+
+   });
+
+})($);
+
+  
+  $('#post_new').validate({
+
+       rules: {
+
+           "post[name]": {
+
+               required: true,
+
+               minlength: 6
+
+           },
+
+          "post[commercial_phone]": {
+
+               required: true,
+
+               minlength: 13
+
+           },
+           "post[mail]": {
+              required: true,
+              email: true,
+              minlength: 12
+              
+              
+           },
+           "post[city]":{
+              required: true,
+              
+              minlength: 3
+           },
+           "post[state]":{
+              required: true,
+              maxlength: 2
+           }
+
+       },
+
+       messages: {
+
+           "post[name]":{
+
+required: "Preencha o Nome",
+
+minlength: "Informe um Nome valido"
+
+},
+
+"post[commercial_phone]":{
+
+required: "O campo Telefone deve ser preenchido",
+
+minlength: "Informe um Telefone valido"
+
+},
+
+"post[mail]":{
+required: "O campo E-mail deve ser preenchido",
+
+minlength: "Informe um E-mail valido"
+},
+
+"post[state]":{
+required: "Selecione o Estado",
+
+maxlength: "Selecione o Estado"
+},
+"post[city]":{
+required: "Selecione a Cidade",
+
+minlength: "Selecione a Cidade"
+}
+
+       },
+
+errorPlacement: function(error,element){
+
+    error.insertAfter(element);
+
+    //alert(error.html());
+
+},
+
+showErrors: function(errorMap, errorList){
+
+      this.defaultShowErrors();
+
+}
+
+
+
+
+   });
+</script>
 </div>

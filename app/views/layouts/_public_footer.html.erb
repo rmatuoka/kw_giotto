@@ -13,6 +13,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nulla magna, facilisis et ullamcorper nec, laoreet nec elit. Donec sit amet quam orci, ut tempus magna. Integer vitae felis risus. Aliquam neque enim, vulputate vitae blandit vitae, fringilla vitae erat. Nulla erat ligula, volutpat quis blandit sed, vestibulum eget nulla.
         </p>
     </div>
+    
     <div class="cont_box_right ">
         
           <%= form_for @contact, :url => home_create_path(@contact), :remote => true do |f| %>
@@ -48,4 +49,125 @@
           <% end %>
     </div>
 </div>
+<script>
+
+
+/* Mascaras personalizadas */ 
+
+$.mask.masks = $.extend($.mask.masks,{
+
+   phone_sp:{ mask: '(99) 99999-9999'}
+
+});
+
+
+
+
+(function($){
+
+   $(function(){
+
+       $('input:text').setMask();
+
+
+
+
+        /* Personalização para celulares de SP*/
+
+       $('#contact_phone').keydown(function(event) {
+
+             // Act on the event
+
+             if($(this).val().substring(1,6) == '11) 9'){
+
+                 $(this).attr('alt','phone_sp');
+
+             }else{
+
+                 $(this).attr('alt','phone');
+
+            }
+
+           $(this).setMask();
+
+       });
+
+   });
+
+})($);
+
+
+  
+  $('#new_contact').validate({
+
+       rules: {
+
+           "contact[name]": {
+
+               required: true,
+
+               minlength: 6
+
+           },
+
+          "contact[phone]": {
+
+               required: true,
+
+               minlength: 13
+
+           },
+           "contact[email]": {
+              required: true,
+              
+              minlength: 12
+           }
+
+       },
+
+       messages: {
+
+           "contact[name]":{
+
+required: " *",
+
+minlength: " *"
+
+},
+
+"contact[phone]":{
+
+required: "O campo Telefone deve ser preenchido",
+
+minlength: "Informe um Telefone valido"
+
+},
+
+"contact[email]":{
+required: "O campo E-mail deve ser preenchido",
+
+minlenght: "Informe um E-mail valido"
+}
+
+       },
+
+errorPlacement: function(error,element){
+
+    error.insertAfter(element);
+
+    //alert(error.html());
+
+},
+
+showErrors: function(errorMap, errorList){
+
+      this.defaultShowErrors();
+
+}
+
+
+
+
+   });
+</script>
 	</div>

@@ -11,7 +11,7 @@ class FindUsController < ApplicationController
   end
   
   def create
-    @contact = Find.new(params[:find])
+    @contact = ::Find.new(params[:find])
     if @contact.save
       ContactMailer.send_findus_to_adm(@contact).deliver
       redirect_to find_u_path(@contact), :notice => "Mensagem de sucesso."
