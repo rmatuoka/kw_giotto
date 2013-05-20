@@ -226,6 +226,7 @@ margin-bottom: 0;
 	font-family:HelveticaCondensedLight;
 	font-size:14px;
 	color:#ed1d24 !important;
+	cursor: pointer;
 }
 .bt_facebook_align{
 	position:relative;

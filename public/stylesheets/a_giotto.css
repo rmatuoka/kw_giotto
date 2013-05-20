@@ -79,8 +79,8 @@
 /*jcicle a giotto*/
 .slideshow {margin:0 auto; width:461px; height:auto;  }  
 .slideshow img {width:100%!important; height:auto; padding: 18px 22px;} 
-#next{position: absolute;top:111px;right:-26%; float:right; background-image:url(../images/bt_next_cycle.png); background-position:center; height:173px; width:135px; display:block;}
-#prev{position: absolute;top:111px;left:-26%;float:left; background-image:url(../images/bt_prev_cycle.png); background-position:center; height:173px; width:135px; display:block;} 
+#next{position: absolute;top:111px;right:-26%; float:right; background-image:url(../images/bt_next_cycle.png); background-position:center; height:173px; width:135px; display:block;cursor: pointer;}
+#prev{position: absolute;top:111px;left:-26%;float:left; background-image:url(../images/bt_prev_cycle.png); background-position:center; height:173px; width:135px; display:block;cursor: pointer;} 
 #nav {tex-align:center; position:absolute;margin-top:63.2%;margin-left:50%; border:#0F0; z-index:5000; height:30px; width:300px;  }
 #nav a{ color:transparent;float:left; height:21px; width:21px;display:block; margin-right:11px; background-image:url(images/bg_nav_slider_off.png); background-position:3px 3px; background-repeat:no-repeat;}	
 #nav .activeSlide{ background-image:url(images/bg_nav_slider_on.png); background-repeat:no-repeat;background-position:0px 0px;}
