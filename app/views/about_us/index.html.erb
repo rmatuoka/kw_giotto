@@ -1,5 +1,9 @@
 <%content_for :head do%>
 <%= stylesheet_link_tag "a_giotto"%>
+  <%=stylesheet_link_tag "/fancybox/jquery.fancybox.css"%>
+<%=javascript_include_tag "jquery.fancybox.pack.js"%>
+<%=javascript_include_tag "jquery.fancybox.js"%>
+
 <script type="text/javascript">
 
 $(document).ready(function() {
@@ -17,9 +21,15 @@ $(document).ready(function() {
 		next:   '#next',  
 		timeout: 0 
 	});
-
-
-
+  
+  $(".fancybox").fancybox({
+    'transitionIn'	:	'fade',
+		'transitionOut'	:	'fade',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	false
+    });
+  
 });
 	
 </script>
@@ -35,7 +45,7 @@ $(document).ready(function() {
                 <div class="viewport">
                     <div class="overview" style="top: 0px;">
                         <p class="text_left_container">
-                            Fundada em 2009, a Giotto é uma empresa especializada na fabricação de produtos confeccionados em plástico. Com sede na cidade de Nazaré Paulista, destaca-se no ramo de utilidades domésticas, atendendo clientes em todo o território nacional.
+                            Fundada em 2000, a Giotto é uma empresa especializada na fabricação de produtos confeccionados em plástico. Com sede na cidade de Nazaré Paulista, destaca-se no ramo de utilidades domésticas, atendendo clientes em todo o território nacional.
                         </p>
                         <p class="text_left_container">
                             Constantemente preocupada em suprir as necessidades dos consumidores, a Giotto possui alta capacidade produtiva e frota de distribuição própria. Desse modo, seus produtos podem ser encontrados em diversos distribuidores, atacadistas ou lojas do ramo espalhadas por todo o país.
@@ -56,10 +66,21 @@ $(document).ready(function() {
             <div class="img_container">
             <div id="prev"></div>
             <div id="next"></div>	
-               <div class="slideshow" style="position: relative; width: 461px; height: 382px; overflow: hidden;">
-                <%=image_tag("01.jpg")%> 
-                <%=image_tag("02.jpg")%>
-                <%=image_tag("03.jpg")%>       
+               <div class="slideshow" style="position: relative; width: 461px; height: 320px; overflow: hidden;">
+                <a class="fancybox" rel="group" href="/images/01.jpg"><%=image_tag("01.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/02.jpg"><%=image_tag("02.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/03.jpg"><%=image_tag("03.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/04.jpg"><%=image_tag("04.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/05.jpg"><%=image_tag("05.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/06.jpg"><%=image_tag("06.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/07.jpg"><%=image_tag("07.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/08.jpg"><%=image_tag("08.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/09.jpg"><%=image_tag("09.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/10.jpg"><%=image_tag("10.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/11.jpg"><%=image_tag("11.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/12.jpg"><%=image_tag("12.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/13.jpg"><%=image_tag("13.jpg")%></a>
+                <a class="fancybox" rel="group" href="/images/14.jpg"><%=image_tag("14.jpg")%></a>
                </div>
             </div>     
                    

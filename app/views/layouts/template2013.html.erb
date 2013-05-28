@@ -11,18 +11,14 @@
   <!-- Included CSS Files (Uncompressed) -->
   
   <!-- Included CSS Files (Compressed) -->
-  <%= stylesheet_link_tag "foundation"%>
-  <%= stylesheet_link_tag "app"%>
-  <%= stylesheet_link_tag "template"%>
-  <%= javascript_include_tag :defaults %>
+  <%=stylesheet_link_tag "foundation"%>
+  <%=stylesheet_link_tag "app"%>
+  <%=stylesheet_link_tag "template"%>
+  <%=javascript_include_tag :defaults %>
   <%=javascript_include_tag "jquery.validate.min.js"%>
   <%=javascript_include_tag "jquery.meio.mask.js"%>
-  <%= javascript_include_tag "modernizr.foundation" %>
+  <%=javascript_include_tag "modernizr.foundation" %>
 
-
-<style>
-
-</style>
 <%=yield :head%>   
 </head>
 <body>
@@ -35,17 +31,16 @@
   -->
   
   <!-- Included JS Files (Compressed) -->
-  <%= javascript_include_tag "jquery.js"%>
   <!-- Initialize JS Plugins -->
   <script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
   <%= javascript_include_tag "jquery.tinyscrollbar.min"%>
-  
-    
-    <script>
+  <script>
     $(window).load(function(){
       $("#featured").orbit();
      
     });
+    
+
     </script> 
 <script type="text/javascript">
 function ajustaTela() {
@@ -72,8 +67,8 @@ $(document).ready(function() {
 		slideResize: true,
 		width: '100%',
 		fit: 1,
-		speed:1000,
-		timeout: 5000	
+		speed:2000,
+		timeout: 10000	
 	});
 	
   $(".contato_box").hide();	
@@ -84,9 +79,8 @@ $(document).ready(function() {
       $(".contato_box").slideUp();
     }
   });
-
 });
 </script>
-
+</div>
 </body>
 </html>
