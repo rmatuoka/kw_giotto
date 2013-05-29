@@ -1,6 +1,9 @@
 <%content_for :head do%>
 <%= stylesheet_link_tag "lancamentos"%>
 <%= stylesheet_link_tag "produtos_espec"%>
+<%=stylesheet_link_tag "/fancybox/jquery.fancybox.css"%>
+<%=javascript_include_tag "jquery.fancybox.pack.js"%>
+<%=javascript_include_tag "jquery.fancybox.js"%>
 <script type="text/javascript">
 
 $(document).ready(function() {
@@ -18,9 +21,8 @@ $(document).ready(function() {
 		next:   '#next',  
 		timeout: 0 
 	});
-
-
-
+	
+	    $(".fancybox").fancybox();
 });
 	
 </script>

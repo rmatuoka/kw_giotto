@@ -1,5 +1,8 @@
 <%content_for :head do%>
 <%= stylesheet_link_tag "produtos_espec"%>
+<%=stylesheet_link_tag "/fancybox/jquery.fancybox.css"%>
+<%=javascript_include_tag "jquery.fancybox.pack.js"%>
+<%=javascript_include_tag "jquery.fancybox.js"%>
 <% end %>	
 <div id="container_prod" class="container_prod" style="display: none;">
     
@@ -47,6 +50,8 @@
 	$(window).resize(function(){
 	$('#scrollbar1').tinyscrollbar_update();
 	});
+	
+    $(".fancybox").fancybox();
   });
  </script>
 

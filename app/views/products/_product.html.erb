@@ -11,7 +11,7 @@
                       <table height="390" style="border-style:none;display:table !important;">
                         <tr>
                           <td align="center" valign="middle" style="vertical-align:middle !important;">
-                          <%= image_tag(images.image("rotative"))%>
+                          <%=link_to (image_tag(images.image("rotative")), images.image.url, :class => "fancybox", :rel => @product.code)%>
                           </td>
                         </tr>
                       </table>
