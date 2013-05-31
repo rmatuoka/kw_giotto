@@ -1,0 +1,28 @@
+.login_box_h1 {
+font-family: HelveticaCondensedLight;
+font-weight: normal;
+font-size: 46px;
+color: #fff;
+margin: 0px;
+}
+
+body {
+    background-image: url(/images/bg_representantes.jpg);
+    background-repeat: no-repeat;
+}
+
+#box_login {
+top:10px;
+padding:10px;
+position: relative;
+background-image: url(/images/bg_trans_submenu.png);
+height: 100%;
+width: 100%;
+}
+
+p {
+font-family: HelveticaCondensedLight;
+font-weight: normal;
+font-size: 18px;
+color: #fff;
+}

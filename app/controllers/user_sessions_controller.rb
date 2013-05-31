@@ -1,7 +1,6 @@
 class UserSessionsController < ApplicationController
   before_filter :navegadorie6
-  layout "admin"
-  
+  layout "login"
   def new
     @user_session = UserSession.new
   end
@@ -21,4 +20,5 @@ class UserSessionsController < ApplicationController
     flash[:notice] = "Sessão finalizada com sucesso."
     redirect_to root_url
   end
+	
 end

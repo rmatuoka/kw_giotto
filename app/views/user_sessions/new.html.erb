@@ -2,7 +2,11 @@
 	content_for :title do "Login" end
 %>
 <%content_for :head do%>
-<%= stylesheet_link_tag "login"%>
+
+<%= stylesheet_link_tag "login_box"%>
+<%=stylesheet_link_tag "/fancybox/jquery.fancybox.css"%>
+<%=javascript_include_tag "jquery.fancybox.pack.js"%>
+<%=javascript_include_tag "jquery.fancybox.js"%>
 <script>
 	var htmlold = "";
 	
@@ -23,7 +27,7 @@
 				jQuery('#box_login').html(response);
 		    },
 		    error: function(){ 
-				alert('Falha ao carregar a página!') ;
+				alert('Falha ao carregar a pÃ¡gina!') ;
 				jQuery('#loading-forgot').hide();
 			}
 		  })
@@ -46,9 +50,9 @@
 </script>
 <%end%>
 <div id="box_login" class="twelve columns">
-	<h1>Área Restrita</h1><br />
-	<p>Área Restrita. Para acessá-la faça seu login abaixo.</p><br />
-	
+	<h1 class="login_box_h1">Área Restrita</h1><br />
+	<p>Área Restrita. Para acessa-la faça seu login abaixo.</p><br />
+	<hr style="border-color:#f1454b;" class="twelve columns">
 	<div id="flash_error_cadastro" style="display:none;"></div>
 	
 	<%= form_for @user_session, :remote => true do |f| %>
@@ -67,9 +71,6 @@
 		<p><%= f.submit "Enviar", :class => "button" %></p>
 		<%= image_tag "loading.gif", :style => 'display:none;', :id => 'loading-forgot' %>
 		<br />
-		<p class="EsqueciSenha">
-			<%= link_to "Esqueceu a senha? Clique aqui", "#", :onclick=>"novoConteudo()" %>
-		</p>
 	<% end %>
 </div>
 

@@ -18,8 +18,8 @@ class User < ActiveRecord::Base
     @role
     if self.has_role? :admin
       @role = :admin
-    elsif self.has_role? :supervisor
-      @role = :supervisor
+    elsif self.has_role? :representante
+      @role = :representante
     elsif self.has_role? :user
       @role = :user
     end
