@@ -1,7 +1,7 @@
 .container{
 	position: relative;
 	height:718px;
-	background-image:url(../images/bg_produtos.jpg);
+	background-image:url(/images/bg_produtos.jpg);
 	background-repeat:no-repeat;
 	background-position:center center;
 	-o-background-size: 100% 100%, auto;
@@ -16,7 +16,7 @@
 	z-index:3000;
 	height:718px;
 	width:100%;
-	background-image:url(../images/bg_trans_submenu.png);
+	background-image:url(/images/bg_trans_submenu.png);
 	background-position:center center;
 	-o-background-size: 100% 100%, auto;
 	-moz-background-size: 100% 100%, auto;
@@ -134,7 +134,7 @@
 				display:block;
 				margin-right:36px;
 				position:relative;
-				padding:13px 20px 13px 20px; 
+				padding:13px 10px;
 			 	float:left;
 				font-family:HelveticaCondensedLight;
 				font-weight:bold;
@@ -165,7 +165,7 @@
 					position:relative;
 					width:auto;
 					text-align:center;
-					height: 200px;
+					height: 150x;
 					
 				}
 				.image_products img{
@@ -321,7 +321,7 @@
 
 
 /*scroll personalizado*/
-#scrollbar1 {width: auto; height:100%;clear: both; margin: 0px 0 0px; }
+#scrollbar1 {width: auto; height:100%;clear: both; margin:60px 0px 0px 0px; }
 #scrollbar1 .viewport { width: auto; height:90%; overflow: hidden; position: relative; }
 #scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
 #scrollbar1 .thumb .end,

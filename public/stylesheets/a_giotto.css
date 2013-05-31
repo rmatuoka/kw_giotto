@@ -38,10 +38,12 @@
 			margin:0px;
 		}
 		.text_left_container{
-			font-family:HelveticaCondensedLight;
-			font-weight:normal;
-			font-size:12px;
+			font-family: HelveticaCondensedLight;
+			font-weight: normal;
+			font-size: 15px;
 			color:#fff;
+			line-height: 1.00;
+			text-align: justify;
 		}		
 	.right_container{
 		position: relative;
