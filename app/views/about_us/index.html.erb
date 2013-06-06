@@ -32,7 +32,7 @@ $(document).ready(function() {
 });
 </script>
 <%end%>
-<div class="container ">
+<div class="container "  id="content">
     <div class="left_container six columns">
         <div class="title_container">
             <h1 class="title_left_container">A Giotto</h1>
@@ -60,28 +60,28 @@ $(document).ready(function() {
     
         </div>
     </div>
+<% if !browser.mobile? %>	
     <div class="right_container six columns">
-            <div class="img_container">
-            <div id="prev"></div>
-            <div id="next"></div>	
-               <div class="slideshow" style="position: relative; width: 461px; height: 320px; overflow: hidden;">
-                <a class="fancybox" rel="group" href="/images/01.jpg"><%=image_tag("01.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/02.jpg"><%=image_tag("02.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/03.jpg"><%=image_tag("03.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/04.jpg"><%=image_tag("04.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/05.jpg"><%=image_tag("05.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/06.jpg"><%=image_tag("06.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/07.jpg"><%=image_tag("07.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/08.jpg"><%=image_tag("08.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/09.jpg"><%=image_tag("09.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/10.jpg"><%=image_tag("10.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/11.jpg"><%=image_tag("11.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/12.jpg"><%=image_tag("12.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/13.jpg"><%=image_tag("13.jpg")%></a>
-                <a class="fancybox" rel="group" href="/images/14.jpg"><%=image_tag("14.jpg")%></a>
-               </div>
-            </div>     
-                   
-    
-    </div>
+		<div class="img_container">
+			<div id="prev"></div>
+			<div id="next"></div>	
+			<div class="slideshow" style="position: relative; width: 461px; height: 320px; overflow: hidden;">
+				<a class="fancybox" rel="group" href="/images/01_big.jpg"><%=image_tag("01.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/02_big.jpg"><%=image_tag("02.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/03_big.jpg"><%=image_tag("03.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/04_big.jpg"><%=image_tag("04.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/05_big.jpg"><%=image_tag("05.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/06_big.jpg"><%=image_tag("06.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/07_big.jpg"><%=image_tag("07.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/08_big.jpg"><%=image_tag("08.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/09_big.jpg"><%=image_tag("09.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/10_big.jpg"><%=image_tag("10.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/11_big.jpg"><%=image_tag("11.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/12_big.jpg"><%=image_tag("12.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/13_big.jpg"><%=image_tag("13.jpg")%></a>
+				<a class="fancybox" rel="group" href="/images/14_big.jpg"><%=image_tag("14.jpg")%></a>
+			</div>
+		</div>     
+	</div>
+<% end %>
 </div>
