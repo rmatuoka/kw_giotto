@@ -1,5 +1,4 @@
 .login_box_h1 {
-font-family: HelveticaCondensedLight;
 font-weight: normal;
 font-size: 46px;
 color: #fff;
@@ -12,7 +11,7 @@ body {
 }
 
 #box_login {
-top:10px;
+top:30px;
 padding:10px;
 position: relative;
 background-image: url(/images/bg_trans_submenu.png);
@@ -21,8 +20,13 @@ width: 100%;
 }
 
 p {
-font-family: HelveticaCondensedLight;
 font-weight: normal;
 font-size: 18px;
 color: #fff;
+}
+@media only screen and (max-width: 525px)
+{
+	#box_login {	
+		top:10px;
+	}	
 }

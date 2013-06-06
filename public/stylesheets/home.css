@@ -17,7 +17,7 @@
 .saiba_mais_container{
 	
 	position: absolute;
-	width: 50%;
+	width: 40%;
 	z-index: 1000;	
 	margin-top:18.75%;
 }
@@ -36,7 +36,7 @@
 	background-image:url(../images/bg_trans_submenu.png);
 	margin-bottom:2px;
 	margin-right:20%;
-	padding-left:39%;
+	padding-left:25%;
 }
 .sm_ct_2{
 	position:relative;
@@ -52,7 +52,7 @@
 	background-image:url(../images/bg_trans_submenu.png);
 	margin-bottom:2px;
 	margin-right:27%;
-	padding-left:39%;
+	padding-left:25%;
 }
 .sm_ct_3{
 	position:relative;
@@ -66,7 +66,7 @@
 	color:#fff;			
 	width:auto;	
 	background-image:url(../images/bg_trans_submenu.png);
-	padding-left:39%;
+	padding-left:25%;
 }
 .bt_saibamais{
 	position:relative;
@@ -105,6 +105,10 @@
 
 @media only screen and (max-width: 525px)
 {
+
+.slideshow {
+	width:100% !important;
+}
 .saiba_mais_container{
 	position: absolute;
 	width: 50%;
@@ -112,14 +116,14 @@
 	margin-top:12.75%;	
 }
 	.sm_ct_1{
-		font-size:12px;
+		font-size:20px;
 	}
 	
 	.sm_ct_2{
-		font-size:12px;	
+		font-size:18px;	
 	}
 	.sm_ct_3{
-		font-size:4px;	
+		font-size:16px;	
 	}
 	.bt_saibamais{
 		width:40%;
@@ -130,5 +134,6 @@
 #nav {
 	margin-top: 56.2% !important;
 	margin-left: 38% !important;
+	width: 240px;
 }
 }

@@ -77,6 +77,7 @@
 	.left_container{
 		width:100%;
 	}
+	#scrollbar1 .scrollbar { display:none;}
 }	
 /*jcicle a giotto*/
 .slideshow {margin:0 auto; width:461px; height:auto;  }  

@@ -5,11 +5,12 @@
 <%=javascript_include_tag "jquery.fancybox.js"%>
 <script type="text/javascript">
 $(document).ready(function() {
+<% if !browser.mobile? %>		
 	$('#scrollbar1').tinyscrollbar();
 	$(window).resize(function(){
 	$('#scrollbar1').tinyscrollbar_update();
 	});	
-	
+
 		
 	$('.slideshow').cycle({ 
 		fx:     'scrollHorz', 
@@ -19,7 +20,7 @@ $(document).ready(function() {
 		next:   '#next',  
 		timeout: 0 
 	});
-  
+	  
   $(".fancybox").fancybox({
     'transitionIn'	:	'fade',
 		'transitionOut'	:	'fade',
@@ -27,7 +28,7 @@ $(document).ready(function() {
 		'speedOut'		:	200, 
 		'overlayShow'	:	false
     });
-  
+<% end %>  
 });
 </script>
 <%end%>

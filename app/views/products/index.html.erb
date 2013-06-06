@@ -12,6 +12,10 @@
     <div class="left_container three columns left">
         <div class="title_container">
             <h1 class="title_left_container" id="active_category">Produtos</h1>
+            <h2 class="title_left_container" id="active_category">
+
+				<%= link_to "Baixe aqui o catálogo", login_path, :"data-fancybox-type"=>"iframe", :class=>"fancybox-media"%>
+			</h2>
         </div>
     </div>
         <div class="right_container nine columns right">
@@ -45,12 +49,12 @@
       $(".container_prod").fadeIn("slow");
 	  
     });
-    
+ <% if !browser.mobile? %>   
     $('#scrollbar1').tinyscrollbar();
 	$(window).resize(function(){
 	$('#scrollbar1').tinyscrollbar_update();
 	});
-	
+<% end %>	
     $(".fancybox").fancybox();
   });
  </script>

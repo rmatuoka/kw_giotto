@@ -250,7 +250,7 @@ margin-bottom: 0;
 	}		
 	.container
 	{
-		background:#09C;
+		height: 716px;
 	}
 	.cont_right_footer {
 		width: 362px;
@@ -280,8 +280,13 @@ margin-bottom: 0;
 .menu li {
 	line-height:normal;
 	float:none;
-	
+	top: 26px;
+	position: relative;
+	height: 30px;		
 }
+	.menu a {
+		padding-top: 10px;
+	}
 	.menu li:hover ul.sub_menu{
 		display: none;
 		
