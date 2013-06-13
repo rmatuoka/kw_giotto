@@ -17,18 +17,18 @@
 		min-width:300px;
 	}
 	.title_container{
-		margin-top:17.45%;
-		margin-left:18.83%;
-		margin-right:18.83%;
-		margin-bottom:62px;
-		max-width:512px;
-		height:54px;
+		margin-top: 0.45%;
+		margin-left: 7.83%;
+		margin-right: 18.83%;
+		margin-bottom: 62px;
+		max-width: 512px;
+		height: 54px;
 	}	
 	.text_container{
-		margin-left:18.83%;
-		margin-right:18.83%;
-		max-width:512px;
-		height:348px;
+		margin-left: 7.83%;
+		margin-right: 10.83%;
+		max-width: 512px;
+		height: 348px;
 	}
 		.title_left_container{
 			font-family:HelveticaCondensedLight;
