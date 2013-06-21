@@ -37,11 +37,12 @@
 function ajustaTela() {
     height = $(window).height()-$('#footer').height()-$('#header').height()-25;
     $('#content').height(height);
+    $('.saiba_mais_container').css('margin-top',$('#content').height() * 0.18);
     $('#content').css('overflow','hidden');
     
 }
 
-$(document).ready(function() {
+$(document).ready(function(){
 	
 <% if !browser.mobile? %>	
 	ajustaTela();	
@@ -80,6 +81,15 @@ $(".fancybox-media").fancybox({
       $(".contato_box").slideDown("slow");
     } else {
       $(".contato_box").slideUp();
+    }
+  });
+  
+  $(".trabalhe_box").hide();	
+  $("#trabalhe_bt").click(function () {
+    if ($(".trabalhe_box").is(":hidden")) {
+      $(".trabalhe_box").slideDown("slow");
+    } else {
+      $(".trabalhe_box").slideUp();
     }
   });
 });

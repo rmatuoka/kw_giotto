@@ -16,4 +16,3 @@ class ContactMailer < ActionMailer::Base
     mail(:to => "bsouza@korewa.com.br",:bcc => "log@korewa.com.br", :subject => "Giotto - Novo Contato")
   end
 end
-
