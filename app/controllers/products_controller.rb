@@ -7,7 +7,7 @@ before_filter :new_contact
   
   def show_category
     @category = Category.find_by_id(params[:id])
-    @products = @category.products
+    @products = @category.products.order("`order` ASC")
   end
   
   def show_product
