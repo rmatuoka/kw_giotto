@@ -1,8 +1,10 @@
 class Admin::ProductsController < ApplicationController
 layout "inadmin"
   before_filter :load_category
+  respond_to :html, :xml
   def index
     @products = @category.products.all
+    respond_with(@products)
   end
 
   def show
@@ -10,7 +12,7 @@ layout "inadmin"
   end
 
   def new
-    @product = @category.products.build
+    @product = @category.products.build(:order => "10")
   end
 
   def create
