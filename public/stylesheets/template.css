@@ -122,7 +122,6 @@ margin-bottom: 0;
 	display:block;
 	/*border:transparent 1px solid; /* Borda maligna */
 	}
-
 .contato_box{
 	position:absolute;
 	z-index:3000px !important;
@@ -190,6 +189,27 @@ margin-bottom: 0;
 			border-radius: 0px !important;
 			border:#b9b9b9 1px solid !important;
 			}
+.work_box{
+	height:402px;
+	position:absolute;
+	z-index:3000px !important;
+	bottom:51px;
+	right:0px;
+	margin-right:19px;
+	padding-top:6px;
+	width:626px;
+	border:transparent 1px solid;	
+}
+
+.work_box_left{
+	height: 389px;
+}
+.work_box_right{
+	height: 389px;
+}
+
+
+
 
 
 
@@ -221,7 +241,7 @@ margin-bottom: 0;
 .cont_right_footer{
 	position:relative;
 	float:right;
-	width:394px;
+	width:494px;
 	font-family:HelveticaCondensedLight;
 	font-size:14px;
 	color:#ed1d24 !important;

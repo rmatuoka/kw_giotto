@@ -77,18 +77,22 @@ $(".fancybox-media").fancybox({
     
   $(".contato_box").hide();	
   $("#contato_bt").click(function () {
+      $(".work_box").hide();
     if ($(".contato_box").is(":hidden")) {
       $(".contato_box").slideDown("slow");
     } else {
+	
       $(".contato_box").slideUp();
     }
   });
   
   $(".work_box").hide();	
   $("#work_bt").click(function () {
+      $(".contato_box").hide();
     if ($(".work_box").is(":hidden")) {
       $(".work_box").slideDown("slow");
     } else {
+	
       $(".work_box").slideUp();
     }
   });
