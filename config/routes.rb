@@ -4,6 +4,8 @@ KwGiotto::Application.routes.draw do
   get "about_us/index"
   get "home/create"
   post "home/create"
+  get "home/work"
+  post "home/work"
     
   resources :products do
     member do

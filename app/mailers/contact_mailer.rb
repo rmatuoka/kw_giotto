@@ -11,8 +11,16 @@ class ContactMailer < ActionMailer::Base
     mail(:to => "bsouza@korewa.com.br",:bcc => "log@korewa.com.br", :subject => "Giotto - Novo Contato")
   end
   
-    def send_findus_to_adm(contact)
+  def send_findus_to_adm(contact)
     @contact = contact
     mail(:to => "bsouza@korewa.com.br",:bcc => "log@korewa.com.br", :subject => "Giotto - Novo Contato")
   end
+  
+    def send_work_to_adm(contact)
+    @contact = contact
+    mail(:to => "bsouza@korewa.com.br",:bcc => "log@korewa.com.br", :subject => "Giotto - Novo Contato")
+  end
+  
+  
+  
 end

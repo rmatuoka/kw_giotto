@@ -2,9 +2,73 @@
       <p class="cont_left_footer">Giotto (C) 2013 - Todos os direitos reservados.</p>
 	    
             <div class="cont_right_footer">
+		<%= image_tag ("bt_entrar_contato.jpg"), :id => "work_bt" %>
             	<%= image_tag ("bt_entrar_contato.jpg"), :id => "contato_bt" %>
                 <%#= link_to image_tag("bt_facebook.jpg", :class => "bt_facebook_align")%>
             </div>
+            
+<div class="contato_box work_box" style="display: none;">
+    <div class="cont_box_left ">
+        <p class="cont_box_text_h1">
+            Trabalhe com a Giotto!
+        </p>
+        <p class="cont_box_text_p">
+	  Faça parte da equipe Giotto!</br></br>
+	  Para ser um representante Giotto,</br>
+	  preencha os dados ao lado e aguarde nosso contato.</br></br>
+	  Será um prazer atendê-lo.
+
+            
+        </p>
+    </div>
+    
+    <div class="cont_box_right ">
+        
+          <%= form_for @contact, :url => home_create_path(@contact), :remote => true, :html => { :multipart => :true } do |f| %>
+              <div class="four columns">
+                <%= label_tag :name, "Nome", :class => "right inline"%>
+                </div>
+              <div class="eight  columns">
+                <%= f.text_field :name, :class => "five"%>
+              </div>
+              <div class="four  columns">
+                <%= label_tag :email, "E-mail", :class => "right inline"%>
+              </div>
+              <div class="eight  columns">
+                <%= f.text_field :email, :class => "five"%>
+              </div>
+              <div class="four columns">
+                <%= label_tag :phone, "Telefone", :class => "right inline"%>
+              </div>
+              <div class="eight  columns">
+                <%= f.text_field :phone, :class => "five"%>
+              </div>
+              <div class="four columns">
+		<%= label_tag :state, "Estado", :class => "right inline"%>
+              </div>
+              <div class="eight columns">
+		<%= f.select(:state,options_for_select([['Selecione o Estado',''],['AC'],['AL'],['AP'],['AM'],['BA'],['CE'],['DF'],['ES'],['GO'],['MA'],['MT'],['MS'],['MG'],['PA'],['PB'],['PR'],['PE'],['PI'],['RJ'],['RN'],['RS'],['RO'],['RR'],['SC'],['SP'],['SE'],['TO']]), :class => "five")%>
+              </div>
+              <div class="four columns">
+                <%= label_tag :message, "Mensagem", :class => "right inline"%>
+              </div>
+              <div class="eight columns">
+                <%= f.text_area :message, :class => "five"%>
+              </div>
+              <div class="four columns">
+                <%= label_tag :file, "Arquivo", :class => "right inline"%>
+              </div>
+              <div class="five  columns">
+                <%= f.file_field :file, :class => "eight"%>
+              </div>
+              <div class="four columns">
+              </div>
+              <div class="eight  columns">
+                <%= image_submit_tag("bt_enviar_contato.jpg")%>
+              </div>          
+          <% end %>
+    </div>
+</div>
             
 
 <div class="contato_box" style="display: none;">
