@@ -1,5 +1,9 @@
 KwGiotto::Application.routes.draw do
 
+  get "works/index"
+  get "works/work"
+  post "works/work"
+
   get "releases/index"
   get "about_us/index"
   get "home/create"

@@ -28,5 +28,6 @@ before_filter :new_contact
     @erro = false
     end
   end
+
       
 end

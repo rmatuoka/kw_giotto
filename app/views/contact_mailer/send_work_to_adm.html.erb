@@ -5,7 +5,7 @@
 	<p>Email: <%=@contact.email%></p>
 	<p>Telefone: <%=@contact.phone%></p>
 	<p>Estado: <%=@contact.state%></p>
-	<p>Arquivo: <%=@contact.file%></p>
+	<p><%=link_to "Download do CV", "localhost" + @contact.file.url()%></p>
 	<p>Mensagem:</p>
 	<p><%=@contact.message%></p>
 </body>
