@@ -134,6 +134,9 @@
 #scrollbar1 .disable{ display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
 */
+iframe {
+        border-style:none;
+}
 #scrollbar1 .viewport {height:90%; }
 #scrollbar1 .track {height: 90%; }
 #scrollbar1 {margin: 0px 0px 0px 0px; }

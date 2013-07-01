@@ -1,3 +1,6 @@
+iframe {
+        border-style:none;
+}
 .container{
 	position: relative;
 	width: 100%;

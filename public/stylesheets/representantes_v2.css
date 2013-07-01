@@ -1,7 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
-
+iframe {
+        border-style:none;
+}
 
 .container{
 	position: relative;
