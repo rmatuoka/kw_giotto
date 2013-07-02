@@ -10,8 +10,8 @@
   <div class="name_products">
     <%= link_to product.name, show_product_product_path(product.id), :remote => true%>
   </div>
-  <% if product.litre? %>
-  <span class="tag_litre"><%= product.litre %> Litros</span>
+  <% if product.tag? %>
+  <span class="tag"><%= product.tag %></span>
   <% end %>
 </div> 
 <% end %>
