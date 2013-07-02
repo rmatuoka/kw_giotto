@@ -193,6 +193,7 @@ iframe {
 				}
 				.image_products img{
 					position:relative;
+                                        z-index:1;
 					
 				}				
 				.code_products{
@@ -202,6 +203,18 @@ iframe {
 					
 					text-align:center;						
 				}
+				.tag_litre {
+                                        position:absolute;
+                                        margin-top:-30%;
+                                        margin-left:60%; 
+                                        z-index:2;
+                                        height:20px;
+                                        width:auto;
+                                        padding:5px;
+                                        color:#fff;
+                                        background-color:#F96328;
+                                        font-size:11px;
+                                 }
         .code_products a{
           color:#5b5b5b !important;
         }
