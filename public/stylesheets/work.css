@@ -1,3 +1,77 @@
 iframe {
   border-style:none;
 }
+.cont_box_left{
+                padding-top:33px;
+                padding-left:39px;
+                position:relative;
+                float:left;
+                width:246px;
+                height:357px;
+                background-image:url(../images/bg_transp_cont.png);
+        }
+                .cont_box_text_h1{
+                        font-family:HelveticaCondensedLight;
+                        font-weight:normal;
+                        font-size:14px;
+                        color:#ed1d24;
+                }
+                .cont_box_text_p{
+                        font-family:HelveticaCondensedLight;
+                        font-weight:normal;
+                        font-size:12px;
+                        color:#444444;
+                        width:207px;
+                }       
+        .cont_box_right{
+                padding-top:33px;
+                padding-right: 24px;
+                position:relative;
+                background-color:#FFF;
+                float:left;
+                width:378px;
+                height:357px;
+        }
+                label{
+                        color:#adadad;
+                        font-size:14px;
+                }
+                label.right {
+                float: right;
+                }
+                textarea {
+                        width:100% !important;
+                        height:69px !important;
+                        -webkit-border-radius: 0px !important;
+                        -moz-border-radius: 0px !important;
+                        -ms-border-radius: 0px !important;
+                        -o-border-radius: 0px !important;
+                        border-radius: 0px !important;  
+                        border:#b9b9b9 1px solid !important;                    
+                }
+                input{
+                        -webkit-border-radius: 0px !important;
+                        -moz-border-radius: 0px !important;
+                        -ms-border-radius: 0px !important;
+                        -o-border-radius: 0px !important;
+                        border-radius: 0px !important;
+                        border:#b9b9b9 1px solid !important;
+                        }
+.work_box{
+        height:402px;
+        position:absolute;
+        z-index:3000px !important;
+        bottom:51px;
+        right:0px;
+        margin-right:19px;
+        padding-top:6px;
+        width:626px;
+        border:transparent 1px solid;   
+}
+
+.work_box_left{
+        height: 389px;
+}
+.work_box_right{
+        height: 389px;
+}
