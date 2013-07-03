@@ -1,7 +1,6 @@
 <%content_for :head do%>
 <%= stylesheet_link_tag "onde_encontrar"%>
 <script type="text/javascript">
-$(document).ready(function() {
 	$('#scrollbar1').tinyscrollbar();
 	$(window).resize(function(){
 	$('#scrollbar1').tinyscrollbar_update();
@@ -16,11 +15,6 @@ $(document).ready(function() {
 		next:   '#next',  
 		timeout: 0 
 	});
-
-
-
-});
-	
 </script>
 <% end %>
 <div class="container " id="content">
