@@ -29,7 +29,7 @@ iframe {
                 position:relative;
                 background-color:#FFF;
                 float:left;
-                width:378px;
+                width:360px;
                 height:357px;
         }
                 label{
@@ -40,7 +40,7 @@ iframe {
                 float: right;
                 }
                 textarea {
-                        width:100% !important;
+                        
                         height:69px !important;
                         -webkit-border-radius: 0px !important;
                         -moz-border-radius: 0px !important;
@@ -56,7 +56,14 @@ iframe {
                         -o-border-radius: 0px !important;
                         border-radius: 0px !important;
                         border:#b9b9b9 1px solid !important;
+						width:230px !important;
                         }
+						
+				#contact_state{
+					float:right; 
+					width:230px !important;
+					margin-top:6px;
+					}
 .work_box{
         height:402px;
         position:absolute;
@@ -75,3 +82,8 @@ iframe {
 .work_box_right{
         height: 389px;
 }
+
+.campo-work{
+	width:200px !important;
+	border:1px solid red;
+	}
