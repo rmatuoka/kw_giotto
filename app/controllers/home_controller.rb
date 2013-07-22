@@ -10,12 +10,12 @@ before_filter :new_contact
   end
   
   def create
-    @erro = true
+    #@erro = true
     @contact = Contact.new(params[:contact])
     @contact.contact = true
     if @contact.save
       ContactMailer.send_contact_to_adm(@contact).deliver
-    @erro = false
+    #@erro = false
     end
   end
   
