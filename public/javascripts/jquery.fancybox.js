@@ -166,7 +166,7 @@
 			nextMethod : 'changeIn',
 
 			// Changing previous gallery item
-			prevEffect : 'elastic', // 'elastic', 'fade' or 'none'
+			prevEffect : 'fade', // 'elastic', 'fade' or 'none'
 			prevSpeed  : 250,
 			prevEasing : 'swing',
 			prevMethod : 'changeOut',
