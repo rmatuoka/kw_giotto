@@ -160,7 +160,7 @@
 			closeMethod  : 'zoomOut',
 
 			// Changing next gallery item
-			nextEffect : 'elastic', // 'elastic', 'fade' or 'none'
+			nextEffect : 'fade', // 'elastic', 'fade' or 'none'
 			nextSpeed  : 250,
 			nextEasing : 'swing',
 			nextMethod : 'changeIn',
