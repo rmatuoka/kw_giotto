@@ -1,5 +1,7 @@
 KwGiotto::Application.routes.draw do
 
+  namespace(:admin){  }
+
   get "works/index"
   get "works/work"
   post "works/work"
@@ -30,6 +32,7 @@ KwGiotto::Application.routes.draw do
         resources :product_images
       end  
     end
+    resources :about_images
     resources :static_contents
     resources :users do
       collection do

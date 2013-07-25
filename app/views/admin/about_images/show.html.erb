@@ -1,0 +1,20 @@
+<% title "Admin/About Image" %>
+
+<p>
+  <strong>Active:</strong>
+  <%= @about_image.active %>
+</p>
+<p>
+  <strong>Published:</strong>
+  <%= @about_image.published %>
+</p>
+<p>
+  <strong>Imagem</strong>
+  <%= image_tag(@about_image.image("thumb"))%>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_about_image_path(@about_image), :class => "button secondary" %> |
+  <%= link_to "Destroy", [:admin, @about_image], :class => "button secondary", :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_about_images_path, :class => "button secondary" %>
+</p>

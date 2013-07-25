@@ -66,16 +66,9 @@ $(document).ready(function() {
 			<div id="prev"></div>
 			<div id="next"></div>	
 			<div class="slideshow" style="position: relative; width: 461px; height: 320px; overflow: hidden;">
-				<a class="fancybox" rel="group" href="/images/01_big.jpg"><%=image_tag("01.jpg")%></a>
-				<a class="fancybox" rel="group" href="/images/02_big.jpg"><%=image_tag("02.jpg")%></a>
-				<a class="fancybox" rel="group" href="/images/03_big.jpg"><%=image_tag("03.jpg")%></a>
-				<a class="fancybox" rel="group" href="/images/04_big.jpg"><%=image_tag("04.jpg")%></a>
-				<a class="fancybox" rel="group" href="/images/05_big.jpg"><%=image_tag("05.jpg")%></a>
-				<a class="fancybox" rel="group" href="/images/06_big.jpg"><%=image_tag("06.jpg")%></a>
-				<a class="fancybox" rel="group" href="/images/07_big.jpg"><%=image_tag("07.jpg")%></a>
-				<a class="fancybox" rel="group" href="/images/08_big.jpg"><%=image_tag("08.jpg")%></a>
-				<a class="fancybox" rel="group" href="/images/09_big.jpg"><%=image_tag("09.jpg")%></a>
-				<a class="fancybox" rel="group" href="/images/10_big.jpg"><%=image_tag("10.jpg")%></a>
+			<% @about_images.each do |i|%>
+                          <%= link_to(image_tag(i.image("small")), i.image("large"), :class => "fancybox", :rel => "group")%>
+                        <% end %>
 			</div>
 		</div>     
 	</div>

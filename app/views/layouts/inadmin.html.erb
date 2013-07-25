@@ -41,8 +41,9 @@ jQuery(document).ready(function()
 		<%if User.find(current_user.id).has_role? :admin %>
 		<h3>Ajuste do Site</h3>
 		<ul class="sub-menu">
-			<li><%= link_to "Gerenciar Usuários",admin_users_path%></li>
-      <li><%= link_to "Gerenciar Categorias de Produtos",admin_categories_path%></li>
+                  <li><%= link_to "Gerenciar Usuários",admin_users_path%></li>
+                  <li><%= link_to "Gerenciar Categorias de Produtos",admin_categories_path%></li>
+                  <li><%= link_to "Gerenciar Imagens A Giotto", admin_about_images_path%>
 		</ul>
 		<%end%>
 	</div>
