@@ -1,5 +1,7 @@
 KwGiotto::Application.routes.draw do
 
+  get "restrict/index"
+
   namespace(:admin){  }
 
   get "works/index"

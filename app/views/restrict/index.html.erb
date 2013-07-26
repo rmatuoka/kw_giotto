@@ -1,0 +1,106 @@
+<%content_for :head do%>
+<%= stylesheet_link_tag "area_restrita"%>
+<%=stylesheet_link_tag "/fancybox/jquery.fancybox.css"%>
+<%=javascript_include_tag "jquery.fancybox.pack.js"%>
+<%=javascript_include_tag "jquery.fancybox.js"%>
+<script type="text/javascript">
+$(document).ready(function() {
+<% if !browser.mobile? %>		
+	$('#scrollbar1').tinyscrollbar();
+	$(window).resize(function(){
+	$('#scrollbar1').tinyscrollbar_update();
+	});	
+
+		
+	$('.slideshow').cycle({ 
+		fx:     'fade', 
+        slideResize: false,
+        fit: 1,			
+		prev:   '#prev', 
+		next:   '#next',  
+		timeout: 0 
+	});
+	  
+  $(".fancybox").fancybox({
+    'transitionIn'	:	'fade',
+		'transitionOut'	:	'fade',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	false
+    });
+<% end %>  
+});
+</script>
+<%end%>
+<div class="container "  id="content">
+    <div class="left_container six columns">
+        <div class="title_container">
+            <h1 class="title_left_container">Área Restrita</h1>
+	    <%= link_to(image_tag("bt_baixe_catalogo_all.jpg"),"#",:class=>"bt_down_cat_all")%>
+	    <br /><br />
+	    <p class="tit_text">
+		Aqui você pode baixar o catálogo completo da Giotto e também as imagens dos nossos produtos por categorias. Obrigado pela preferência.
+            </p>
+	    
+        </div>
+        <div class="text_container">
+            <div id="scrollbar1">
+                <div class="scrollbar" style="height: 389px;"><div class="track" style="height: 389px;"><div class="thumb" style="top: 0px; height: 127.05373635600336px;"><div class="end"></div></div></div></div>
+                <div class="viewport">
+                    <div class="overview" style="top: 0px;">
+                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+						                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+						                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>	
+					                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+						                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+						                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>
+						                        <div class="item_download">
+			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
+                        </div>						
+                        					
+                    </div>
+                </div>
+            </div>        
+    
+        </div>
+    </div>
+    <div class="right_container six columns">
+
+	</div>
+</div>
