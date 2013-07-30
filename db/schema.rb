@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130725140337) do
+ActiveRecord::Schema.define(:version => 20130730132949) do
 
   create_table "about_images", :force => true do |t|
     t.boolean  "active"
@@ -54,6 +54,16 @@ ActiveRecord::Schema.define(:version => 20130725140337) do
     t.string   "commercial_phone"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "product_catalogs", :force => true do |t|
+    t.string   "link"
+    t.boolean  "active"
+    t.boolean  "published"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
+    t.string   "title"
   end
 
   create_table "product_images", :force => true do |t|

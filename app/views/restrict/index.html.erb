@@ -48,52 +48,11 @@ $(document).ready(function() {
                 <div class="scrollbar" style="height: 389px;"><div class="track" style="height: 389px;"><div class="thumb" style="top: 0px; height: 127.05373635600336px;"><div class="end"></div></div></div></div>
                 <div class="viewport">
                     <div class="overview" style="top: 0px;">
-                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-						                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-						                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>	
-					                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-						                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-						                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>
-						                        <div class="item_download">
-			    <span class="item_text">Nome da Categoria</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"),"#",:class=>"bt_down_cat_un")%> 
-                        </div>						
-                        					
+                    <% @catalogs.each do |catalog|%>
+                      <div class="item_download">
+                        <span class="item_text"><%= catalog.title%></span><%= link_to(image_tag("bt_download_catalogo_un.jpg"), catalog.link, :title => catalog.title ,:class=>"bt_down_cat_un")%>
+                      </div>
+                    <% end %>						
                     </div>
                 </div>
             </div>        

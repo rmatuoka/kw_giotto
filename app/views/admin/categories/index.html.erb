@@ -14,6 +14,7 @@
       <td><%= link_to "Visualizar", [:admin, category], :class => "button secondary"%></td>
       <td><%= link_to "Editar", edit_admin_category_path(category), :class => "button secondary" %></td>
       <td><%= link_to "Produtos", admin_category_products_path(category), :class => "button secondary" %></td>
+      <td><%= link_to "Catálogos", admin_category_product_catalogs_path(category), :class => "button secondary" %></td>
       <td><%= link_to "Deletar", [:admin, category], :class => "button secondary", :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>

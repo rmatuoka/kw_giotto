@@ -1,0 +1,21 @@
+<%= form_for ([:admin,@category,@product_catalog], :html => { :multipart => :true }) do |f| %>
+  <%= f.error_messages %>
+  <h1><%= @category.title%></h1>
+    <p>
+    <%= f.label :title, "titúlo da categoria" %><br />
+    <%= f.text_field :title, :placeholder => "titúlo da categoria" %>
+  </p>
+  <p>
+    <%= f.label :link, "Link para o catálogo" %><br />
+    <%= f.text_field :link, :placeholder => "Link para o catálogo" %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </p>
+  <p>
+    <%= f.label :published %><br />
+    <%= f.check_box :published %>
+  </p>
+  <p><%= f.submit "Salvar", :class => "button" %></p>
+<% end %>

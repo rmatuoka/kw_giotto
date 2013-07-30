@@ -1,0 +1,8 @@
+<% title "Editar Catálogo" %>
+<h1>Editar</h1>
+<%= render 'form' %>
+
+<p>
+  <%= link_to "Visualizar", admin_category_product_catalog_path(@category, @product_catalog) %> |
+  <%= link_to "Ver Todos", admin_category_product_catalogs_path %>
+</p>

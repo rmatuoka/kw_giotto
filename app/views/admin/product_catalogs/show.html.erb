@@ -1,0 +1,20 @@
+<% title "Admin/Product Catalog" %>
+
+<p>
+  <strong>Link:</strong>
+  <%= @product_catalog.link %>
+</p>
+<p>
+  <strong>Active:</strong>
+  <%= @product_catalog.active %>
+</p>
+<p>
+  <strong>Published:</strong>
+  <%= @product_catalog.published %>
+</p>
+
+<p>
+  <td><%= link_to "Editar", edit_admin_category_product_catalog_path(@category, @product_catalog), :class => "button secondary" %></td> |
+  <%= link_to "Deletar", admin_category_product_catalog_path(@category, @product_catalog), :class => "button secondary", :class => "button secondary", :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Ver Todos", admin_category_product_catalogs_path, :class => "button secondary" %>
+</p>

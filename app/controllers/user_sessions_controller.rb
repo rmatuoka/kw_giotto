@@ -11,17 +11,17 @@ class UserSessionsController < ApplicationController
       if login
      flash[:error] = "Login realizado com sucesso"
      redirect_to :controller => 'home', :action => 'index', :target => '_blank'
-      end
+     end
     end
     else
-      flash[:error] = "UsuÃ¡rio e/ou senha invÃ¡lidos!"
+      flash[:error] = "Usuário e/ou senha inválidos!"
     end
   end
  
   def destroy
     @user_session = UserSession.find
     @user_session.destroy
-    flash[:notice] = "SessÃ£o finalizada com sucesso."
+    flash[:notice] = "Sessão finalizada com sucesso."
     redirect_to root_url
   end
 

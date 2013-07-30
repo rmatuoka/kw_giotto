@@ -1,9 +1,6 @@
 KwGiotto::Application.routes.draw do
 
-  get "restrict/index"
-
-  namespace(:admin){  }
-
+  resources "restrict"
   get "works/index"
   get "works/work"
   post "works/work"
@@ -32,7 +29,8 @@ KwGiotto::Application.routes.draw do
     resources :categories do
       resources :products do
         resources :product_images
-      end  
+      end
+      resources :product_catalogs
     end
     resources :about_images
     resources :static_contents
