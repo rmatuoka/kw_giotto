@@ -9,5 +9,9 @@
 	erro += "<div class='clear'></div>";
 	jQuery('#flash_error_cadastro').html(erro);
 <%else%>
-	window.location.href = "<%= admin_root_path %>";
+      <%if User.find(current_user.id).has_role? :representante%>
+        window.parent.location.href = "<%= restrict_index_path %>";
+      <%else%>
+        window.parent.location.href = "<%= admin_root_path %>";
+      <%end%>
 <%end%>

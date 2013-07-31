@@ -4,9 +4,7 @@
 <%content_for :head do%>
 
 <%= stylesheet_link_tag "login_box"%>
-<%=stylesheet_link_tag "/fancybox/jquery.fancybox.css"%>
-<%=javascript_include_tag "jquery.fancybox.pack.js"%>
-<%=javascript_include_tag "jquery.fancybox.js"%>
+
 <%end%>
 <div id="box_login" class="twelve columns">
 	<h1 class="login_box_h1">Área Restrita</h1>
@@ -23,42 +21,15 @@
 		
 		<br />
 		
-		<p><%= f.submit "Enviar", :class => "button" %></p>
+		<p><%= f.submit "Enviar", :class => "button"%></p>
 	<% end %>
 </div>
 
-<%if !flash[:temerro] %>
+
 	<%if flash[:error] %>
-	<script>
-		//window.location.href = "<%= login_path %>";
-		jQuery('#flash_error_cadastro').removeClass('flash_ops').addClass('flash_ok');
-		jQuery('#flash_error_cadastro').show();
-		erro = "";
-		erro += "<div class='alert-box success'>";
-		erro += "	<h2>Ok!</h2>";
-		erro += "	<p><%= flash[:error];%></p>";
-		erro +=	"</div>";
-		erro += "<div class='clear'></div>";	
-		jQuery('#flash_error_cadastro').html(erro);
-		jQuery('#loading-forgot').hide();
-	</script>	
+	
 	<%end%>
 <%else%>
 	<%if flash[:error] %>
-	<script>
-		jQuery('#flash_error_cadastro').removeClass('flash_ok').addClass('flash_ops');
-		jQuery('#flash_error_cadastro').show();
-		
-		erro = "";
-		erro += "<div class='alert-box alert'>";
-		erro += "	<h2>Ops!</h2>";
-		erro += "	<p><%= flash[:error];%></p>";
-		erro +=	"</div>";
-		erro += "<div class='clear'></div>";
-		
-		jQuery('#flash_error_cadastro').html(erro);
-		jQuery('#loading-forgot').hide();
-		jQuery('#btn_enviar_password').show();
-	</script>
+
 	<%end%>
-<%end%>

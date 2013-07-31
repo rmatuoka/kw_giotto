@@ -33,6 +33,8 @@ $(document).ready(function() {
 </script>
 <%end%>
 <div class="container "  id="content">
+<%if current_user%>
+  <%if User.find(current_user.id).has_role? :representante %>
     <div class="left_container six columns">
         <div class="title_container">
             <h1 class="title_left_container">Área Restrita</h1>
@@ -48,11 +50,16 @@ $(document).ready(function() {
                 <div class="scrollbar" style="height: 389px;"><div class="track" style="height: 389px;"><div class="thumb" style="top: 0px; height: 127.05373635600336px;"><div class="end"></div></div></div></div>
                 <div class="viewport">
                     <div class="overview" style="top: 0px;">
-                    <% @catalogs.each do |catalog|%>
                       <div class="item_download">
-                        <span class="item_text"><%= catalog.title%></span><%= link_to(image_tag("bt_download_catalogo_un.jpg"), catalog.link, :title => catalog.title ,:class=>"bt_down_cat_un")%>
-                      </div>
-                    <% end %>						
+                          <span class="item_text">Lançamentos</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"), "/catalogos/Lancamentos.zip", :title => "Lançamentos" ,:class=>"bt_down_cat_un")%>
+                        </div>
+                    <% if @catalogs.count > 0 %>
+                      <% @catalogs.each do |catalog|%>
+                        <div class="item_download">
+                          <span class="item_text"><%= catalog.title%></span><%= link_to(image_tag("bt_download_catalogo_un.jpg"), catalog.link, :title => catalog.title ,:class=>"bt_down_cat_un")%>
+                        </div>
+                      <% end %>
+                    <% end %>
                     </div>
                 </div>
             </div>        
@@ -60,6 +67,18 @@ $(document).ready(function() {
         </div>
     </div>
     <div class="right_container six columns">
-
+    <% else %>
+    <div class="left_container six columns">
+      <div class="title_container">
+            <h1 class="title_left_container">Área Restrita</h1>
+            <br /><br />
+            <p class="tit_text">
+                Você precisa estar logado para visualizar este conteúdo!
+            </p>
+            
+        </div>
+    </div>
+  <% end %>
+<% end %>
 	</div>
 </div>
