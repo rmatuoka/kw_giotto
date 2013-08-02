@@ -5,7 +5,7 @@
 	<p>Email: <%=@contact.email%></p>
 	<p>Telefone: <%=@contact.phone%></p>
 	<p>Estado: <%=@contact.state%></p>
-	<p><%=link_to "Download do CV", Rails.root.to_s+ @contact.file.url()%></p>
+	<p><%=link_to "Download do CV", "http://www.produtosgiotto.com.br/"@contact.file.url().to_s%></p>
 	<p>Mensagem:</p>
 	<p><%=@contact.message%></p>
 </body>
