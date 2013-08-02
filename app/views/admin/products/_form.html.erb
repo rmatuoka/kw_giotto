@@ -70,4 +70,14 @@
     <%= f.text_field :category_id %>
   </p>
   <p><%= f.submit "Salvar", :class => "button" %></p>
+  <script type="text/javascript">
+  $(document).ready(function() {
+   var submit_text = $("#product_name").val();
+    $(":submit").prop( "value", "Salvar " + submit_text);
+   });
+    var submit_text = $("#product_name").val();
+    $("#product_name").keyup(function(){
+      $(":submit").prop( "value", "Salvar " + $(this).val());
+    });
+  </script>
 <% end %>
