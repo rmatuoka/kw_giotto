@@ -1,4 +1,7 @@
 class Admin::ProductCatalogsController < ApplicationController
+  access_control do
+      allow :admin, :all
+  end  
   layout "inadmin"
   before_filter :load_category
   def index

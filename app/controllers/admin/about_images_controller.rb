@@ -1,4 +1,7 @@
 class Admin::AboutImagesController < ApplicationController
+  access_control do
+      allow :admin, :all
+  end  
   layout "inadmin"
   def index
     @about_images = AboutImage.all

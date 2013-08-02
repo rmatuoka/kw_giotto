@@ -1,5 +1,8 @@
 class Admin::ProductsController < ApplicationController
-layout "inadmin"
+  access_control do
+      allow :admin, :all
+  end
+  layout "inadmin"
   before_filter :load_category
   respond_to :html, :xml
   def index
