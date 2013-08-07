@@ -389,7 +389,7 @@ iframe {
 
 
 /*scroll personalizado*/
-#scrollbar1 {width: auto; height:100%;clear: both; margin:60px 0px 0px 0px; }
+#scrollbar1 {width: auto; height:100%;clear: both; }
 #scrollbar1 .viewport { width: auto; height:80%; overflow: hidden; position: relative; }
 #scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
 #scrollbar1 .thumb .end,
