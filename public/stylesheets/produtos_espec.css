@@ -204,17 +204,24 @@ iframe {
 					text-align:center;						
 				}
 				.tag {
-                                        position:absolute;
-                                        margin-top:-30%;
-                                        margin-left:60%; 
-                                        z-index:2;
-                                        height:20px;
-                                        width:auto;
-                                        padding:5px;
-                                        color:#fff;
-                                        background-color:#F96328;
-                                        font-size:11px;
+					position:absolute;
+					margin-top:-30%;
+					margin-left:60%; 
+					z-index:2;
+					height:20px;
+					width:auto;
+					padding:5px;
+					color:#fff;
+					background-color:#F96328;
+					font-size:11px;
                                  }
+                     span.tag  a{
+						color:#fff;
+                     }            
+                     span.tag a:hover{
+						text-decoration:none;
+						color:#fff !important;						
+                     }            
         .code_products a{
           color:#5b5b5b !important;
         }

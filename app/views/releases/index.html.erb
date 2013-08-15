@@ -7,28 +7,27 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
-	$('#scrollbar1').tinyscrollbar();
-	$(window).resize(function(){
-	$('#scrollbar1').tinyscrollbar_update();
-	});	
-	
-		
-	$('.slideshow').cycle({ 
-		fx:     'scrollHorz', 
-        slideResize: false,
-        fit: 1,			
-		prev:   '#prev', 
-		next:   '#next',  
-		timeout: 0 
-	});
-	
-	    $(".fancybox").fancybox();
+$('#scrollbar1').tinyscrollbar();
+$(window).load(function(){
+$('#scrollbar1').tinyscrollbar_update();
+});		
+$(window).resize(function(){
+$('#scrollbar1').tinyscrollbar_update();
+});
+$('.slideshow').cycle({ 
+	fx:     'scrollHorz', 
+	slideResize: false,
+	fit: 1,			
+	prev:   '#prev', 
+	next:   '#next',  
+	timeout: 0 
+});
+$(".fancybox").fancybox();
 });
 	
 </script>
 <%end%>
-<div id="container_prod" class="container_prod" style="display: none;">
-    
+<div id="container_prod" class="container_prod" style="display: none;">    
 </div>
 
 <div class="container "  id="content">
@@ -38,32 +37,29 @@ $(document).ready(function() {
         </div>
     </div>
         <div class="right_container nine columns right">
-			<div class="products_container">    
-               <div id="scrollbar1">
-                    <div class="scrollbar" style="height: 570px;"><div class="track" style="height: 570px;"><div class="thumb" style="top: 0px; height: 144.52846975088968px;"><div class="end"></div></div></div></div>
-                    <div class="viewport">
-                        <div class="overview" style="top: 0px;">
-                          <%=render "products/show", :collection => @products%>
+	    <div class="products_container">    
+	    <div id="scrollbar1">
+		<div class="scrollbar" style=""><div class="track" style=""><div class="thumb" style="top: 0px; height: 144.52846975088968px;"><div class="end"></div></div></div></div>
+		<div class="viewport">
+		    <div class="overview" style="top: 0px;">
+		      <%=render "products/show", :collection => @products%>
 
-                        </div>
-                    </div>
-                </div> 
-			</div>
-               
-
+		    </div>
 		</div>
+	    </div> 
+		    </div>
+
+
+	    </div>
 	</div>
 <script>
-  $(document).ready(function(){
+    $(document).ready(function(){
      $(".container_prod").hide();
-    $(".products_item a").click(function () {
-		
-      $(".container_prod").fadeIn("slow");
-	  
-    });
-    
+    $(".products_item a").click(function () {		
+      $(".container_prod").fadeIn("slow");	  
+    }); 
 
-  });
+    });
   
  
  </script>

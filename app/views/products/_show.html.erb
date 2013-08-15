@@ -11,7 +11,7 @@
     <%= link_to product.name, show_product_product_path(product.id), :remote => true%>
   </div>
   <% if product.tag? %>
-  <span class="tag"><%= product.tag %></span>
+    <span class="tag"><%= link_to product.tag, show_product_product_path(product.id), :remote => true %></span>
   <% end %>
 </div> 
 <% end %>
