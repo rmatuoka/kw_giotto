@@ -4,28 +4,6 @@
 <%=stylesheet_link_tag "/fancybox/jquery.fancybox.css"%>
 <%=javascript_include_tag "jquery.fancybox.pack.js"%>
 <%=javascript_include_tag "jquery.fancybox.js"%>
-<script type="text/javascript">
-
-$(document).ready(function() {
-$('#scrollbar1').tinyscrollbar();
-$(window).load(function(){
-$('#scrollbar1').tinyscrollbar_update();
-});		
-$(window).resize(function(){
-$('#scrollbar1').tinyscrollbar_update();
-});
-$('.slideshow').cycle({ 
-	fx:     'scrollHorz', 
-	slideResize: false,
-	fit: 1,			
-	prev:   '#prev', 
-	next:   '#next',  
-	timeout: 0 
-});
-$(".fancybox").fancybox();
-});
-	
-</script>
 <%end%>
 <div id="container_prod" class="container_prod" style="display: none;">    
 </div>
@@ -41,7 +19,7 @@ $(".fancybox").fancybox();
 	    <div id="scrollbar1">
 		<div class="scrollbar" style=""><div class="track" style=""><div class="thumb" style="top: 0px; height: 144.52846975088968px;"><div class="end"></div></div></div></div>
 		<div class="viewport">
-		    <div class="overview" style="top: 0px;">
+		    <div class="overview"  id="show_product" style="top: 0px;">
 		      <%=render "products/show", :collection => @products%>
 
 		    </div>
@@ -51,14 +29,31 @@ $(".fancybox").fancybox();
 
 
 	    </div>
-	</div>
 <script>
     $(document).ready(function(){
      $(".container_prod").hide();
-    $(".products_item a").click(function () {		
-      $(".container_prod").fadeIn("slow");	  
-    }); 
+     
+    $(".products_item a").click(function () {
+    $(".container_prod").fadeIn("slow");
+          
+    });
+    $('#scrollbar1').tinyscrollbar();
+$(window).load(function(){
+$('#scrollbar1').tinyscrollbar_update();
+});
 
+$(window).resize(function(){
+$('#scrollbar1').tinyscrollbar_update();
+});
+$('.slideshow').cycle({ 
+        fx:     'scrollHorz', 
+        slideResize: false,
+        fit: 1,                 
+        prev:   '#prev', 
+        next:   '#next',  
+        timeout: 0 
+});
+$(".fancybox").fancybox();
     });
   
  

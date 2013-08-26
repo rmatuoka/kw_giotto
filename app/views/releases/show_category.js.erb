@@ -1,0 +1,14 @@
+$('#show_product').html("<%=escape_javascript(render('show'))%>");
+
+$('#active_category').html("<%=escape_javascript(@category.title)%>");
+$('.p_item a').removeClass("category_active");
+$('#cat_<%= @category.id%>').addClass("category_active");
+<% if !browser.mobile? %>  
+$('#scrollbar1').tinyscrollbar();
+<% end %>
+$(".products_item").click(function () {
+		
+      $(".container_prod").fadeIn("slow");
+	  
+    });
+  

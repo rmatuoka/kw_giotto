@@ -1,0 +1,21 @@
+
+
+<% @products.each do |product| %>
+<a href="<%=show_product_product_path(product.id)%>" data-remote="true" >
+    <div class="products_item block-grid four-up mobile">
+      <div class="image_products">
+        <%= image_tag(product.product_images.first.image("thumb")) if !product.product_images.blank?%>
+
+        </div>                                
+      <div class="code_products">
+        <%= product.code%>
+      </div>
+      <div class="name_products">
+        <%= product.name%>
+      </div>
+      <% if product.tag? %>
+        <span class="tag"><%= product.tag%></span>
+      <% end %>
+    </div> 
+</a>
+<% end %>

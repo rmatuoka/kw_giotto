@@ -5,7 +5,13 @@ KwGiotto::Application.routes.draw do
   get "works/work"
   post "works/work"
 
-  get "releases/index"
+  #get "releases/index"
+  resources :releases do
+    member do
+      get "show_category"
+      get "show_product"
+    end
+  end
   get "about_us/index"
   get "home/create"
   post "home/create"
