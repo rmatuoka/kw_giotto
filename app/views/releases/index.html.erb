@@ -31,14 +31,14 @@
 	    </div>
 	    </div>
 <script>
-    $(document).ready(function(){
-     $(".container_prod").hide();
-     
-    $(".products_item a").click(function () {
-    $(".container_prod").fadeIn("slow");
+$(document).ready(function(){
+$(".container_prod").hide();
+$(".products_item").click(function () {
+      $(".container_prod").show();
+      $(".container_prod").fadeIn("slow");
           
     });
-    $('#scrollbar1').tinyscrollbar();
+$('#scrollbar1').tinyscrollbar();
 $(window).load(function(){
 $('#scrollbar1').tinyscrollbar_update();
 });
