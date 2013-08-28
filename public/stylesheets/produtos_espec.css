@@ -46,6 +46,7 @@ iframe {
 	width:1000px;
 	margin:0 auto;
 	height:100%;
+        margin-left:20%;
 }
 	.box_area_left{
 		position:relative;

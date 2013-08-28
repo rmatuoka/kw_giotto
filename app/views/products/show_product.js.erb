@@ -1,17 +1,30 @@
+var item = 0;
 $('#container_prod').html("<%=escape_javascript(render('product'))%>");
 $(".bt_close_prod").click(function () {
 		
       $(".container_prod").fadeOut("slow");
 	  
     });
+
 $('.slideshow2').cycle({ 
-		fx:     'scrollHorz', 
+        fx:     'scrollHorz', 
         slideResize: false,
-        fit: 1,			
-		prev:   '#prev2', 
-		next:   '#next2',  
-		timeout: 0 
-	});
+        fit: 1,                 
+        prev:   '.prev2', 
+        next:   '.next2',  
+        timeout: 0 
+        });
+
+$('.slideshow3').cycle({ 
+        fx:     'scrollHorz', 
+        slideResize: false,
+        fit: 1,                 
+        prev:   '#prevvv', 
+        next:   '#nexxxt',  
+        timeout: 0,
+        startingSlide: item
+        });
+
 
 $(".products_item").click(function () {
       $(".container_prod").show();

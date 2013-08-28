@@ -1,19 +1,28 @@
 <div id="prevvv" style="z-index: 999;position: absolute;display: block;float:left;background-image: url(../images/bt_prev_arr_g.png);top: 43%; height:75px;width:50px;cursor: pointer;"></div>
 <div id="nexxxt" style="z-index: 999;position: relative;display: block;float:right;background-image: url(../images/bt_next_arr_g.png);top: 43%; height:75px;width:50px;cursor: pointer;"></div>
 <%= image_tag ("bt_close_prod.png"), :class => "bt_close_prod"%>
-    <div class="content_area">
-        <div class="box_area">
+
+    <div class="content_area slideshow3">
+    <%$i = 0%>
+    <% @products.each do |product|%>
+    <% @product_images = product.product_images.all %>
+    <% if product.id == @product.id%>
+      <script>
+        item = <%= $i%>;
+      </script>
+    <%end%>
+            <div class="box_area">
             <div class="box_area_left">
                 <% if @product_images.count > 1%>
-                <div id="prev2"></div>
-            	<div id="next2"></div>
+                <div id="prev2" class="prev2"></div>
+            	<div id="next2" class="next2"></div>
               <% end %>
                 <div class="slideshow2" style="position: relative; width: 250px; height: 390px; overflow: hidden;">   	
-                    <% @product_images.each do |images| %>
+                    <% @product_images.each do |image| %>
                       <table height="390" style="border-style:none;display:table !important;">
                         <tr>
                           <td align="center" valign="middle" style="vertical-align:middle !important;">
-                          <%=link_to(image_tag(images.image("rotative")), images.image.url, :class => "fancybox", :rel => @product.code)%>
+                          <%=link_to(image_tag(image.image("rotative")), image.image.url, :class => "fancybox", :rel => product.code)%>
                           </td>
                         </tr>
                       </table>
@@ -22,18 +31,20 @@
                 <span class="text_vjaimg">Clique na imagem para ampliar</span> 
             </div>
             <div class="box_area_right">
-                <p class="title_prod"><%= @product.name %></p>
-                <p class="text_prod"><%= @product.description %></p>
+                <p class="title_prod"><%= product.name%></p>
+                <p class="text_prod"><%= product.description %></p>
                 <p class="title_spec">Especificaçõs:</p>
-                <p class="text_prod"><b>Código: </b><%= @product.code %></p>
-                <p class="text_prod"><b>Código EAN-13: </b><%= @product.ean %></p>
-                <p class="text_prod"><b>Código DUN-14: </b><%= @product.dun %></p>
-                <p class="text_prod"><b>Peso líq (Un): </b><%= @product.weight %></p>
-                <p class="text_prod"><b>Peso Total (g): </b><%= @product.total_weight %></p>
-                <p class="text_prod"><b>Cubagem (m³): </b><%= @product.cubage %></p>
-                <p class="text_prod"><b>Quantidade (volume): </b><%= @product.amount %></p>
-                <p class="text_prod"><b>Dimensões: </b><%= @product.dimensions %></p>
-                <p class="text_prod"><b>Cores: </b><%= @product.color %></p>
+                <p class="text_prod"><b>Código: </b><%= product.code %></p>
+                <p class="text_prod"><b>Código EAN-13: </b><%= product.ean %></p>
+                <p class="text_prod"><b>Código DUN-14: </b><%= product.dun %></p>
+                <p class="text_prod"><b>Peso líq (Un): </b><%= product.weight %></p>
+                <p class="text_prod"><b>Peso Total (g): </b><%= product.total_weight %></p>
+                <p class="text_prod"><b>Cubagem (m³): </b><%= product.cubage %></p>
+                <p class="text_prod"><b>Quantidade (volume): </b><%= product.amount %></p>
+                <p class="text_prod"><b>Dimensões: </b><%= product.dimensions %></p>
+                <p class="text_prod"><b>Cores: </b><%= product.color %></p>
             </div>
         </div>
+        <%$i = $i+1%>
+        <%end%>
     </div>
