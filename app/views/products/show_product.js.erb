@@ -5,17 +5,6 @@ $(".bt_close_prod").click(function () {
       $(".container_prod").fadeOut("slow");
 	  
     });
-
-$('.slideshow2').cycle({ 
-        fx:     'scrollHorz', 
-        slideResize: false,
-        fit: 1,                 
-        prev:   '.prev2', 
-        next:   '.next2',  
-        timeout: 0,
-        pager: '#bullets'
-        });
-
 $('.slideshow3').cycle({ 
         fx:     'scrollHorz', 
         slideResize: false,
@@ -24,6 +13,13 @@ $('.slideshow3').cycle({
         next:   '#nexxxt',  
         timeout: 0,
         startingSlide: item
+        });
+$('.slideshow2').cycle({ 
+        fx:     'scrollHorz', 
+        slideResize: false,
+        fit: 1,  
+        timeout: 0,
+        pager: '.bullets'
         });
 
 

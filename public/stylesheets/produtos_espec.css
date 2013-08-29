@@ -55,6 +55,27 @@ iframe {
 		width:430px;
 		text-align: center;
 	}
+	.bullets{
+            color:#e0e0e0;
+            height:auto;
+            width:auto;
+            position:relative;
+            bottom:10px;
+            z-index:99;
+        }
+        .bullets a{
+            color:#e0e0e0;
+            margin:2px;
+            width:43px;
+            height:43px;
+            background-image:url(../images/bullet.png);
+            background-position:center;
+            padding:8px;
+            background-repeat:no-repeat;
+        }
+        .bullets a.activeSlide{
+            background-image:url(../images/bullet-active.png);
+        }
 	.text_vjaimg{
 		font-family:HelveticaCondensedLight;
 		font-weight:normal;

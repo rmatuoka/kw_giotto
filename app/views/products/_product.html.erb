@@ -13,10 +13,6 @@
     <%end%>
             <div class="box_area">
             <div class="box_area_left">
-                <% if @product_images.count > 1%>
-                <div id="prev2" class="prev2"></div>
-            	<div id="next2" class="next2"></div>
-              <% end %>
                 <div class="slideshow2" style="position: relative; width: 250px; height: 390px; overflow: hidden;">   	
                     <% @product_images.each do |image| %>
                       <table height="390" style="border-style:none;display:table !important;">
@@ -28,7 +24,9 @@
                       </table>
                     <% end %>
                 </div>
+                <% if @product_images.count > 1%>
                 <div id="bullets" class="bullets"></div>
+                <%end%>
                 <span class="text_vjaimg">Clique na imagem para ampliar</span> 
             </div>
             <div class="box_area_right">
