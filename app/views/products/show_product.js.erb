@@ -1,4 +1,5 @@
 var item = 0;
+
 $('#container_prod').html("<%=escape_javascript(render('product'))%>");
 $(".bt_close_prod").click(function () {
 		
@@ -6,20 +7,13 @@ $(".bt_close_prod").click(function () {
 	  
     });
 $('.slideshow3').cycle({ 
-        fx:     'scrollHorz', 
+        fx:     'fade', 
         slideResize: false,
         fit: 1,                 
         prev:   '#prevvv', 
         next:   '#nexxxt',  
         timeout: 0,
         startingSlide: item
-        });
-$('.slideshow2').cycle({ 
-        fx:     'scrollHorz', 
-        slideResize: false,
-        fit: 1,  
-        timeout: 0,
-        pager: '.bullets'
         });
 
 
