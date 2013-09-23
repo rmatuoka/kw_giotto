@@ -18,7 +18,7 @@ iframe {
 }
 .slideshow .img_show {
 	width:100%; 
-	height:100%;
+	height:auto;
 }
 
 .saiba_mais_container{
@@ -124,20 +124,32 @@ iframe {
 }
 	.sm_ct_1{
 		font-size:20px;
+		width:320px;
+		text-align: left;
 	}
 	
 	.sm_ct_2{
-		font-size:18px;	
+		font-size:18px;
+		width:320px;
+		text-align: left;	
 	}
 	.sm_ct_3{
-		font-size:16px;	
+		font-size:16px;
+		width:320px;
+		text-align: left;	
 	}
 	.bt_saibamais{
-		width:40%;
-		top:-3px;
-		right:-6px;	
+		width:50%;
+		top:-5px;
+		right:-120px;	
 	}
-
+.slideshow .img_show {
+	width:100%; 
+	height:auto;
+}	
+	.container{
+		height:220px !important;
+	}
 #nav {
 	margin-top: 56.2% !important;
 	margin-left: 38% !important;
