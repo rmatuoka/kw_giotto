@@ -28,7 +28,7 @@
                 <p class="text_prod"><b>Código DUN-14: </b><%= @product.dun %></p>
                 <p class="text_prod"><b>Peso líq (Un): </b><%= @product.weight %></p>
                 <p class="text_prod"><b>Peso Total (g): </b><%= @product.total_weight %></p>
-                <p class="text_prod"><b>Cubagem (m³): </b><%= @product.cubage %></p>
+                <p class="text_prod"><b>Cubagem (m³): </b><%= format("%.4f",@product.cubage) %></p>
                 <p class="text_prod"><b>Quantidade (volume): </b><%= @product.amount %></p>
                 <p class="text_prod"><b>Dimensões: </b><%= @product.dimensions %></p>
                 <p class="text_prod"><b>Cores: </b><%= @product.color %></p>
