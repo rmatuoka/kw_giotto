@@ -11,7 +11,6 @@ iframe {
 	-moz-background-size: 100% 100%, auto;
 	-webkit-background-size: 100% 100%, auto;
 	background-size: 100% 100%, auto;
-/*	border:#069 1px solid; */
 }
 .container_prod{
 	display:none;
@@ -159,6 +158,7 @@ iframe {
 		position: relative;
 		padding: 1% 18px 0px 0px;
 		height:98%;
+		
 	}
 		.products_container{
 			position: relative;
@@ -287,25 +287,31 @@ iframe {
 .left_container{
 	
 }
+h2.title_left_container {
+	font-size: 19px !important;
+	border: 1px solid red;
+
+}
 .products_container{
 	height:;
 }
-.container{
-	height: 1748px;
-	
+.container {
+	height:900px;
 }
-.container_prod{
-	height: 1748px;
+.container_prod {
+	height:1160px;
 }
 .content_area{
-	height: 1480px;
+	height: 909px;
 }
 	.box_area{
-		height: 1480px;
+		height: 1000px;
 	}
 	.box_area_right {
-	top: 7%;
+		top: 7%;
 	}
+
+	
 }
 @media only screen and (max-width: 918px)
 {
@@ -344,6 +350,9 @@ iframe {
 }
 @media only screen and (max-width: 768px)
 {
+.container {
+	height: 213px;
+}	
 	.left_container{
 		padding: 1% 0px 0px 0px !important;
 					
@@ -357,16 +366,17 @@ iframe {
 	.right_container{
 		padding: 1% 7px 0px 7px !important;
 		height:1700px !important;
+		
+		margin:0 auto;
 	}
+
 	.products_container {
 		padding: 0px 5px 250px !important;
 	}
 	.products_item{
-		width: 500px;
-		left: 50%;
-		margin-left: -250px !important;
 		display: block;
 	}	
+	
 }	
 
 
@@ -380,6 +390,9 @@ iframe {
 	.container {
 		background:none;
 	}	
+.container_prod{
+	height:2064px;
+}	
 	.left_container{
 		height:auto;
 	}
@@ -388,30 +401,70 @@ iframe {
 }
 @media only screen and (max-width: 398px)
 {
+	div{}
+	html{}
+	.header{ }
 	.container {
-		height: 1150px;
+		height: 100%;
 	}	
 	.right_container{
 		padding: 1% 7px 0px 7px !important;
 		height:1090px !important;
+		margin:0 auto !important;
 	}	
+		.products_menu {
+			position: relative;
+			width: 296px;
+			min-height: 40px;
+			height: auto;
+
+		}
 	.products_container {
-		padding: 0px 5px 350px !important;
+		
+		position: relative;
+		max-width: 242px !important;	
+		padding: 0px 5px 350px 0px !important;	
+			
+		
 	}
 	.products_item{
-		width: 500px;
+
+		width: 445px;
+			
+		display: block;
+		text-align: center;
+	}
+	.bt_close_prod {
+		float: right;
+		margin-top: 37px;
+		margin-right: 10px;
+		cursor: pointer;
+	}	
+	.container_prod {
+		height: 1900px;
+	}	
+	.text_prod {
+		max-width: 185px !important;
+	}
+	.box_area_left {
+		width: 100% !important;
+	}
+	.box_area_right {
+		width: 220px !important;
+
+	}	
+	.right_container{	
+		text-aligin:center !important;
+	}	
+	.products_item{
 		left: 50%;
 		margin-left: -250px !important;
 		display: block;
-	}
-	
-	.box_area_left {
-		width: 377px !important;
-	}
-	.box_area_right {
-		width: 377px !important;
-	}	
+		padding-left: 105px !important;
+	}		
+		#scrollbar1 {width: 303px !important; height:100%;clear: both; }
 }
+
 
 /*jcicle produtos interna*/
 .slideshow2 {margin:0 auto; width:461px; height:auto;  }  

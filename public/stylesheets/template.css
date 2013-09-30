@@ -6,11 +6,13 @@
          url('../stylesheets/fonts/HelveticaCd_5.ttf') format('truetype'),
          url('../stylesheets/fonts/HelveticaCd_5.svg#HelveticaCondensedLightLight') format('svg');
 }
+
 .header{
 	position:relative;
 	height:128px;
 	z-index:2000;
-	background:#FFF;	
+	background:#FFF;
+	width:100%;	
 }
 	.logo{
 		position:relative;
@@ -262,7 +264,7 @@ margin-bottom: 0;
 {
 	.header {
 		height: 255px;
-		min-width:321px;
+		min-width:303px;
 	}
 	
 	.menu_container{ float:none; margin: 0 auto; width: 485px;}
