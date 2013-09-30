@@ -124,19 +124,22 @@ iframe {
 }
 	.sm_ct_1{
 		font-size:20px;
-		width:320px;
+		width:302px;
 		text-align: left;
+		padding-left:10%;
 	}
 	
 	.sm_ct_2{
 		font-size:18px;
-		width:320px;
-		text-align: left;	
+		width:302px;
+		text-align: left;
+		padding-left:10%;
 	}
 	.sm_ct_3{
 		font-size:16px;
-		width:320px;
-		text-align: left;	
+		width:302px;
+		text-align: left;
+		padding-left:10%;	
 	}
 	.bt_saibamais{
 		width:50%;
@@ -148,7 +151,8 @@ iframe {
 	height:auto;
 }	
 	.container{
-		height:220px !important;
+		height:302px !important;
+		margin-left: 0px;
 	}
 #nav {
 	margin-top: 56.2% !important;
