@@ -8,7 +8,7 @@ class WorksController < ApplicationController
     @contact = Contact.new
   end
   
-    def work
+  def work
     @erro = true
     @contact = Contact.new(params[:contact])
     @contact.contact = false

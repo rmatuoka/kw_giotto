@@ -85,6 +85,7 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     thor (0.14.6)
+    translate_routes (3.0.3)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
@@ -104,4 +105,5 @@ DEPENDENCIES
   nifty-generators
   paperclip (= 2.3.8)
   rails (= 3.0.10)
+  translate_routes
   will_paginate (~> 2.3.15)

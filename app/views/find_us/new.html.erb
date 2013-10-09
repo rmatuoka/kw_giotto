@@ -20,13 +20,13 @@
 <div class="container " id="content">
     <div class="left_container six columns">
         <div class="title_container ">
-            <h1 class="title_left_container twelve columns">Onde Encontrar</h1>
+            <h1 class="title_left_container twelve columns"><%= t("find_us_title")%></h1>
         </div>
         		
         <div class="text_container twelve columns">
           <hr style="border-color:#f1454b;" class="twelve columns">
         <p class="text_container_p twelve columns">
-        	Para encontrar produtos Giotto perto de você, preencha os campos abaixo e aguarde nosso contato. 
+			<%= t("find_us_body")%> 
         </p>
             <%= form_for @find, :as => "post", :url => find_us_path do |f| %>
               <div class="twelve mobile-three columns">

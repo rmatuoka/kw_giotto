@@ -1,11 +1,21 @@
 <%content_for :head do%>
 <%= stylesheet_link_tag "home"%>
 <% end %>
-    <div class="cont_box_left ">
-        <p class="cont_box_text_h1">
-            Sua mensagem foi enviada com sucesso!
+<div class="container ">
+    <div class="left_container six columns">
+        <div class="title_container ">
+            <h1 class="title_left_container twelve columns"><%= t("message_success")%></h1>
+        </div>
+		
+        <div class="text_container twelve columns">
+        <hr style="border-color:#f1454b;" class="twelve columns">
+        <p class="text_container_p twelve columns">
+        	<%= t("message_success_body")%>
         </p>
-        <p class="cont_box_text_p"><br />
             
-        </p>
+        </div>
     </div>
+    <div class="right_container six columns">
+
+    </div>
+</div>

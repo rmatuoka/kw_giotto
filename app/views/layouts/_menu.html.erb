@@ -5,25 +5,25 @@
             <!--Menu --> 
             <div class="menu_container right">    
                 <ul class="menu">
-                    <li><%= link_to "A Giotto", about_us_index_path%>                  
+                    <li><%= link_to t("about_title"), about_us_index_path%>                  
                     </li>
                     <li>
-                    	<%= link_to "Produtos", products_path%>
+                    	<%= link_to t("show_product"), products_path%>
                         <ul class="sub_menu">
-                        	<li><%= link_to "Lançamentos", releases_path %></li>                        	
+                        	<li><%= link_to t("show_release"), releases_path %></li>                        	
                             <% if @categories.count > 0 %>
                             <% @categories.each do |category| %>
                             <li><%= link_to category.title, product_path(category.id) %></li>
                             <% end %> 
                             <% end %> 
-                            <li><%=link_to "Brinquedos", "http://www.miellebrinquedos.com.br/", :target => "_blank"%></li>                          
+                            <li><%=link_to t("show_toys"), "http://www.miellebrinquedos.com.br/", :target => "_blank"%></li>                          
                         </ul>
                     </li>
                     <li>
-		      <%= link_to "Representantes", new_representative_path%>
+		      <%= link_to t("show_representatives"), new_representative_path%>
                     </li>
                     <li>
-                      <%= link_to "Onde Encontrar", new_find_u_path%>
+                      <%= link_to t("show_find_us"), new_find_u_path%>
                     </li>
                 </ul>
             </div>        

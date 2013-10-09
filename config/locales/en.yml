@@ -1,5 +1,25 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  site_name: "Giotto"
+  translation:
+    en: "English"
+    pt-BR: "Portuguese"
+  
+  copywrite: "Giotto (C) 2013 - All rights reserved."
+  about_title: "Giotto"
+  show_product: "Products"
+  show_release: "Releases"
+  show_representatives: "Representatives"
+  show_toys: "Toys"
+  show_find_us: "Find it"
+  message_success: "Mensagem envida com sucesso!"
+  message_success_body: "Lorem ipsum dolor sit ametconsectetur adipiscing elit. Sed ornare porta nibh vitae lacinia. Phasellus ut nulla dolor. Integer eu metus orci, et semper neque."    
+  contact_title: "Contact us"  
+  contact_body: "Fill up the form to send us your suggestions and doubts.<br /><br />Or contact us by phone <br /> (11) 3132-9192<br /><br />Will be a pleasure to serve you.<br /><br />We are waiting for your contact.<br />"
+  representative_title: "Representatives"
+  representative_body: "To become a Giotto representative, please contact us by filling the form bellow."
+  find_us_title: "Find it"
+  find_us_body: "To find Giotto products near you, please fill the form bellow and wait for our answer."
+  work_title: "Work with us"
+  work_body: "Be a member of our team! </br></br>To become a Giotto representative,</br>please fill the form bellow and wait for our answer.</br></br>Will be a pleasure to serve you."
+  about_us_title: "Giotto"
+  about_us_body: "<p class='text_left_container'>Founded in 1990, Giotto is a company specialized in the manufacturing of plastic products for homes. Headquartered in the city of Nazaré Paulista (state of São Paulo, Brazil), 75 kilometers (46miles) away from São Paulo and 149 kilometers (92miles) away from Santos, stands out in the housewares industry, serving customers nationwide.</p><p class='text_left_container'>Constantly concerned with meeting the needs of consumers, Giotto has high production capacity and its own distribution fleet. Thus, its products can be found in many distributors, wholesalers or retail stores spread throughout the Country.</p><p class='text_left_container'>Committed to quality, Giotto also has modern facilities, equipped with first-line machinery to meet all demands with promptitude and efficiency.</p><p class='text_left_container'>Concerned about sustainable processes, the environment also receives the care and attention from the company, which promotes the recycling of plastic waste inside its facilities.</p>"

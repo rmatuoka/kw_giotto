@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-  default :from => "Produtos Giotto <log@korewa.com.br>"
+  default :from => "Produtos Giotto <site@produtosgiotto.com.br>"
   
   def send_representative_to_adm(contact)
     @contact = contact

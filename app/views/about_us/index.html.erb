@@ -35,25 +35,14 @@ $(document).ready(function() {
 <div class="container "  id="content">
     <div class="left_container six columns">
         <div class="title_container">
-            <h1 class="title_left_container">A Giotto</h1>
+            <h1 class="title_left_container"><%= t("about_us_title")%></h1>
         </div>
         <div class="text_container">
             <div id="scrollbar1">
                 <div class="scrollbar" style="height: 389px;"><div class="track" style="height: 389px;"><div class="thumb" style="top: 0px; height: 127.05373635600336px;"><div class="end"></div></div></div></div>
                 <div class="viewport">
                     <div class="overview" style="top: 0px;">
-                        <p class="text_left_container">
-			      Fundada em 2000, a Giotto é uma empresa especializada na fabricação e comercialização de produtos plásticos e afins. Com sede na cidade de Nazaré Paulista- SP, destaca-se no ramo de utilidades domésticas, atendendo clientes em todo o território nacional.
-                        </p>
-                        <p class="text_left_container">
-			Constantemente preocupada em suprir as necessidades dos consumidores, a Giotto possui alta capacidade produtiva e frota própria para entregas. Desse modo, seus produtos podem ser encontrados em diversos distribuidores, atacadistas e lojas do ramo, espalhadas por todo o país.
-                        </p>
-                        <p class="text_left_container">
-			Comprometida com a qualidade, a Giotto também conta com instalações modernas, equipada com maquinário de alto desempenho, atendendo todas as demandas com rapidez e eficiência.
-                        </p> 
-			<p class="text_left_container">
-			A preocupação com o meio ambiente também recebe o cuidado e atenção da empresa, que promove a reciclagem dos resíduos plásticos dentro de suas instalações.
-			</p>					
+                       <%= t("about_us_body").html_safe%>
                     </div>
                 </div>
             </div>        
@@ -67,8 +56,8 @@ $(document).ready(function() {
 			<div id="next"></div>	
 			<div class="slideshow" style="position: relative; width: 461px; height: 320px; overflow: hidden;">
 			<% @about_images.each do |i|%>
-                          <%= link_to(image_tag(i.image("small")), i.image("large"), :class => "fancybox", :rel => "group")%>
-                        <% end %>
+				<%= link_to(image_tag(i.image("small")), i.image("large"), :class => "fancybox", :rel => "group")%>
+			<% end %>
 			</div>
 		</div>     
 	</div>

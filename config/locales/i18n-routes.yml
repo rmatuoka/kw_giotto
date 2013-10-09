@@ -1,0 +1,20 @@
+en:
+  find_us: find_it
+pt-BR:
+  new: novo
+  edit: editar
+  destroy: destruir
+  index: indice
+  
+  works: trabalho
+  find_us: onde_encontrar
+  about_us: sobre  
+  representatives: representantes
+  releases: lacamentos  
+  products: produtos
+  show_category: ver_categoria
+  show_product: ver_produto
+  
+  register: registrar
+  login: entrar
+  logout: sair

@@ -14,6 +14,11 @@ class ApplicationController < ActionController::Base
     @contact = Contact.new
   end
   
+  protect_from_forgery
+
+  before_filter :set_locale
+  before_filter :set_locale_from_url
+  
   private
   
   def current_user_session
@@ -38,6 +43,14 @@ class ApplicationController < ActionController::Base
        flash[:error] = 'Acesso negado. Você precisa estar logado.'
        redirect_to login_path
      end
+   end
+   
+   def set_locale
+     if lang = request.env['HTTP_ACCEPT_LANGUAGE']
+       lang = lang[/^[a-z]{2}/]
+       lang = :"pt-BR" if lang == "pt"
+     end
+     I18n.locale = params[:locale] || lang || I18n.default_locale
    end
    
 end
