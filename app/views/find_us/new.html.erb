@@ -30,21 +30,21 @@
         </p>
             <%= form_for @find, :as => "post", :url => find_us_path do |f| %>
               <div class="twelve mobile-three columns">
-                  <%= f.text_field :name, :placeholder => "Nome", :class => "eight" %>
+                  <%= f.text_field :name, :placeholder => "#{t('activerecord.attributes.find.name')}", :class => "eight" %>
                 </div>
                 <div class="twelve mobile-three columns">
-                  <%= f.text_field :mail, :placeholder => "E-mail", :class => "eight" %>
+                  <%= f.text_field :mail, :placeholder => "#{t('activerecord.attributes.find.mail')}", :class => "eight" %>
                 </div>            
                 <div class="six mobile-three columns">
-                  <%= f.text_field :city, :placeholder => "Cidade", :class => "eight"%>
+                  <%= f.text_field :city, :placeholder => "#{t('activerecord.attributes.find.city')}", :class => "eight"%>
                 </div>   
                 <br><br><div class="one column"></div> 
                 <div class="five mobile-three columns">
-                  <%= f.select (:state, options_for_select([['Selecione o Estado',''],['AC'],['AL'],['AP'],['AM'],['BA'],['CE'],['DF'],['ES'],['GO'],['MA'],['MT'],['MS'],['MG'],['PA'],['PB'],['PR'],['PE'],['PI'],['RJ'],['RN'],['RS'],['RO'],['RR'],['SC'],['SP'],['SE'],['TO']]), :id => "customDropdown",:class => "state_input", :style => "display:none") %>
+                  <%= f.select (:state, options_for_select([['AC'],['AL'],['AP'],['AM'],['BA'],['CE'],['DF'],['ES'],['GO'],['MA'],['MT'],['MS'],['MG'],['PA'],['PB'],['PR'],['PE'],['PI'],['RJ'],['RN'],['RS'],['RO'],['RR'],['SC'],['SP'],['SE'],['TO']]), :id => "customDropdown",:class => "state_input", :style => "display:none", :prompt => true) %>
                 </div>
                 <br><br>         
                 <div class="twelve mobile-three columns">
-                  <%= f.text_field :commercial_phone, :placeholder => "Telefone Comercial", :class => "eight"%>
+                  <%= f.text_field :commercial_phone, :placeholder => "#{t('activerecord.attributes.find.commercial_phone')}", :class => "eight"%>
                 </div> 
                 <div class="twelve mobile-three columns">
                 	<%= image_submit_tag ("bt_enviar_repres.jpg")%>
@@ -58,140 +58,51 @@
     <div class="right_container six columns">
 
     </div>
+
 <script>
 /* Mascaras personalizadas */ 
 $.mask.masks = $.extend($.mask.masks,{
-
    phone_sp:{ mask: '(99) 99999-9999'}
-
 });
 
 (function($){
-
    $(function(){
-
        $('input:text').setMask();
-
-
-
-
         /* Personalização para celulares de SP*/
-
        $('#post_commercial_phone').keydown(function(event) {
-
              // Act on the event
-
              if($(this).val().substring(1,6) == '11) 9'){
-
                  $(this).attr('alt','phone_sp');
-
              }else{
-
                  $(this).attr('alt','phone');
-
             }
-
            $(this).setMask();
-
        });
-
    });
-
 })($);
 
-  
-  $('#post_new').validate({
-
-       rules: {
-
-           "post[name]": {
-
-               required: true,
-
-               minlength: 6
-
-           },
-
-          "post[commercial_phone]": {
-
-               required: true,
-
-               minlength: 13
-
-           },
-           "post[mail]": {
-              required: true,
-              email: true,
-              minlength: 12
-              
-              
-           },
-           "post[city]":{
-              required: true,
-              
-              minlength: 3
-           },
-           "post[state]":{
-              required: true,
-              maxlength: 2
-           }
-
-       },
-
-       messages: {
-
-           "post[name]":{
-
-required: "Preencha o Nome",
-
-minlength: "Informe um Nome valido"
-
-},
-
-"post[commercial_phone]":{
-
-required: "O campo Telefone deve ser preenchido",
-
-minlength: "Informe um Telefone valido"
-
-},
-
-"post[mail]":{
-required: "O campo E-mail deve ser preenchido",
-
-minlength: "Informe um E-mail valido"
-},
-
-"post[state]":{
-required: "Selecione o Estado",
-
-maxlength: "Selecione o Estado"
-},
-"post[city]":{
-required: "Selecione a Cidade",
-
-minlength: "Selecione a Cidade"
-}
-
-       },
-
-errorPlacement: function(error,element){
-
-    error.insertAfter(element);
-
-    //alert(error.html());
-
-},
-
-showErrors: function(errorMap, errorList){
-
-      this.defaultShowErrors();
-
-}
-
-
-
-
-   });
+$('#post_new').validate({
+	rules: {
+		"post[name]":  {required: true,minlength: 2},
+		"post[mail]": {required: true,email: true},
+		"post[commercial_phone]": {required: true,minlength: 13},
+		"post[city]": {required: true,minlength: 3},
+		"post[state]" : {required: true}
+	},
+	messages: {
+		"post[name]":{required: "<%= t("msg_validate.name_required")%>", minlength: "<%= t("msg_validate.name_minlength")%>"},
+		"post[mail]":{required: "<%= t("msg_validate.email_required")%>",email: "<%= t("msg_validate.email_email")%>"},
+		"post[commercial_phone]":{required: "<%= t("msg_validate.phone_required")%>",minlength: "<%= t("msg_validate.phone_minlength")%>"},
+		"post[city]":{required: "<%= t("msg_validate.city_required")%>",minlength: "<%= t("msg_validate.city_minlength")%>"},
+		"post[state]" : {required: "<%= t("msg_validate.state_required")%>"}		
+	},
+	errorPlacement: function(error,element){
+    	error.insertAfter(element);
+    	//alert(error.html());
+	},
+	showErrors: function(errorMap, errorList){
+		this.defaultShowErrors();
+	}
+});
 </script>
 </div>

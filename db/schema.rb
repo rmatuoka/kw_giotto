@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730132949) do
+ActiveRecord::Schema.define(:version => 20131017201012) do
 
   create_table "about_images", :force => true do |t|
     t.boolean  "active"
@@ -30,6 +30,17 @@ ActiveRecord::Schema.define(:version => 20130730132949) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "category_translations", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "locale"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "category_translations", ["category_id"], :name => "index_category_translations_on_category_id"
+  add_index "category_translations", ["locale"], :name => "index_category_translations_on_locale"
 
   create_table "contacts", :force => true do |t|
     t.string   "name"
@@ -77,6 +88,19 @@ ActiveRecord::Schema.define(:version => 20130730132949) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
+
+  create_table "product_translations", :force => true do |t|
+    t.integer  "product_id"
+    t.string   "locale"
+    t.text     "description"
+    t.string   "name"
+    t.string   "color"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "product_translations", ["locale"], :name => "index_product_translations_on_locale"
+  add_index "product_translations", ["product_id"], :name => "index_product_translations_on_product_id"
 
   create_table "products", :force => true do |t|
     t.string   "code"

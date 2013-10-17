@@ -37,6 +37,10 @@ GEM
       abstract (>= 1.0.0)
     fastthread (1.0.7)
     gem_plugin (0.2.3)
+    globalize3 (0.3.0)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      paper_trail (~> 2)
     i18n (0.5.0)
     jquery-rails (1.0.19)
       railties (~> 3.0)
@@ -58,6 +62,9 @@ GEM
       gem_plugin (>= 0.2.3)
     mysql2 (0.2.18)
     nifty-generators (0.4.6)
+    paper_trail (2.7.2)
+      activerecord (~> 3.0)
+      railties (~> 3.0)
     paperclip (2.3.8)
       activerecord
       activesupport
@@ -97,6 +104,7 @@ PLATFORMS
 
 DEPENDENCIES
   browser
+  globalize3
   jquery-rails (>= 1.0.12)
   mail
   mocha

@@ -2,7 +2,9 @@
 <div id="User_bar" class="twelve columns">
 	<div id="User_bar_content">
 		<div id="User_name" class="ten columns">
-			<%= link_to image_tag("img_house.png", :width=>"57", :height=>"52", :class=>"Usr_bt_align"), root_path%><span class="bem-vindo">Bem Vindo,</span> <span class="bem-vindo-nome"><%= current_user.name %></span>
+			<%= link_to image_tag("img_house.png", :width=>"28", :height=>"23", :class=>"Usr_bt_align"), root_path%>
+			<span class="bem-vindo">Bem Vindo,</span> <span class="bem-vindo-nome"><%= current_user.name %></span>
+			<%= language_links %>
 		</div>
 	
 		<div id="Buttons" class="two columns" style="padding-top:13px;">
@@ -16,6 +18,6 @@
 <%end%>
 <div id="Header" class="twelve columns">
 	<div id="Logo">
-		<%= image_tag("logo.png", :width=>"271", :height=>"54")%>
+		<%= image_tag("logo.png", :width=>"165", :height=>"50")%>
 	</div>
 </div>

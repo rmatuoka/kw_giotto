@@ -7,21 +7,21 @@
 
 <%end%>
 <div id="box_login" class="twelve columns">
-	<h1 class="login_box_h1">Área Restrita</h1>
+	<h1 class="login_box_h1"><%= t("restricted_title")%></h1>
 	<hr style="border-color:#f1454b;" class="twelve columns">
 	<%= form_for @user_session, :remote => true do |f| %>
 		<p>
-			<%= f.label :email, "Email" %>
-			<%= f.text_field :email, :placeholder => "Usuário" %>
+			<%= f.label :email %>
+			<%= f.text_field :email %>
 		</p>
 		<p>
-			<%= f.label :password, "Senha" %>
-			<%= f.password_field :password, :placeholder => "Senha" %>
+			<%= f.label :password %>
+			<%= f.password_field :password%>
 		</p>
 		
 		<br />
 		
-		<p><%= f.submit "Enviar", :class => "button"%></p>
+		<p><%= f.submit nil, :class => "button"%></p>
 	<% end %>
 </div>
 

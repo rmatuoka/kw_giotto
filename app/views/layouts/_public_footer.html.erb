@@ -62,124 +62,47 @@
 </div>
 
 <script>
+	/* Mascaras personalizadas */ 
+	$.mask.masks = $.extend($.mask.masks,{
+	   phone_sp:{ mask: '(99) 99999-9999'}
+	});
 
+	(function($){
+	   $(function(){
+	       $('input:text').setMask();
+	        /* Personalização para celulares de SP*/
+	       $('#contact_phone').keydown(function(event) {
+	             // Act on the event
+	             if($(this).val().substring(1,6) == '11) 9'){
+	                 $(this).attr('alt','phone_sp');
+	             }else{
+	                 $(this).attr('alt','phone');
+	            }
+	           $(this).setMask();
+	       });
+	   });
+	})($);
 
-/* Mascaras personalizadas */ 
-
-$.mask.masks = $.extend($.mask.masks,{
-
-   phone_sp:{ mask: '(99) 99999-9999'}
-
-});
-
-
-
-
-(function($){
-
-   $(function(){
-
-       $('input:text').setMask();
-
-
-
-
-        /* Personalização para celulares de SP*/
-
-       $('#contact_phone').keydown(function(event) {
-
-             // Act on the event
-
-             if($(this).val().substring(1,6) == '11) 9'){
-
-                 $(this).attr('alt','phone_sp');
-
-             }else{
-
-                 $(this).attr('alt','phone');
-
-            }
-
-           $(this).setMask();
-
-       });
-
-   });
-
-})($);
-
-
-  
-  $('#new_contact').validate({
-
-       rules: {
-
-           "contact[name]": {
-
-               required: true,
-
-               minlength: 6
-
-           },
-
-          "contact[phone]": {
-
-               required: true,
-
-               minlength: 13
-
-           },
-           "contact[email]": {
-              required: true,
-              
-              minlength: 12
-           }
-
-       },
-
-       messages: {
-
-           "contact[name]":{
-
-required: "Nome deve ser preenchido",
-
-minlength: "Informe um nome válido"
-
-},
-
-"contact[phone]":{
-
-required: "Telefone deve ser preenchido",
-
-minlength: "Informe um Telefone valido"
-
-},
-
-"contact[email]":{
-required: "E-mail deve ser preenchido",
-
-minlenght: "Informe um E-mail valido"
-}
-
-       },
-
-errorPlacement: function(error,element){
-
-    error.insertAfter(element);
-
-    //alert(error.html());
-
-},
-
-showErrors: function(errorMap, errorList){
-
-      this.defaultShowErrors();
-
-}
-
-
-
-
-   });
+	$('#new_contact').validate({
+		rules: {
+			"contact[name]":  {required: true,minlength: 2},
+			"contact[email]": {required: true,email: true},
+			"contact[phone]": {required: true,minlength: 13},
+			"contact[message]": {required: true,minlength: 5}
+		},
+		messages: {
+			"contact[name]":{required: "<%= t("msg_validate.name_required")%>", minlength: "<%= t("msg_validate.name_minlength")%>"},
+			"contact[email]":{required: "<%= t("msg_validate.email_required")%>",email: "<%= t("msg_validate.email_email")%>"},
+			"contact[phone]":{required: "<%= t("msg_validate.phone_required")%>",minlength: "<%= t("msg_validate.phone_minlength")%>"},
+			"contact[message]":{required: "<%= t("msg_validate.message_required")%>",minlength: "<%= t("msg_validate.message_minlength")%>"}
+		},
+		errorPlacement: function(error,element){
+	    	error.insertAfter(element);
+	    	//alert(error.html());
+		},
+		showErrors: function(errorMap, errorList){
+			this.defaultShowErrors();
+		}
+	});
 </script>
 	</div>

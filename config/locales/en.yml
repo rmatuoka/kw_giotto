@@ -2,7 +2,7 @@ en:
   site_name: "Giotto"
   translation:
     en: "English"
-    pt-BR: "Portuguese"
+    pt-BR: "Português"
   
   copywrite: "Giotto (C) 2013 - All rights reserved."
   about_title: "Giotto"
@@ -23,3 +23,46 @@ en:
   work_body: "Be a member of our team! </br></br>To become a Giotto representative,</br>please fill the form bellow and wait for our answer.</br></br>Will be a pleasure to serve you."
   about_us_title: "Giotto"
   about_us_body: "<p class='text_left_container'>Founded in 1990, Giotto is a company specialized in the manufacturing of plastic products for homes. Headquartered in the city of Nazaré Paulista (state of São Paulo, Brazil), 75 kilometers (46miles) away from São Paulo and 149 kilometers (92miles) away from Santos, stands out in the housewares industry, serving customers nationwide.</p><p class='text_left_container'>Constantly concerned with meeting the needs of consumers, Giotto has high production capacity and its own distribution fleet. Thus, its products can be found in many distributors, wholesalers or retail stores spread throughout the Country.</p><p class='text_left_container'>Committed to quality, Giotto also has modern facilities, equipped with first-line machinery to meet all demands with promptitude and efficiency.</p><p class='text_left_container'>Concerned about sustainable processes, the environment also receives the care and attention from the company, which promotes the recycling of plastic waste inside its facilities.</p>"
+  download_catalog: "Download here catalog"
+  restricted_title: "Restricted Area"
+  restricted_body: "Here you can download the full catalog of Giotto and also the pictures of our product categories. Thanks for the preference."  
+  restricted_error: "You need to be logged in to view this content!"
+    
+  msg_validate:
+    name_required: "Name must be filled"
+    name_minlength: "Please enter a valid name"
+    email_required: "Email must be filled"
+    email_email: "Enter a valid E-mail"    
+    phone_required: "Phone must be completed"
+    phone_minlength: "Enter a valid Phone"
+    message_required: "Message must be filled"
+    message_minlength: "Enter a message validates"
+    city_required: "City must be completed"
+    city_minlength: "Enter a city validates"
+    state_required: "Select a state"
+
+  product_descriptions:
+    zoom: "Click on image to enlarge"
+    title: "Specifications"
+    code: "Code"
+    code_ean: "EAN-13 Code"
+    code_dun: "DUN-14 Code"
+    net_weight: "Net weight (Un)"
+    total_weight: "Total weight (g)"
+    cubic_capacity: "Cubic Capacity (m³)"
+    quantity: "Quantity (by volume)"
+    dimensions: "Dimensions"
+    color: "Color"
+
+  highlights:
+    highlight_one:
+      highlight_title_one: "Welcome to Giotto"
+      highlight_description: "What makes a house a real home are the people, the colors and feelings shared in every corner. therefore produce lines that complement your home a very special way. You, your family and your home deserve Giotto. "
+    highlight_two:
+      highlight_title_one: "Organize Your Home"
+      highlight_title_two: "with Giotto"
+      highlight_description: "Organize clothes or cleaning products with a basket versatile and beautiful."
+    highlight_three:
+      highlight_title_one: "More beautiful"
+      highlight_title_two: "for your home"
+      highlight_description: "A new design with the quality you already know. <br /> New buckets Giotto: your home more beautiful and functional."

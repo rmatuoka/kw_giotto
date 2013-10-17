@@ -10,13 +10,8 @@
 		
 		<div class="slide_box_show"> 
 			<div class=" saiba_mais_container ">
-				<div class="sm_ct_1">Bem-vindo à Giotto</div>
-				<div class="sm_ct_3">
-					O que faz de uma casa um verdadeiro lar são as pessoas, as cores e sentimentos
-					compartilhados em cada cantinho. Por isso, produzimos linhas que completam sua casa de um
-					jeito muito especial.
-					Você, sua família e seu lar merecem Giotto.
-				</div>
+				<div class="sm_ct_1"><%= t("highlights.highlight_one.highlight_title_one")%></div>
+				<div class="sm_ct_3"><%= t("highlights.highlight_one.highlight_description").html_safe %></div>
 				<%= link_to(image_tag("bt_saibamais.jpg", :class=>"bt_saibamais"),about_us_index_path)%>	
 			</div>	
 			<%= image_tag("DestaqueFamilia.jpg", :class=>"img_show")%>
@@ -25,11 +20,9 @@
 		
 		<div class="slide_box_show">
 			<div class=" saiba_mais_container ">
-				<div class="sm_ct_1">Organize sua casa</div>
-				<div class="sm_ct_2">com Giotto</div>				
-				<div class="sm_ct_3">
-					Organize roupas ou produtos de limpeza com um cesto versátil e bonito.
-				</div>
+				<div class="sm_ct_1"><%= t("highlights.highlight_two.highlight_title_one")%></div>
+				<div class="sm_ct_2"><%= t("highlights.highlight_two.highlight_title_two")%></div>				
+				<div class="sm_ct_3"><%= t("highlights.highlight_two.highlight_description").html_safe %></div>
 				<%= link_to(image_tag("bt_saibamais.jpg", :class=>"bt_saibamais"),product_path(7))%>
 			</div>	
 			<%= image_tag("DestaqueCesto.jpg", :class=>"img_show")%>			
@@ -37,12 +30,9 @@
 		
 		<div class="slide_box_show">
 			<div class=" saiba_mais_container ">
-				<div class="sm_ct_1">Mais beleza </div>
-				<div class="sm_ct_2">para sua casa</div>
-				<div class="sm_ct_3">
-					Um novo design com a qualidade que você já conhece.<br />
-					Novos baldes Giotto: sua casa mais bonita e funcional.
-				</div>
+				<div class="sm_ct_1"><%= t("highlights.highlight_three.highlight_title_one")%></div>
+				<div class="sm_ct_2"><%= t("highlights.highlight_three.highlight_title_two")%></div>				
+				<div class="sm_ct_3"><%= t("highlights.highlight_three.highlight_description").html_safe %></div>
 				<%= link_to(image_tag("bt_saibamais.jpg", :class=>"bt_saibamais"), releases_path())%>	
 			</div>	
 			<%= image_tag("DestaqueBalde.jpg", :class=>"img_show")%>

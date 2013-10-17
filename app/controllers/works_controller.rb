@@ -14,7 +14,7 @@ class WorksController < ApplicationController
     @contact.contact = false
     if @contact.save
       ContactMailer.send_work_to_adm(@contact).deliver
-    @erro = false
+    @contact = false
     end
   end
 

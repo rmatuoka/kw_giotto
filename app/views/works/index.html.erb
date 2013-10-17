@@ -12,31 +12,31 @@
         </p>
     </div>
     <div class="cont_box_right work_box_right">
-          <%= form_for([@contact], :url => works_work_path(@contact), :html => { :multipart => :true }) do |f| %>
+          <%= form_for([@contact], :url => works_work_path(@contact), :html => { :multipart => :true, :id=>"work_form"}) do |f| %>
               <div class="eight columns">
-                <%= label_tag :name, "Nome", :class => "right inline", :style=> "float:left" %>
+                <%= f.label :name, :class => "right inline", :style=> "float:left" %>
 				<%= f.text_field :name, :style=> "float:right; width:230px;" %>
                </div>
               <div class="four  columns">
-                <%= label_tag :email, "E-mail", :class => "right inline", :style=> "float:left"%>
+                <%= f.label :email, :class => "right inline", :style=> "float:left"%>
                 <%= f.text_field :email, :style=> "float:right; width:230px;"%>
               </div>
               <div class="four columns">
-                <%= label_tag :phone, "Telefone", :class => "right inline", :style=> "float:left"%>
+                <%= f.label :phone, :class => "right inline", :style=> "float:left"%>
                 <%= f.text_field :phone, :style=> "float:right; width:230px;"%>
               </div>
               <div class="clear"></div>
               <div class="four columns">
-                <%= label_tag :state, "Estado", :class => "right inline", :style=> "float:left"%>
-                <%= f.select(:state,options_for_select([['Selecione o Estado',''],['AC'],['AL'],['AP'],['AM'],['BA'],['CE'],['DF'],['ES'],['GO'],['MA'],['MT'],['MS'],['MG'],['PA'],['PB'],['PR'],['PE'],['PI'],['RJ'],['RN'],['RS'],['RO'],['RR'],['SC'],['SP'],['SE'],['TO']]), :class => "five")%>
+                <%= f.label :state, :class => "right inline", :style=> "float:left"%>
+                <%= f.select(:state,options_for_select([['AC'],['AL'],['AP'],['AM'],['BA'],['CE'],['DF'],['ES'],['GO'],['MA'],['MT'],['MS'],['MG'],['PA'],['PB'],['PR'],['PE'],['PI'],['RJ'],['RN'],['RS'],['RO'],['RR'],['SC'],['SP'],['SE'],['TO']]), :class => "five", :prompt=>true)%>
               </div>
               <div class="clear"></div>
               <div class="four columns">
-                <%= label_tag :message, "Mensagem", :class => "right inline", :style=> "float:left"%>
+                <%= f.label :message, :class => "right inline", :style=> "float:left"%>
                 <%= f.text_area :message, :style=> "float:right; width:230px !important;"%>
               </div>
               <div class="four columns">
-                <%= label_tag :file, "Arquivo", :class => "right inline", :style=> "float:left"%>
+                <%= f.label :file, :class => "right inline", :style=> "float:left"%>
                 <%= f.file_field :file, :style=> "float:right; width:230px !important;"%>
               </div>
               <div class="clear"></div>
@@ -47,3 +47,28 @@
               </div>          
           <% end %>
     </div>
+<script>
+	$('#work_form').validate({
+		rules: {
+			"contact[name]":  {required: true,minlength: 2},
+			"contact[email]": {required: true,email: true},
+			"contact[phone]": {required: true,minlength: 13},
+			"contact[message]": {required: true,minlength: 5},
+			"contact[state]" : {required: true}
+		},
+		messages: {
+			"contact[name]":{required: "<%= t("msg_validate.name_required")%>", minlength: "<%= t("msg_validate.name_minlength")%>"},
+			"contact[email]":{required: "<%= t("msg_validate.email_required")%>",email: "<%= t("msg_validate.email_email")%>"},
+			"contact[phone]":{required: "<%= t("msg_validate.phone_required")%>",minlength: "<%= t("msg_validate.phone_minlength")%>"},
+			"contact[message]":{required: "<%= t("msg_validate.message_required")%>",minlength: "<%= t("msg_validate.message_minlength")%>"},
+			"contact[state]":{required: "<%= t("msg_validate.state_required")%>"}
+		},
+		errorPlacement: function(error,element){
+	    	error.insertAfter(element);
+	    	//alert(error.html());
+		},
+		showErrors: function(errorMap, errorList){
+			this.defaultShowErrors();
+		}
+	});
+</script>

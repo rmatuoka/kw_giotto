@@ -30,21 +30,21 @@
             <% if @product_images.count > 1%>
             <div id="bullets<%=product.id%>" class="bullets"></div>
             <%end%>
-            <span class="text_vjaimg">Clique na imagem para ampliar</span> 
+            <span class="text_vjaimg"><%= t("product_descriptions.zoom")%></span> 
         </div>
         <div class="box_area_right">
             <p class="title_prod"><%= product.name%></p>
             <p class="text_prod"><%= product.description %></p>
-            <p class="title_spec">Especificações:</p>
-            <p class="text_prod"><b>Código: </b><%= product.code %></p>
-            <p class="text_prod"><b>Código EAN-13: </b><%= product.ean %></p>
-            <p class="text_prod"><b>Código DUN-14: </b><%= product.dun %></p>
-            <p class="text_prod"><b>Peso líq (Un): </b><%= product.weight %></p>
-            <p class="text_prod"><b>Peso Total (g): </b><%= product.total_weight %></p>
-            <p class="text_prod"><b>Cubagem (m³): </b><%= format("%.4f",product.cubage) %></p>
-            <p class="text_prod"><b>Quantidade (volume): </b><%= product.amount %></p>
-            <p class="text_prod"><b>Dimensões: </b><%= product.dimensions %></p>
-            <p class="text_prod"><b>Cores: </b><%= product.color %></p>
+            <p class="title_spec"><%= t("product_descriptions.title")%>:</p>
+            <p class="text_prod"><b><%= t("product_descriptions.code")%>: </b><%= product.code %></p>
+            <p class="text_prod"><b><%= t("product_descriptions.code_ean")%>: </b><%= product.ean %></p>
+            <p class="text_prod"><b><%= t("product_descriptions.code_dun")%>: </b><%= product.dun %></p>
+            <p class="text_prod"><b><%= t("product_descriptions.net_weight")%>: </b><%= product.weight %></p>
+            <p class="text_prod"><b><%= t("product_descriptions.total_weight")%>: </b><%= product.total_weight %></p>
+            <p class="text_prod"><b><%= t("product_descriptions.cubic_capacity")%>: </b><%= format("%.4f",product.cubage) %></p>
+            <p class="text_prod"><b><%= t("product_descriptions.quantity")%>: </b><%= product.amount %></p>
+            <p class="text_prod"><b><%= t("product_descriptions.dimensions")%>: </b><%= product.dimensions %></p>
+            <p class="text_prod"><b><%= t("product_descriptions.color")%>: </b><%= product.color %></p>
         </div>
     </div>
     <script>

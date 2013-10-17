@@ -32,17 +32,14 @@ $(document).ready(function() {
 });
 </script>
 <%end%>
-<div class="container "  id="content">
-<%if current_user%>
-  <%if User.find(current_user.id).has_role? :representante %>
+<div class="container"  id="content">
+  <%if current_user && (User.find(current_user.id).has_role? :representante) %>
     <div class="left_container six columns">
         <div class="title_container">
-            <h1 class="title_left_container">Área Restrita</h1>
+            <h1 class="title_left_container"><%= t("restricted_title")%></h1>
 	    <%= link_to(image_tag("bt_baixe_catalogo_all.jpg"),"/catalogos/catalogo_giotto.zip",:class=>"bt_down_cat_all")%>
 	    <br /><br />
-	    <p class="tit_text">
-		Aqui você pode baixar o catálogo completo da Giotto e também as imagens dos nossos produtos por categorias. Obrigado pela preferência.
-            </p>
+	    <p class="tit_text"><%= t("restricted_body")%></p>
 	    
         </div>
         <div class="text_container">
@@ -51,7 +48,7 @@ $(document).ready(function() {
                 <div class="viewport">
                     <div class="overview" style="top: 0px;">
                       <div class="item_download">
-                          <span class="item_text">Lançamentos</span><%= link_to(image_tag("bt_download_catalogo_un.jpg"), "/catalogos/Lancamentos.zip", :title => "Lançamentos" ,:class=>"bt_down_cat_un")%>
+                          <span class="item_text"><%= t("show_release")%></span><%= link_to(image_tag("bt_download_catalogo_un.jpg"), "/catalogos/Lancamentos.zip", :title => t("show_release") ,:class=>"bt_down_cat_un")%>
                         </div>
                     <% if @catalogs.count > 0 %>
                       <% @catalogs.each do |catalog|%>
@@ -70,15 +67,12 @@ $(document).ready(function() {
     <% else %>
     <div class="left_container six columns">
       <div class="title_container">
-            <h1 class="title_left_container">Área Restrita</h1>
+            <h1 class="title_left_container"><%= t("restricted_title")%></h1>
             <br /><br />
-            <p class="tit_text">
-                Você precisa estar logado para visualizar este conteúdo!
-            </p>
-            
+            <p class="tit_text"><%= t("restricted_error")%></p>
         </div>
     </div>
+	<div class="right_container six columns">
   <% end %>
-<% end %>
 	</div>
 </div>

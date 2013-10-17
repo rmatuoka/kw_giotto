@@ -14,6 +14,7 @@ gem 'jquery-rails', '>= 1.0.12'
 gem "browser"
 gem 'paperclip', '2.3.8'
 gem 'translate_routes'
+gem 'globalize3'
 
 
 # Use unicorn as the web server

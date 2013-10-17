@@ -10,10 +10,10 @@ before_filter :new_contact
   end
   
   def create
-    @contact = Representative.new(params[:representative])
-    if @contact.save
-      ContactMailer.send_representative_to_adm(@contact).deliver
-      redirect_to representative_path(@contact), :notice => "Mensagem de sucesso."
+    @representative = Representative.new(params[:representative])
+    if @representative.save
+      ContactMailer.send_representative_to_adm(@representative).deliver
+      redirect_to representative_path(@representative), :notice => "Mensagem de sucesso."
   
   else
     render :action => 'new'

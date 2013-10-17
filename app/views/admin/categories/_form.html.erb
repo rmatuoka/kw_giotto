@@ -1,9 +1,11 @@
 <%= form_for ([:admin, @category], :html => { :multipart => :true }) do |f| %>
   <%= f.error_messages %>
+  
   <p>
     <%= f.label :title, "Título:" %><br />
     <%= f.text_field :title, :placeholder => "Título" %>
   </p>
+
   <p>
     <%= f.label :published, "Publicada:" %><br />
     <%= f.check_box :published %>

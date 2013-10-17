@@ -1,7 +1,7 @@
 pt-BR:
   site_name: "Giotto"
   translation:
-    en: "Inglês"
+    en: "English"
     pt-BR: "Português"
   
   copywrite: "Giotto (C) 2013 - Todos os direitos reservados."
@@ -23,3 +23,46 @@ pt-BR:
   work_body: "Faça parte da equipe Giotto!</br></br>Para ser um representante Giotto,</br>preencha os dados ao lado e aguarde nosso contato.</br></br>Será um prazer atendê-lo."
   about_us_title: "A Giotto"
   about_us_body: "<p class='text_left_container'>Fundada em 2000, a Giotto é uma empresa especializada na fabricação e comercialização de produtos plásticos e afins. Com sede na cidade de Nazaré Paulista- SP, destaca-se no ramo de utilidades domésticas, atendendo clientes em todo o território nacional.</p><p class='text_left_container'>Constantemente preocupada em suprir as necessidades dos consumidores, a Giotto possui alta capacidade produtiva e frota própria para entregas. Desse modo, seus produtos podem ser encontrados em diversos distribuidores, atacadistas e lojas do ramo, espalhadas por todo o país.</p><p class='text_left_container'>Comprometida com a qualidade, a Giotto também conta com instalações modernas, equipada com maquinário de alto desempenho, atendendo todas as demandas com rapidez e eficiência.</p><p class='text_left_container'>A preocupação com o meio ambiente também recebe o cuidado e atenção da empresa, que promove a reciclagem dos resíduos plásticos dentro de suas instalações.</p>"
+  download_catalog: "Baixe aqui o catálogo"
+  restricted_title: "Área Restrita"
+  restricted_body: "Aqui você pode baixar o catálogo completo da Giotto e também as imagens dos nossos produtos por categorias. Obrigado pela preferência."  
+  restricted_error: "Você precisa estar logado para visualizar este conteúdo!"
+  
+  msg_validate:
+    name_required: "Nome deve ser preenchido"
+    name_minlength: "Informe um nome válido"
+    email_required: "E-mail deve ser preenchido"
+    email_email: "Informe um E-mail valido"    
+    phone_required: "Telefone deve ser preenchido"
+    phone_minlength: "Informe um Telefone valido"
+    message_required: "Mensagem deve ser preenchido"
+    message_minlength: "Informe uma mensagem valida"
+    city_required: "Cidade deve ser preenchido"
+    city_minlength: "Informe uma cidade valida"
+    state_required: "Selecione um estado"
+  
+  product_descriptions:
+    zoom: "Clique na imagem para ampliar"
+    title: "Especificações"
+    code: "Código"
+    code_ean: "Código EAN-13"
+    code_dun: "Código DUN-14"
+    net_weight: "Peso líq (Un)"
+    total_weight: "Peso Total (g)"
+    cubic_capacity: "Cubagem (m³)"
+    quantity: "Quantidade (volume)"
+    dimensions: "Dimensões"
+    color: "Cores"
+    
+  highlights:
+    highlight_one:
+      highlight_title_one: "Bem-vindo à Giotto"
+      highlight_description: "O que faz de uma casa um verdadeiro lar são as pessoas, as cores e sentimentos compartilhados em cada cantinho. Por isso, produzimos linhas que completam sua casa de um jeito muito especial. Você, sua família e seu lar merecem Giotto."
+    highlight_two:
+      highlight_title_one: "Organize sua casa"
+      highlight_title_two: "com Giotto"
+      highlight_description: "Organize roupas ou produtos de limpeza com um cesto versátil e bonito."
+    highlight_three:
+      highlight_title_one: "Mais beleza"
+      highlight_title_two: "para sua casa"
+      highlight_description: "Um novo design com a qualidade que você já conhece.<br /> Novos baldes Giotto: sua casa mais bonita e funcional."
