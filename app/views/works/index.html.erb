@@ -43,7 +43,8 @@
               <div class="four columns">
               </div>
               <div class="eight  columns">
-                <%= image_submit_tag("bt_enviar_contato.jpg", :style=> "float:right; width:230px !important;")%>
+                <%= submit_tag t("send"), :class => "botao", :style=> "float:right; width:230px !important;"%>
+                <%#= image_submit_tag("bt_enviar_contato.jpg")%>
               </div>          
           <% end %>
     </div>

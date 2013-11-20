@@ -241,18 +241,19 @@ margin-bottom: 0;
 	color:#ed1d24 !important;
 }
 .cont_right_footer{
-	position:relative;
-	float:right;
-	width: 645px;
-	font-family:HelveticaCondensedLight;
-	font-size:14px;
-	color:#ed1d24 !important;
-	cursor: pointer;
+	position: relative;
+  float: right;
+  width: 747px;
+  font-family: HelveticaCondensedLight;
+  font-size: 14px;
+  color: 
+  #ed1d24 !important;
+  cursor: pointer;
 }
 .bt_facebook_align{
-	position:relative;
-	margin-left: 61px;
-	margin-bottom: 15px;
+	position: relative;
+  margin-left: 13px;
+  margin-bottom: 15px;
 }
 .sato7_bt{
 	position:relative;
@@ -324,3 +325,13 @@ margin-bottom: 0;
 }
 .clear{ clear:both;}
 
+.botao
+{
+  font-size:14px;
+  color:#fff;
+  width:100%;
+  background-color:#eb212e;
+  border:none;
+  font-weight:normal;
+  height:46px;
+}

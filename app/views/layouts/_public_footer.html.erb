@@ -1,12 +1,21 @@
 <div class="footer" id="footer">
+  
+  
+  
         <p class="cont_left_footer"><%= link_to(image_tag("bt_logo_sato7.png",:id => "sato7_bt"),"http://www.sato7.com.br/") %></p>	
         <p class="cont_left_footer"><%= t("copywrite")%></p>
 		<p class="cont_left_footer"><%#= language_links %></p>
 		
             <div class="cont_right_footer">
                 <%= image_tag ("bt_trabalheconosco.jpg"), :id => "work_bt" %>
-            	<%= image_tag ("bt_entrar_contato.jpg"), :id => "contato_bt" %>
+            	  <%= image_tag ("bt_entrar_contato.jpg"), :id => "contato_bt" %>
                 <%= link_to image_tag("bt_facebook.jpg", :class => "bt_facebook_align"),"https://www.facebook.com/pages/Produtos-Giotto/468698803195311", :target =>"_blank"%>
+            
+              <select id="language">
+                  <option value=""><%= t("translation.choose")%></option>
+                  <option value="/"><%=t("translation.pt-BR")%></option>
+                  <option value="/en"><%= t("translation.en")%></option>
+              </select>
             </div>
             
 <div class="work_box" style="display: none;">
@@ -55,7 +64,7 @@
               <div class="four columns">
               </div>
               <div class="eight  columns">
-                <%= image_submit_tag("bt_enviar_contato.jpg")%>
+                <%= submit_tag t("send"), :class => "botao"%>
               </div>          
           <% end %>
     </div>

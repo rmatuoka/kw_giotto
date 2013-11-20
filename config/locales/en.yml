@@ -3,7 +3,9 @@ en:
   translation:
     en: "English"
     pt-BR: "Português"
+    choose: "Choose your language"
   
+  send: "Send"
   copywrite: "Giotto (C) 2013 - All rights reserved."
   about_title: "Giotto"
   show_product: "Products"

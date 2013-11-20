@@ -21,12 +21,19 @@
   <%=stylesheet_link_tag "/fancybox/jquery.fancybox.css"%>
 	<%=javascript_include_tag "jquery.fancybox.pack.js"%>
 	<%=javascript_include_tag "jquery.fancybox.js"%>
+	
+	<%=javascript_include_tag "jquery.fancybox.pack.js"%>
+	<%=javascript_include_tag "jquery.selectbox-0.2.js"%>
+	
+	<%=stylesheet_link_tag "jquery.selectbox.css"%>
+
 
 <%=yield :head%>   
 </head>
 <body>
 <%=render :file => "layouts/_menu.html.erb"%>  
 <%= yield %>
+
 <%=render :file => "layouts/_public_footer.html.erb"%>    
 
   <!-- Initialize JS Plugins -->
@@ -43,6 +50,13 @@ function ajustaTela() {
 }
 
 $(document).ready(function(){
+  $("#language").selectbox({
+    onChange: function (val, inst) {
+		  window.open(val,'_self')
+		}
+  });
+  
+  
 	
 <% if !browser.mobile? %>	
 	ajustaTela();	
@@ -97,6 +111,7 @@ $(".fancybox-media").fancybox({
     }
   });
 });
+
 </script>
 </div>
 </body>
