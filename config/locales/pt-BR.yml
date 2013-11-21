@@ -5,6 +5,8 @@ pt-BR:
     pt-BR: "Português"
     choose: "Escolha o idioma"
   
+  button_work: "/images/bt_trabalheconosco.jpg"
+  button_contact: "/images/bt_entrar_contato.jpg"
   send: "Enviar"
   copywrite: "Giotto (C) 2013 - Todos os direitos reservados."
   about_title: "A Giotto"
