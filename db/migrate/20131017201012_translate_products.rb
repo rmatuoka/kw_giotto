@@ -3,7 +3,8 @@ class TranslateProducts < ActiveRecord::Migration
     Product.create_translation_table!({
           :name => :string,
           :color => :string,
-          :description => :text
+          :description => :text,
+          :tag => :string
         }, {
           :migrate_data => true
         })

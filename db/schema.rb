@@ -92,9 +92,10 @@ ActiveRecord::Schema.define(:version => 20131017201012) do
   create_table "product_translations", :force => true do |t|
     t.integer  "product_id"
     t.string   "locale"
+    t.string   "tag"
     t.text     "description"
-    t.string   "name"
     t.string   "color"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
