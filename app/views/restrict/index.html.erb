@@ -53,7 +53,7 @@ $(document).ready(function() {
                     <% if @catalogs.count > 0 %>
                       <% @catalogs.each do |catalog|%>
                         <div class="item_download">
-                          <span class="item_text"><%= catalog.title%></span><%= link_to(image_tag("bt_download_catalogo_un.jpg"), catalog.link, :title => catalog.title ,:class=>"bt_down_cat_un")%>
+                          <span class="item_text"><%= catalog.category.title%></span><%= link_to(image_tag("bt_download_catalogo_un.jpg"), catalog.link, :title => catalog.title ,:class=>"bt_down_cat_un")%>
                         </div>
                       <% end %>
                     <% end %>
