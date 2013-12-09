@@ -12,7 +12,7 @@
 			<div class=" saiba_mais_container ">
 				<div class="sm_ct_1"><%= t("highlights.highlight_one.highlight_title_one")%></div>
 				<div class="sm_ct_3"><%= t("highlights.highlight_one.highlight_description").html_safe %></div>
-				<%= link_to(image_tag("bt_saibamais.jpg", :class=>"bt_saibamais"),about_us_index_path)%>	
+				<%= link_to(image_tag("bt_saibamais_#{I18n.locale}.jpg", :class=>"bt_saibamais"),about_us_index_path)%>	
 			</div>	
 			<%= image_tag("DestaqueFamilia.jpg", :class=>"img_show")%>
 			
@@ -23,7 +23,7 @@
 				<div class="sm_ct_1"><%= t("highlights.highlight_two.highlight_title_one")%></div>
 				<div class="sm_ct_2"><%= t("highlights.highlight_two.highlight_title_two")%></div>				
 				<div class="sm_ct_3"><%= t("highlights.highlight_two.highlight_description").html_safe %></div>
-				<%= link_to(image_tag("bt_saibamais.jpg", :class=>"bt_saibamais"),product_path(7))%>
+				<%= link_to(image_tag("bt_saibamais_#{I18n.locale}.jpg", :class=>"bt_saibamais"),product_path(7))%>
 			</div>	
 			<%= image_tag("DestaqueCesto.jpg", :class=>"img_show")%>			
 		</div>
@@ -33,7 +33,7 @@
 				<div class="sm_ct_1"><%= t("highlights.highlight_three.highlight_title_one")%></div>
 				<div class="sm_ct_2"><%= t("highlights.highlight_three.highlight_title_two")%></div>				
 				<div class="sm_ct_3"><%= t("highlights.highlight_three.highlight_description").html_safe %></div>
-				<%= link_to(image_tag("bt_saibamais.jpg", :class=>"bt_saibamais"), releases_path())%>	
+				<%= link_to(image_tag("bt_saibamais_#{I18n.locale}.jpg", :class=>"bt_saibamais"), releases_path())%>	
 			</div>	
 			<%= image_tag("DestaqueBalde.jpg", :class=>"img_show")%>
 		</div>		

@@ -37,7 +37,7 @@ $(document).ready(function() {
     <div class="left_container six columns">
         <div class="title_container">
             <h1 class="title_left_container"><%= t("restricted_title")%></h1>
-	    <%= link_to(image_tag("bt_baixe_catalogo_all.jpg"),"/catalogos/catalogo_giotto.zip",:class=>"bt_down_cat_all")%>
+	    <%= link_to(image_tag("bt_baixe_catalogo_all_#{I18n.locale}.jpg"),"/catalogos/catalogo_giotto.zip",:class=>"bt_down_cat_all")%>
 	    <br /><br />
 	    <p class="tit_text"><%= t("restricted_body")%></p>
 	    

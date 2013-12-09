@@ -89,13 +89,15 @@ ActiveRecord::Schema.define(:version => 20131017201012) do
     t.datetime "image_updated_at"
   end
 
+  add_index "product_images", ["product_id"], :name => "idx_1"
+
   create_table "product_translations", :force => true do |t|
     t.integer  "product_id"
     t.string   "locale"
     t.string   "tag"
     t.text     "description"
-    t.string   "color"
     t.string   "name"
+    t.string   "color"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -125,6 +127,8 @@ ActiveRecord::Schema.define(:version => 20131017201012) do
     t.integer  "litre"
     t.string   "tag"
   end
+
+  add_index "products", ["category_id"], :name => "idx_1"
 
   create_table "representatives", :force => true do |t|
     t.string   "name"
