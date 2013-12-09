@@ -228,6 +228,8 @@ en:
       representative:
         <<: *default_name 
       find:
-        <<: *default_name 
+        <<: *default_name
+      user_session:
+        <<: *default_name         
     errors:
       <<: *errors

@@ -2,13 +2,14 @@ pt-BR:
   site_name: "Giotto"
   translation:
     en: "English"
+    es: "Español"
     pt-BR: "Português"
     choose: "Escolha o idioma"
   
   send: "Enviar"
   copywrite: "Giotto (C) 2013 - Todos os direitos reservados."
   about_title: "A Giotto"
-  show_product: "Produtos"
+  show_products: "Produtos"
   show_release: "Lançamentos"
   show_representatives: "Representantes"
   show_toys: "Brinquedos"

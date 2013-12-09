@@ -18,3 +18,21 @@ pt-BR:
   register: registrar
   login: entrar
   logout: sair
+es:
+  new: nuevo
+  edit: editar
+  destroy: destruir
+  index: indice
+
+  works: trabajo
+  find_us: donde_encontrar
+  about_us: acerca_de  
+  representatives: representantes
+  releases: lanzamientos  
+  products: productos
+  show_category: vease_la_categoria
+  show_product: ver_producto
+
+  register: registrar
+  login: entrar
+  logout: salida 

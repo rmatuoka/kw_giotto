@@ -48,12 +48,12 @@ $(document).ready(function() {
                 <div class="viewport">
                     <div class="overview" style="top: 0px;">
                       <div class="item_download">
-                          <span class="item_text"><%= t("show_release")%></span><%= link_to(image_tag("bt_download_catalogo_un.jpg"), "/catalogos/Lancamentos.zip", :title => t("show_release") ,:class=>"bt_down_cat_un")%>
+                          <span class="item_text"><%= t("show_release")%></span><%= link_to(image_tag("bt_download_catalogo_un_#{I18n.locale}.jpg"), "/catalogos/Lancamentos.zip", :title => t("show_release") ,:class=>"bt_down_cat_un")%>
                         </div>
                     <% if @catalogs.count > 0 %>
                       <% @catalogs.each do |catalog|%>
                         <div class="item_download">
-                          <span class="item_text"><%= catalog.category.title%></span><%= link_to(image_tag("bt_download_catalogo_un.jpg"), catalog.link, :title => catalog.title ,:class=>"bt_down_cat_un")%>
+                          <span class="item_text"><%= catalog.category.title%></span><%= link_to(image_tag("bt_download_catalogo_un_#{I18n.locale}.jpg"), catalog.link, :title => catalog.category.title ,:class=>"bt_down_cat_un")%>
                         </div>
                       <% end %>
                     <% end %>
