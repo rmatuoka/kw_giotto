@@ -1,5 +1,8 @@
 iframe {
   border-style:none;
+}       
+body{
+	background-color: transparent;
 }
 .cont_box_left{
                 padding-top:33px;
