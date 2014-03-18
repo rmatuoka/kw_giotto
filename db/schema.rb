@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131209133448) do
+ActiveRecord::Schema.define(:version => 20140318195954) do
 
   create_table "about_images", :force => true do |t|
     t.boolean  "active"
@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(:version => 20131209133448) do
     t.string   "file_content_type"
     t.integer  "file_file_size"
     t.datetime "file_updated_at"
+    t.string   "city"
+    t.string   "mail_to"
   end
 
   create_table "finds", :force => true do |t|

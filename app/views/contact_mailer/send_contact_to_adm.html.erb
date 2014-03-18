@@ -1,9 +1,11 @@
 <html>
 <body>
 	<h2>Novo Contato - Contato</h2>
+	<p>Para: <%=@contact.mail_to%></p>
 	<p>Nome: <%=@contact.name%></p>
 	<p>Email: <%=@contact.email%></p>
 	<p>Telefone: <%=@contact.phone%></p>
+	<p>Cidade: <%=@contact.city%>/<%=@contact.state%></p>
 	<p>Mensagem:</p>
 	<p><%=@contact.message%></p>
 </body>

@@ -39,6 +39,22 @@
         
           <%= form_for @contact, :url => home_create_path(@contact), :remote => true do |f| %>
               <div class="four columns">
+                <%= f.label  :mail_to, :class => "right inline"%>
+                </div>
+              <div class="eight  columns" style="height:44px;">
+                <%= f.select(:mail_to,options_for_select([
+                                                      ['Reclamação','sac@produtosgiotto.com.br'],
+                                                      ['Sugestão','sac@produtosgiotto.com.br'],
+                                                      ['Elogio','sac@produtosgiotto.com.br'],
+                                                      ['Representação','Vagner@produtosgiotto.com.br'],
+                                                      ['Compra','comercial@produtosgiotto.com.br'],
+                                                      ['Trabalhe conosco','thais@produtosgiotto.com.br'],
+                                                      ['Encontre nossos produtos','comercial@produtosgiotto.com.br'],
+                                                      
+                                                      ]), :class => "five")%>
+              </div>
+              
+              <div class="four columns">
                 <%= f.label  :name, :class => "right inline"%>
                 </div>
               <div class="eight  columns">
@@ -57,6 +73,19 @@
                 <%= f.text_field :phone, :class => "five"%>
               </div>
               <div class="four columns">
+                <%= f.label  :city, :class => "right inline"%>
+                </div>
+              <div class="eight  columns">
+                <%= f.text_field :city, :class => "five"%>
+              </div>
+              
+              <div class="four columns">
+                <%= f.label  :state, :class => "right inline"%>
+                </div>
+              <div class="eight  columns" style="height:44px;">
+                <%= f.select(:state,options_for_select([['AC'],['AL'],['AP'],['AM'],['BA'],['CE'],['DF'],['ES'],['GO'],['MA'],['MT'],['MS'],['MG'],['PA'],['PB'],['PR'],['PE'],['PI'],['RJ'],['RN'],['RS'],['RO'],['RR'],['SC'],['SP'],['SE'],['TO']]), :class => "five", :prompt=>true)%>
+              </div>
+              <div class="four columns">
                 <%= f.label  :message, :class => "right inline"%>
               </div>
               <div class="eight columns">
@@ -65,7 +94,7 @@
               <div class="four columns">
               </div>
               <div class="eight  columns">
-                <%= submit_tag t("send"), :class => "botao"%>
+                <%= submit_tag t("send"), :class => "botao", :style => "cursor:pointer;"%>
               </div>          
           <% end %>
     </div>

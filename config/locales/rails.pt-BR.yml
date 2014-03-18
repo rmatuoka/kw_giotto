@@ -228,6 +228,7 @@ pt-BR:
         message: 'Mensagem'
         state: 'Estado'
         file: 'Arquivo'
+        mail_to: 'Para'
       representative:
         <<: *default_name  
       find:

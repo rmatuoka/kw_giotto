@@ -8,7 +8,8 @@ class ContactMailer < ActionMailer::Base
   
   def send_contact_to_adm(contact)
     @contact = contact
-    mail(:to => "comercial@produtosgiotto.com.br",:bcc => "log@korewa.com.br", :subject => "Giotto - Contato")
+    
+    mail(:to => @contact.mail_to,:bcc => "log@korewa.com.br", :subject => "Giotto - Contato")
   end
   
   def send_findus_to_adm(contact)
